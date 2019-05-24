@@ -1,0 +1,2808 @@
+@import "./_options"
+@import "./_default"
+@import "./_font"
+@import "./scss/fontawesome.scss"
+
+// ============================
+// MAIN CODE START
+// ============================
+body
+	font-size: 18px
+	
+.container
+	width: 100%
+	max-width: nth($mediaBp, 1)
+	padding:
+		left: 10px
+		right: 10px
+	margin:
+		left: auto
+		right: auto
+	overflow: hidden
+
+.nav
+	border-bottom: 1px solid #cbcdd0
+	background-color: rgb(255, 255, 255)
+	font-family: "MuseoSansCyrl"
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 10
+	font-size: 14px
+    
+	&-list
+		@include flex($jc: space-between, $ai: center)
+		a
+			position: relative
+			color: #121622
+			font-weight: 300
+			display: inline-block
+			padding: 13px 10px
+			&:after
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				border-bottom: 0 solid rgb(40, 91, 208)
+			&:hover, .active
+				&:after
+					border-bottom: 2px solid rgb(40, 91, 208)
+
+	&-toggle
+		@include flex($jc: center, $ai: center)
+		display: none
+		width: 42px
+		height: 42px
+		border-radius: 5px
+		cursor: pointer
+		background-color: $mainC1
+		color: #FFF
+		font-size: 20px
+
+		&__close
+			display: none
+		&_active &__close
+			display: inline-block
+		&_active &__open
+			display: none
+
+.nav-toggle__open
+	&:before
+		font-family: "FontAwesome"
+		font-weight: 900
+		content: "\f0c9"
+.nav-toggle__close
+	&:before
+		font-family: "FontAwesome"
+		font-weight: 900
+		content: "\f00d"
+
+.topheader
+	padding-top: 55px
+	font-size: 15px
+	font-family: "MuseoSansCyrl"
+	color: rgb(18, 22, 34)
+	&-grid
+		@include flex($jc: space-between, $ai: center)
+		&__col
+			@include flex($jc: flex-start, $ai: center)
+
+.header-bg
+	background: url(../images/preview-bg.png) no-repeat center/cover
+	
+
+.logo
+	&_link
+		@include flex($jc: flex-start, $ai: center)
+	&_image
+		margin-right: 30px
+	&_text
+		max-width: 155px
+
+.map
+	&-icon
+		font-size: 37px
+		color: rgb(40, 91, 208)
+		margin-right: 10px
+	@include flex($jc: flex-start, $ai: center)
+	&_text
+		a
+			font-size: 13px
+			font-family: "MuseoSansCyrl"
+			color: rgb(40, 91, 208)
+			text-decoration: underline
+
+.map-icon:before
+	font-family: "FontAwesome"
+	font-weight: 900
+	content: "\f3c5"
+
+.social
+	margin-right: 35px
+	@include flex($jc: space-between, $ai: center)
+	li + li
+		margin-left: 10px
+	&__link
+		@include flex($jc: center, $ai: center)
+		height: 42px
+		width: 42px
+		border-radius: 5px
+		&:hover
+				transform: scale(1.1)
+		&_telegram
+			background-color: rgb(66, 148, 232)
+
+		&_viber
+			background-color: rgb(125, 61, 175)
+		i
+			color: rgb(255, 255, 255)
+			font-size: 22px
+
+.contact
+	&_number
+		font-family: "Montserrat"
+		font-weight: bold
+		font-size: 22px
+	&_text
+		font-size: 13px
+		line-height: 2
+	&_button
+		padding: 15px 30px
+		background-color: #285bd0
+		box-shadow: inset 0px -2px 0px 0px #2553bd,0px 4px 10px 2.5px rgba(40, 91, 208, 0.1)
+		span
+			margin-right: 5px
+		position: relative
+		cursor: pointer
+		&:hover
+			background-color: #2553bd
+
+.preview-block
+	padding: 35px 0 0
+	&-grid
+		@include flex($jc: space-between, $ai: center)
+		&__title
+			font-size: 34px
+			font-family: "Montserrat"
+			color: rgb(255, 255, 255)
+			font-weight: bold
+			line-height: 1.5
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+			&-mobile
+				display: none
+				font-size: 36px
+				font-family: "Montserrat"
+				color: rgb(255, 255, 255)
+				font-weight: bold
+				line-height: 1.5
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				p
+					background-color: rgb(40, 91, 208)
+					padding: 0 7px
+					margin-bottom: 2px
+			p
+				background-color: rgb(40, 91, 208)
+				padding: 0 15px
+				margin-bottom: 7px
+		&__subtitle
+			font-size: 19px
+			font-family: "Montserrat"
+			color: rgb(18, 22, 34)
+			font-weight: bold
+			max-width: 585px
+			line-height: 1.368
+			&-form
+				font-size: 19px
+				font-family: "Montserrat"
+				color: rgb(18, 22, 34)
+				font-weight: bold
+				max-width: 585px
+				line-height: 1.368
+		&__form
+			margin-top: 20px
+			@include grid($s: 10px)
+		&__img
+			z-index: 10
+		&__image
+			position: relative
+			margin-top: 90px
+			&-mobile
+				display: none
+				.pulse-circle
+					position: absolute
+					transform: translate(-50%, -50%)
+					top: 40%
+					left: 50%
+					opacity: 1
+					z-index: -1
+			.pulse-circle
+				position: absolute
+				transform: translate(-50%, -50%)
+				top: 40%
+				left: 50%
+				opacity: 1
+				z-index: -1
+			img
+				display: block
+				width: 100%
+		&__call
+			&-mobile
+				display: none
+			position: absolute
+			right: 0
+			top: 60%
+			@include flex($jc: center, $ai: flex-start)
+			border-radius: 50%
+			background-color: #ff0042
+			box-shadow: inset 0px 3px 2px 0px rgba(255, 245, 212, 0.4)
+			width: 147px
+			height: 147px
+			text-align: center
+			&_text
+				padding-top: 15px
+				max-width: 90px
+				font-size: 14px
+				font-family: "Montserrat"
+				color: #fff
+				font-weight: bold
+				line-height: 1.143
+				span
+					text-transform: uppercase
+					font-size: 16px
+					line-height: 1.25
+			.circle-animation
+				top: 50%
+				z-index: 1
+		&__text
+			margin-top: 40px
+			font-size: 14px
+			font-family: "MuseoSansCyrl"
+			color: #121622
+			line-height: 1.714
+	&-video
+		margin: 25px 0 25px 45px
+		position: relative
+		display: flex
+		.circle-animation
+			top: 50%
+			left: 0
+
+		&__icon
+			@include flex($jc: center, $ai: center)
+			position: absolute
+			left: -27px
+			top: calc(50% - 54px/2)
+			border-radius: 50%
+			background-color: rgb(40, 91, 208)
+			width: 54px
+			height: 54px
+			z-index: 2
+			&:before
+				font-family: "FontAwesome"
+				font-weight: 900
+				content: "\f04b"
+				color: #fff
+		&__text
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+			border-radius: 5px
+			background-color: #fff
+			box-shadow: 0px 14px 29px 0px rgba(0, 0, 0, 0.1)
+			width: 210px
+			padding: 12px 10px 12px 50px
+			font-family: "MuseoSansCyrl"
+			font-weight: normal
+			z-index: 1
+		&__title
+			font-size: 16px
+			color: rgb(0, 0, 0)
+			line-height: 1.25
+		&__time
+			font-size: 11px
+			color: rgb(177, 177, 177)
+			line-height: 2
+			text-align: left
+	&-services
+		@include grid($s: 20px)
+		&-grid
+			@include flex($jc: center, $ai: center)
+			padding: 60px 0 20px
+			&__col
+				padding-bottom: 30px
+				@include flex($jc: center, $ai: center)
+.preview-block-grid__col:nth-child(2)
+	width: 39%
+	@include flex($jc: flex-end, $ai: flex-end)
+	flex-direction: column
+	
+.services
+	&-items
+		@include flex($jc: center, $ai: center)
+		flex-direction: column
+		border-radius: 5px
+		background-color: #fff
+		box-shadow: 0px 14px 29px 0px rgba(0, 0, 0, 0.1)
+		text-align: left
+		max-width: 350px
+	&-item
+		padding: 20px
+	&-title
+		font-size: 16px
+		font-family: "Montserrat"
+		color: rgb(18, 22, 34)
+		font-weight: bold
+		line-height: 1.25
+	&-text
+		margin-top: 15px
+		max-width: 285px
+		font-size: 14px
+		font-family: "MuseoSansCyrl"
+		color: rgb(86, 88, 94)
+		line-height: 1.429
+	&-image
+		img
+			max-width: 100%
+
+.form-grid__checkbox_input:checked+.form-grid__checkbox_label:before
+	font-family: "FontAwesome"
+	font-weight: 900
+	content: "\f00c"
+.form-grid__input:before
+	content: "\e802"
+
+.form-grid__checkbox_input
+	display: none
+.form
+	@include grid($s: 5px)
+.form-grid
+	@include flex($jc: flex-start, $ai: center)
+	&__col
+		display: flex
+		flex-direction: column
+	&__text
+		font-size: 13px
+		font-family: "MuseoSansCyrl"
+		color: rgb(18, 22, 34)
+		line-height: 1.846
+	&__checkbox
+		margin-top: 10px
+	&__checkbox_label
+		position: relative
+		font-size: 10px
+		font-family: "MuseoSansCyrl"
+		color: rgb(18, 22, 34)
+		line-height: 2.4
+		padding-left: 25px
+		cursor: pointer
+		&:before
+			content: ""
+			font-family: "fontello"
+			font-weight: normal
+			font-style: normal
+			display: inline-block
+			text-decoration: inherit
+			@include flex($jc: center, $ai: center)
+			position: absolute
+			cursor: pointer
+			top: -5px
+			left: 0
+			border: 1px solid rgb(214, 214, 214)
+			border-radius: 2px
+			background-color: #fff
+			width: 20px
+			height: 20px
+	&__phone
+		@include flex($jc: center, $ai: center)
+		border: 1px solid rgb(214, 214, 214)
+		border-radius: 5px
+		background-color: #fff
+		padding: 25px 60px 25px 15px
+		margin-top: 10px
+		position: relative
+		color: rgb(170, 170, 172)
+		width: 100%
+		height: 65px
+		&_input
+			font-size: 17px
+			width: 100%
+			font-family: "MuseoSansCyrl"
+			border-style: none
+			color: rgb(170, 170, 172)
+			&::-webkit-input-placeholder
+				color: rgb(170, 170, 172)
+
+
+	&__number
+		font-size: 15px
+		margin-top: 10px
+		font-family: "MuseoSansCyrl"
+		color: rgb(18, 22, 34)
+		line-height: 1.6
+		a
+			font-weight: bold
+			color: rgb(18, 22, 34)
+			&:hover
+				text-decoration: underline
+		&-mobile
+			display: none
+			font-size: 15px
+			margin-top: 10px
+			font-family: "MuseoSansCyrl"
+			color: rgb(18, 22, 34)
+			line-height: 1.6
+			a
+				font-weight: bold
+				color: rgb(18, 22, 34)
+				&:hover
+					text-decoration: underline
+	&__button
+		margin-top: 35px
+		height: 65px
+		font-size: 18px
+		font-family: "Montserrat"
+		color: rgb(0, 0, 0)
+		font-weight: bold
+		padding: 25px 30px
+		width: 265px
+		background-color: #fdc53c
+		box-shadow: inset 0px -3px 0px 0px #ffb12a,0px 4px 10px 0px rgba(253, 183, 60, 0.2),inset 0px 3px 2px 0px rgba(255, 245, 212, 0.4)
+		&:hover
+			background-color: #ffb12a
+
+.price-block
+	padding: 80px 0
+	text-align: center
+	color: #121622
+	.title:before
+		left: calc(50% - 75px/2)
+	&__text
+		font-size: 15px
+		line-height: 24px
+		font-family: "MuseoSansCyrl"
+		margin-bottom: 35px
+	&__button
+		margin-top: 10px
+		display: none
+	&__btn
+		font-size: 13px
+		line-height: 22px
+		font-family: "MuseoSansCyrl"
+		color: $mainC1
+		border-radius: 5px
+		border: 1px solid $mainC1
+		width: 206px
+		height: 38px
+		background-color: #fff
+		transition: .3s
+		&:hover
+			background-color: $mainC1
+			color: #fff
+			cursor: pointer
+
+	&-grid
+		@include grid2($c: 5, $g: 7px)
+		&__col
+			
+			text-align: center
+			@include flex($jc: center, $ai: center)
+			flex-direction: column
+		&__items
+			border-radius: 5px
+			background-color: #ffffff
+			border: 1px solid #a8a8a8
+			padding: 15px 0
+			width: 223px
+			height: 197px
+			&:hover
+				cursor: pointer
+				border: 1px solid $mainC1
+		&__text
+			font-size: 15px
+			line-height: 22px
+			color: #000000
+			font-family: "MuseoSansCyrl"
+		&__image
+			padding: 0 20px
+			height: 110px
+			width: 100%
+			margin-bottom: 10px
+			img
+				object-fit: contain
+				display: block
+				height: 100%
+				width: 100%
+				
+
+.offer-block
+	@include grid($s: 5px)
+	padding: 60px 0
+	background: url(../images/offer-bg.png) no-repeat center
+	background-size: cover
+	&-grid
+		@include flex($jc: flex-start, $ai: center)
+		padding-bottom: 50px
+		padding-right: 105px
+		&__title
+			max-width: 435px
+		&__text
+			font-size: 16px
+			line-height: 20px
+			color: #000000
+			font-family: "MuseoSansCyrl"
+			max-width: 440px
+			p + p
+				margin-top: 25px
+		&__form
+			background-color: #ffffff
+			padding: 25px 30px 20px
+			position: relative
+			.form-grid__checkbox
+				@include flex($jc: center, $ai: center)
+				margin-top: 15px
+				&_label
+					color: #464646
+					&:before
+						top: 0
+			.form-grid__phone
+				height: 60px
+			&_title
+				font-size: 16px
+				line-height: 20px
+				color: #000000
+				font-family: "MuseoSansCyrl"
+			&_list
+				font-size: 14px
+				line-height: 40px
+				color: #000000
+				font-family: "MuseoSansCyrl"
+				padding-bottom: 10px
+			&_input
+				display: none
+			&_label
+				position: relative
+				font-size: 14px
+				font-family: "MuseoSansCyrl"
+				color: #000000
+				line-height: 40px
+				padding-left: 30px
+				cursor: pointer
+				&:before
+					content: ""
+					font-family: "fontello"
+					font-weight: normal
+					font-style: normal
+					display: inline-block
+					text-decoration: inherit
+					@include flex($jc: center, $ai: center)
+					position: absolute
+					cursor: pointer
+					top: 0
+					left: 0
+					border: 1px solid rgb(214, 214, 214)
+					border-radius: 3px
+					background-color: #f2f2f2
+					width: 20px
+					height: 20px
+			&_inputs
+				@include grid2($c: 2, $g: 10px)
+				.form-grid__phone_input
+					font-size: 15px
+					line-height: 22px
+				.form-grid__phone
+					span
+						margin-right: 10px
+			&_button
+				width: 546px
+				height: 64px
+				border-radius: 5px
+				box-shadow: 0px 3px 0px #ffb12a
+				background-color: #fdc53b
+				font-size: 18px
+				color: #000000
+				font-family: "Montserrat"
+				margin-top: 10px
+				&:hover
+					background-color: #ffb12a
+			&_image
+				position: absolute
+				bottom: -50px
+				right: -140px
+				z-index: 10
+				img
+					max-height: 100%
+
+
+.offer-block-grid__form_input:checked+.offer-block-grid__form_label:before
+	font-family: "FontAwesome"
+	font-weight: 900
+	content: "\f00c"
+.icon-user
+	&:before
+		font-family: "FontAwesome"
+		font-weight: 900
+		content: "\f007"
+
+.icon-phone
+	&:before
+		font-family: "FontAwesome"
+		font-weight: 900
+		content: "\f095"
+
+.form-grid-user
+	.form-grid__input:before
+		content: "\e804"
+
+.warranty-block
+	@include grid($s: 5px)
+	padding: 80px 0
+	background: url(../images/warranty-bg.png) no-repeat center/cover
+	&-grid
+		@include flex($jc: flex-start, $ai: flex-start)
+		&__title
+			max-width: 555px
+			color: #fff
+		&__text
+			font-size: 16px
+			line-height: 20px
+			font-family: "MuseoSansCyrl"
+			color: #fff
+			max-width: 555px
+			font-weight: normal
+			margin-bottom: 25px
+		&__subtitle
+			font-size: 20px
+			max-width: 430px
+			line-height: 26px
+			color: #ffffff
+			font-family: "Montserrat"
+			font-weight: bold
+			text-align: center
+			text-transform: uppercase
+			padding: 15px
+			background: url(../images/warranty-block.png) no-repeat center/cover
+		&__subtext
+			margin-top: 30px
+			font-size: 16px
+			max-width: 430px
+			line-height: 20px
+			color: #738dc7
+			font-family: "MuseoSansCyrl"
+		&__icon
+			padding-right: 20px
+		&__col:nth-child(3)
+			width: 475px
+		&__video
+			position: relative
+			&-link
+				cursor: default
+				&:hover
+					.icon-play
+						background-color: $mainC1
+						color: #fff
+				img
+					max-width: 100%
+				.icon-play
+					@include flex($jc: center, $ai: center)
+					border-radius: 50%
+					border: 4px solid $mainC1
+					background-color: #fff
+					color: $mainC1
+					width: 68px
+					height: 68px
+					position: absolute
+					top: calc(50% - 68px/2)
+					left: calc(50% - 68px/2)
+					font-size: 25px
+					cursor: pointer
+					font-family: "FontAwesome"
+					font-weight: 900
+					&:before
+						content: "\f04b"
+						margin: 0px 0px
+.icon-play
+	@include flex($jc: center, $ai: center)
+	border-radius: 50%
+	border: 4px solid $mainC1
+	background-color: #fff
+	color: $mainC1
+	width: 68px
+	height: 68px
+	position: absolute
+	top: calc(50% - 68px/2)
+	left: calc(50% - 68px/2)
+	font-size: 25px
+	cursor: pointer
+	&:before
+		content: "\f04b"
+		margin: 0px 0px
+		font-family: "FontAwesome"
+		font-weight: 900
+
+.icon-play:hover
+	background-color: $mainC1
+	color: #fff
+	
+
+.services-block
+	padding: 80px 0
+	background-color: #fff
+	&__title
+		text-align: center
+		line-height: 45px
+	.title:before
+		left: calc(50% - 75px/2)
+	&__list
+		padding: 0 220px
+		&_link
+			@include flex($jc: space-between, $ai: flex-start)
+			font-size: 16px
+			font-family: "MuseoSansCyrl"
+			color: rgb(0, 0, 0)
+			line-height: 3.75
+			text-align: left
+			border-bottom: 1px solid rgb(219, 219, 219)
+		&_text
+			margin-left: 10px
+			width: 70%
+		&_btn
+			width: 109px
+			height: 35px
+			border-radius: 18px
+			background-color: #fff
+			border: 2px solid #275bcf
+			font-size: 12px
+			font-family: "Montserrat"
+			color: #285bd0
+			font-weight: bold
+			text-align: center
+			&:hover
+				background-color: #275bcf
+				border: 2px solid #275bcf
+				color: #fff
+				cursor: pointer
+
+textarea
+	resize: none
+	border-image: none
+.trust-block
+	@include grid($s: 5px)
+	padding-top: 20px
+	background: url(../images/trust-bg.png) no-repeat center/cover
+	&__mobile_photo
+		display: none
+	&-grid
+		@include flex($jc: flex-start, $ai: center)
+		&__col:nth-child(1)
+			z-index: 1
+			width: 50%
+			@include flex($jc: center, $ai: center)
+		&__title
+			max-width: 430px
+			color: #fff
+		&__text
+			font-size: 16px
+			line-height: 1.25
+			font-family: "MuseoSansCyrl"
+			color: #fff
+			max-width: 545px
+			font-weight: normal
+			margin-bottom: 20px
+			span
+				font-weight: bold
+			p + p
+				margin-top: 10px
+		&__subtitle
+			font-size: 20px
+			line-height: 20px
+			color: #ffffff
+			font-family: "MuseoSansCyrl"
+			font-weight: bold
+
+		&__subtext
+			@include flex($jc: flex-start, $ai: flex-start)
+			margin-top: 10px
+			font-size: 16px
+			line-height: 20px
+			color: #ffffff
+			font-family: "MuseoSansCyrl"
+		&__btn
+			border-radius: 5px
+			box-shadow: 0px 3px 0px #ffb12a
+			background-color: #fdc53b
+			font-size: 14px
+			color: #000000
+			font-family: "Montserrat"
+			font-weight: normal
+			text-align: center
+			padding: 15px
+			overflow: hidden
+			margin-bottom: 25px
+			&:hover
+				background-color: #ffb12a
+		&__photo
+			position: relative
+			.circle-animation
+				opacity: 1
+				top: 50%
+				left: 40%
+
+.calculation-block
+	.preview-block-grid__call-mobile
+		display: flex
+		position: relative
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		margin-top: 15px
+	.preview-block-grid__call
+		position: relative
+		right: 0
+	.preview-block-grid__text
+		margin-top: 20px
+	@include grid($s: 15px)
+	padding: 80px 0
+	text-align: center
+	.title:before
+		left: calc(50% - 75px/2)
+		line-height: 45px
+	.form-grid__phone
+		.icon-user
+			margin-right: 15px
+		.icon-phone
+			margin-right: 15px
+		
+	&__text
+		font-size: 15px
+		line-height: 24px
+		color: #121622
+		font-family: "MuseoSansCyrl"
+		text-align: center
+		margin-bottom: 30px
+	&-form
+		&-grid
+			@include grid2($c: 3, $g: 25px)
+			padding: 0 20px 10px 20px
+			&__col
+				border-radius: 5px
+			&__items
+				padding: 30px
+				box-shadow: 0px 14px 29px 0px rgba(0, 0, 0, 0.1)
+			&_width_item
+				margin: 0 auto
+	&-grid
+		
+		&__form
+			padding: 30px
+			border-radius: 5px
+			box-shadow: 0px 14px 29px rgba(0,0,0,0.1)
+			background-color: #ffffff
+			&_mark
+				&:after
+					font-family: "FontAwesome"
+					font-weight: 900
+					content: "\f078"
+					color: #000
+					font-size: 17px
+			&_item
+				@include flex($jc: space-between, $ai: center)
+				border: 1px solid rgb(214, 214, 214)
+				border-radius: 5px
+				background-color: #fff
+				padding: 25px 15px 25px 15px
+				margin-top: 10px
+				position: relative
+				color: rgb(170, 170, 172)
+				width: 295px
+				height: 65px
+				textarea
+					resize: none
+					height: 100px
+					padding-top: 20px
+					width: 100%
+			&_textarea
+				height: 120px
+			&_select
+				font-size: 17px
+				font-family: "MuseoSansCyrl"
+				border-style: none
+				width: 100%
+				color: rgb(170, 170, 172)
+				-webkit-appearance: none
+			&_vin
+				&:after
+					font-family: "FontAwesome"
+					font-weight: 900
+					content: "\f129"
+			&_button
+				margin-top: 10px
+
+		&__title
+			p
+				display: flex
+				align-items: center
+			span
+				@include flex($jc: center, $ai: center)
+				width: 36px
+				height: 36px
+				border-radius: 5px
+				background-color: #285bd0
+				color: #fff
+				padding: 5px 15px
+				margin-right: 15px
+			font-size: 18px
+			line-height: 20px
+			color: #121622
+			font-family: "Montserrat"
+			font-weight: bold
+
+.photo-block
+	padding: 80px 0
+	text-align: center
+	background: url(../images/photo-bg.png) no-repeat center/cover
+	.title:before
+		left: calc(50% - 75px/2)
+	&__title
+		line-height: 45px
+		color: #ffffff
+	&-grid
+		@include grid2($c: 4, $g: 10px)
+
+.work-performed-block
+	@include grid($s: 7px)
+	padding: 80px 0
+	text-align: center
+	@include grid($s: 7px)
+	.title
+		margin-bottom: 40px
+		&:before
+			left: calc(50% - 75px/2)
+		
+	&__title
+		line-height: 1.406
+		color: rgb(18, 22, 34)
+	&-grid
+		@include flex($jc: flex-start, $ai: center)
+		padding-bottom: 30px
+		flex-wrap: wrap
+		&__col
+			padding: 0 15px 35px 15px
+			@include flex($jc: center, $ai: center)
+			display: none
+			&_active
+				@include flex($jc: center, $ai: center)
+				width: calc(100% / 3)
+	&__items
+		border-radius: 5px
+		background-color: #fff
+		box-shadow: 0px 14px 29px rgba(0,0,0,0.1)
+		@include flex($jc: flex-start, $ai: flex-start)
+		flex-direction: column
+		&_text
+			padding: 20px
+			text-align: left
+	&__video
+		position: relative
+		&-link
+			cursor: default
+			img
+				max-width: 100%
+
+	&__subtitle
+		max-width: 190px
+		font-size: 16px
+		font-family: "Montserrat"
+		color: rgb(18, 22, 34)
+		font-weight: bold
+		line-height: 1.25
+		text-align: left
+	&__text
+		margin-top: 13px
+		font-size: 14px
+		font-family: "MuseoSansCyrl"
+		color: rgb(86, 88, 94)
+		line-height: 1.714
+	&__price
+		border-top: 1px solid #e1e1e1
+		padding: 20px
+		font-size: 14px
+		font-family: "MuseoSansCyrl"
+		color: rgb(86, 88, 94)
+		line-height: 1.714
+		width: 100%
+	&__list
+		text-align: left
+	&__link
+		display: flex
+		span
+			@include flex($jc: center, $ai: center)
+			border-radius: 50%
+			background-color: $mainC1
+			color: #fff
+			width: 18px
+			height: 18px
+			margin-right: 10px
+			font-size: 10px
+			padding: 5px
+			font-family: "FontAwesome"
+			font-weight: 900
+		&_price-icon:before
+			content: "\f158"
+		&_time-icon:before
+			content: "\f00c"
+	&__show-more
+		font-size: 14px
+		line-height: 24px
+		color: #56585e
+		font-family: "MuseoSansCyrl"
+		text-decoration: underline
+		&:hover
+			color: $mainC1
+	&__button
+		@include flex($jc: center, $ai: center)
+		&:before
+			content: "\f2f1"
+			font-family: "FontAwesome"
+			font-weight: 900
+			font-size: 17px
+			color: $mainC1
+			margin-right: 7px
+			vertical-align: text-top
+
+.video-block
+	@include grid($s: 7px)
+	padding: 80px 0
+	text-align: center
+	background: url(../images/video-bg.png) no-repeat center/cover
+	position: relative
+	opacity: 1
+	@include grid($s: 10px)
+	.circle-animation
+		z-index: 0
+		top: 50%
+	.title
+		&:before
+			left: calc(50% - 75px/2)	
+	&__title
+		line-height: 45px
+		color: #fff
+		z-index: 1
+	&__text
+		font-size: 15px
+		font-family: "MuseoSansCyrl"
+		color: rgb(255, 255, 255)
+		line-height: 1.6
+		margin-bottom: 25px
+		z-index: 1
+	&-grid
+		@include flex($jc: center, $ai: center)
+		&__col
+			position: relative
+			@include flex($jc: center, $ai: center)
+			img
+				border-top-left-radius: 5px
+				border-top-right-radius: 5px
+		&__link
+			width: 380px
+			img
+				max-width: 100%
+
+.certificate
+	&-block
+		@include grid($s: 10px)
+		padding: 80px 0 75px
+		text-align: center
+		position: relative
+		background-color: #f6f6f6
+		.slick-dots
+			bottom: 15px
+		.title
+			margin-bottom: 15px
+			&:before
+				left: calc(50% - 75px/2)	
+		&__title
+			line-height: 45px
+			color: #121622
+		&__text
+			font-size: 17px
+			font-family: "MuseoSansCyrl"
+			margin-bottom: 35px
+			color: rgb(18, 22, 34)
+		&-grid
+			@include flex($jc: center, $ai: center)
+			padding: 0 70px 50px 70px
+			&__col
+				@include flex($jc: center, $ai: center)
+				padding-bottom: 20px
+				img
+					display: block
+					width: 230px
+					box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.1)
+
+
+
+.logos-block
+	padding: 80px 0
+	text-align: center
+	@include grid($s: 10px)
+	border-bottom: 1px solid rgb(228, 228, 228)
+	background-color: #fff
+	.slick-dots
+		bottom: 10px
+		width: 70px
+	.slick-arrow
+		top: 20%
+	.title
+		margin-bottom: 40px
+		&:before
+			left: calc(50% - 75px/2)	
+	&__title
+		line-height: 45px
+		color: #121622
+	&-grid
+		@include flex($jc: center, $ai: center)
+		padding: 0 70px 50px 70px
+		position: relative
+		&__col
+			a:hover
+				filter: grayscale(0)
+			&_link
+				filter: grayscale(100%)
+				@include flex($jc: center, $ai: center)
+				width: 100%
+				height: 100%
+			&_image-small
+				width: 125px
+			img
+				display: block
+				max-width: 100%
+				width: 150px
+				height: 75px
+
+
+.comfort-block
+	padding: 80px 0
+	text-align: center
+	.title
+		margin-bottom: 30px
+		&:before
+			left: calc(50% - 75px/2)	
+	&__title
+		line-height: 45px
+		color: #121622
+	&-grid
+		@include grid2($c: 4, $g: 5px)
+		&__col
+			position: relative
+			&_hover
+				display: none
+				position: absolute
+				top: 0
+				left: 0
+				background-color: $mainC1
+				opacity: 0.8
+				color: #fff
+				font-size: 15px
+				font-family: "MuseoSansCyrl"
+				line-height: 1.333
+				text-align: center
+				padding: 75px 70px
+				height: 208px
+				width: 100%
+				cursor: pointer
+				p
+					max-width: 160px
+			&:hover
+				.comfort-block-grid__col_hover
+					display: block
+					cursor: pointer
+
+.comfort-block-grid__col_link img:hover .comfort-block-grid__col_hover
+	display: block
+	z-index: 10
+
+
+
+.news
+	&-block
+		background: url(../images/news-bg.png) no-repeat center/cover
+		padding: 80px 0 45px
+		text-align: center
+		position: relative
+		@include grid($s: 10px)
+		.title
+			margin-bottom: 40px
+			&:before
+				left: calc(50% - 75px/2)	
+		&__title
+			line-height: 45px
+			color: #121622
+		&-grid
+			@include flex($jc: center, $ai: center)
+			padding: 0 50px
+			&__col
+				@include flex($jc: center, $ai: center)
+				padding: 0 20px 50px 20px
+			&__items
+				border-radius: 5px
+				box-shadow: 0px 14px 29px rgba(0,0,0,0.1)
+				background-color: #ffffff
+				img
+					max-width: 100%
+			&__item
+				text-align: left
+				padding: 20px
+			&__title
+				font-size: 16px
+				font-family: "Montserrat"
+				color: #121622
+				font-weight: bold
+				line-height: 1.25
+				margin-bottom: 10px
+				max-width: 235px
+			&__text
+				font-size: 14px
+				font-family: "MuseoSansCyrl"
+				color: #56585e
+				line-height: 1.286
+				max-width: 270px
+			&__button
+				margin-top: 15px
+			&__btn
+				border: 2px solid $mainC1
+				border-radius: 18px
+				width: 145px
+				height: 31px
+				background-color: #fff
+				color: $mainC1
+				font-size: 12px
+				font-family: "Montserrat"
+				font-weight: bold
+				text-align: center
+				&:hover
+					background-color: $mainC1
+					color: #fff
+					cursor: pointer
+
+
+
+.slick-initialized
+	display: flex
+	justify-content: center
+	align-items: center
+.team
+	&-block
+		@include grid($s: 15px)
+		padding: 80px  45px
+		text-align: center
+		position: relative
+		.title
+			margin-bottom: 40px
+			&:before
+				left: calc(50% - 75px/2)	
+		.slick-dots
+			bottom: 15px
+		.slick-arrow.slick-prev
+			left: 10px
+		.slick-arrow.slick-next
+			right: 59px
+		&__title
+			line-height: 45px
+			color: #121622
+		&-grid
+			@include flex($jc: center, $ai: center)
+			padding: 0 65px
+			.slick-initialized .slick-slider
+				display: flex
+			&__col
+				@include flex($jc: center, $ai: center)
+				padding-bottom: 50px
+			&__items
+				border-radius: 5px
+				box-shadow: 0px 14px 29px 0px rgba(0,0,0,0.1)
+				background-color: #ffffff
+				text-align: left
+				max-width: 240px
+				img
+					max-width: 100%
+					display: block
+			&__subtitle
+				font-size: 16px
+				line-height: 20px
+				color: #121622
+				font-family: "Montserrat"
+				font-weight: bold
+				margin-bottom: 10px
+			&__text
+				padding: 20px
+			&__subtext
+				color: #56585e
+				font-size: 14px
+				line-height: 18px
+				font-family: "MuseoSansCyrl"
+
+
+.answers-block
+	padding: 80px 0
+	text-align: center
+	background-color: #f6f6f6
+	.title
+		margin-bottom: 40px
+		&:before
+			left: calc(50% - 75px/2)	
+	&__title
+		line-height: 45px
+		color: #121622
+	&-grid
+		@include grid2($c: 2, $g: 30px)
+		&__input
+			select
+				border: 1px solid rgb(214, 214, 214)
+				background-color: #fff
+				border-radius: 5px
+				width: 570px
+				height: 68px
+				font-size: 17px
+				font-family: "MuseoSansCyrl"
+				color: rgb(86, 88, 94)
+				line-height: 1.412
+				padding: 20px
+
+.spoiler > input + label:after
+	content: "\f107"
+	float: right
+	font-family: "FontAwesome"
+	font-weight: 900
+.spoiler > input:checked + label:after
+	content: "\f106"
+	float: right
+	font-family: "FontAwesome"
+	font-weight: 900
+.spoiler > input
+	display: none
+.spoiler > input + label , .spoiler > .spoiler_body
+	overflow: hidden
+	width: 100%
+	box-sizing: border-box
+	display: block
+	border: 1px solid rgb(214, 214, 214)
+	background-color: #fff
+	border-radius: 5px
+	height: 68px
+	font-size: 17px
+	font-family: "MuseoSansCyrl"
+	color: rgb(86, 88, 94)
+	line-height: 1.412
+	padding: 20px
+	text-align: left
+.spoiler > input + label + .spoiler_body
+	display: none
+.spoiler > input:checked + label + .spoiler_body
+	display: block
+.spoiler > .spoiler_body
+	background: #FFF
+	border-top: none
+
+.spoiler_hidden
+	display: none
+
+
+.evacuation-block
+	padding: 80px 0 40px
+	text-align: center
+	@include grid($s: 15px)
+	.title
+		&:before
+			left: calc(50% - 75px/2)	
+	&__title
+		line-height: 45px
+		color: #121622
+	&__subtitle
+		font-size: 20px
+		line-height: 24px
+		color: #121622
+		font-family: "MuseoSansCyrl"
+		text-align: center
+		margin-bottom: 10px
+	&-grid
+		@include flex($jc: center, $ai: center)
+		padding-bottom: 40px
+		&__list
+			font-size: 16px
+			line-height: 42px
+			color: #121622
+			font-family: "MuseoSansCyrl"
+			li
+				display: flex
+				text-align: center
+				padding-left: 30px
+			&_icon
+				@include flex($jc: center, $ai: center)
+				margin-right: 15px
+		&__image
+			margin-top: 20px
+			max-width: 100%
+		&__form
+			@include flex($jc: center, $ai: center)
+			flex-direction: column
+			border-radius: 5px
+			box-shadow: 0px 14px 29px rgba(0,0,0,0.1)
+			background-color: #ffffff
+			&_items
+				padding: 30px 30px 15px 30px
+				@include flex($jc: center, $ai: center)
+				flex-direction: column
+			&_title
+				font-size: 22px
+				line-height: 26px
+				color: #121622
+				font-family: "Montserrat"
+				font-weight: bold
+				text-align: center
+				max-width: 205px
+				margin-bottom: 20px
+			.form-grid__phone
+				width: 295px
+				span
+					margin-right: 15px
+			.form-grid__button
+				margin-top: 10px
+				width: 295px
+			&_number
+				border-top: 1px solid #e1e1e1
+				width: 100%
+				padding-top: 10px
+				padding-bottom: 25px
+
+#map
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+
+.map-block
+	padding: 130px 0 70px
+	position: relative
+	&__form
+		@include grid2($c: 1, $g: 30px)
+		width: 420px
+		position: relative
+		padding: 40px
+		font-size: 14px
+		font-family: "MuseoSansCyrl"
+		color: #56585e
+		line-height: 1.286
+		z-index: 1
+		background-color: #fff
+		margin-left: auto
+		border-radius: 5px
+		box-shadow: 0px 14px 29px rgba(0, 0, 0, 0.1)
+	&__adress
+		position: relative
+		
+	&__text
+		padding-left: 35px
+		h5
+			font-size: 14px
+			font-weight: bold
+			color: #000
+			margin-bottom: 10px
+		&:before
+			content: "\f3c5"
+			font-family: "FontAwesome"
+			font-weight: 900
+			position: absolute
+			top: 0
+			left: 0
+			color: $mainC1
+			font-size: 30px
+	&__phone
+		position: relative
+		&_text
+			padding-left: 35px
+			h5
+				font-size: 14px
+				font-weight: bold
+				color: #000
+				margin-bottom: 10px
+			&:before
+				content: "\f2a0"
+				font-family: "FontAwesome"
+				font-weight: 900
+				position: absolute
+				top: 0
+				left: 0
+				color: $mainC1
+				font-size: 30px
+				transform: rotate(-45deg)
+	&__contact
+		padding-left: 35px
+		.social
+			justify-content: flex-start
+			margin-top: 15px
+	&__btn
+		padding-left: 35px
+
+.gmnoprint, .gm-style-pbt, .gm-style-pbc, .gm-style-cc
+	display: none
+
+	// width: 100%
+	// height: 100vh
+
+.question-block
+	padding: 80px 0
+	text-align: center
+	background: url(../images/question-bg.png) no-repeat center/cover
+	position: relative
+	opacity: 1
+	@include flex($jc: center, $ai: center)
+	flex-direction: column
+	.circle-animation
+		z-index: 0
+		top: 50%
+	.pulse-circle__big
+		width: 365px
+		height: 365px
+	.pulse-circle__small
+		width: 285px
+		height: 285px
+	.title
+		&:before
+			left: calc(50% - 75px/2)	
+	&__title
+		line-height: 45px
+		color: #fff
+		z-index: 1
+	&__text
+		font-size: 18px
+		font-family: "MuseoSansCyrl"
+		color: #fff
+		line-height: 24px
+		margin-bottom: 35px
+		z-index: 1
+	.form-grid
+		justify-content: center
+		&__col
+			align-items: flex-start
+		&__number
+			color: #fff
+			z-index: 1
+			a
+				color: #fff
+		&__text
+			color: #afbdde
+		&__checkbox_label
+			color: #afbdde
+			&:before
+				color: #000
+
+.footer-block
+	padding: 15px 0 0
+	&-grid
+		@include flex($jc: space-between, $ai: center)
+		padding-bottom: 40px
+		.logo_image
+			margin-right: 6px
+		&__links
+			margin-top: 15px
+			a
+				font-size: 13px
+				font-family: "MuseoSansCyrl"
+				color: #121622
+				line-height: 1.538
+				position: relative
+				z-index: 1
+				&:after
+					content: ""
+					border-top: 2px solid #b5b6ba
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					z-index: -1
+				&:hover
+					cursor: pointer
+					color: $mainC1
+					&:after
+						border-top: 2px solid $mainC1
+		&__logos
+			@include flex($jc: space-between, $ai: center)
+			border: 4px solid #f3f3f3
+			padding: 20px 20px 20px 15px
+			width: 270px
+			img
+				max-width: 100%
+		&__pay
+			position: relative
+			&_text
+				font-size: 16px
+				line-height: 20px
+				padding: 7px
+				color: #000000
+				font-family: "MuseoSansCyrl"
+				background-color: #fff
+				position: absolute
+				left: 10%
+				top: -15%
+		&__form
+			border-radius: 5px
+			box-shadow: 0px 14px 29px rgba(0,0,0,0.1)
+			background-color: #ffffff
+			padding: 25px
+			&_text
+				font-size: 14px
+				line-height: 26px
+				color: #121622
+				font-family: "Montserrat"
+				font-weight: bold
+			&_input
+				@include grid2($c: 2, $g: 7px)
+				margin-top: 15px
+			.form-grid__button
+				margin-top: 0
+				width: 200px
+				font-size: 13px
+				height: 50px
+				padding: 0
+			.form-grid__phone
+				margin-top: 0
+				height: 50px
+				&_input
+					font-size: 13px
+					line-height: 18px
+		&__text
+			font-size: 13px
+			line-height: 18px
+			color: #121622
+			font-family: "MuseoSansCyrl"
+			max-width: 110px
+			a
+				color: #121622
+				&:hover
+					color: $mainC1
+
+// ============================
+// MAIN CODE END
+// ============================
+
+@for $i from 1 to length($mediaBp)
+	@media (max-width: nth($mediaBp, $i))
+		.container
+			max-width: nth($mediaBp, $i + 1)
+
+// ============================
+// MEDIA QUARIES
+// ============================
+@media (max-width: nth($mediaBp,1))
+	.price-block, .offer-block, .calculation-block, .warranty-block, .services-block, .work-performed-block, .photo-block, .video-block, .certificate-block, .logos-block, .comfort-block, .news-block, .team-block, .answers-block, .evacuation-block, .question-block, .comfort-block
+		padding: 60px 0
+	.topheader
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 50
+		padding: 10px 0
+		background-color: #fff
+		&-grid
+			&__col:nth-child(2)
+				display: none
+			&__col:nth-child(3)
+				display: none
+	.nav
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 11
+		background-color: #fff
+		padding: 80px 0 40px
+		overflow: scroll
+			x: hidden
+			y: auto
+		visibility: hidden
+		opacity: 0
+		transition: .3s
+		&_active
+			opacity: 1
+			visibility: visible
+		&_active &-list
+			transform: translate(0, 0)
+		&-list
+			flex-direction: column
+			align-items: center
+			transform: translate(0, 30px)
+			transition: .3s
+			a
+				padding: 0
+			li + li
+				margin: 0
+			&__link
+				display: block
+				font-size: 18px
+				line-height: 2.5
+
+	.nav-toggle
+		display: flex
+
+	.preview-block
+		padding-top: 120px
+		.pulse-circle__big
+			width: 350px
+			height: 350px
+		.pulse-circle__small
+			width: 275px
+			height: 275px
+		&-services
+			@include grid($s: 0px)
+			&-grid
+				padding: 60px 40px 25px
+				position: relative
+				@include flex($jc: center, $ai: center)
+				&__col
+					padding-bottom: 30px
+		&-grid
+			&__title-mobile
+				display: flex
+			&__title
+				display: none
+			&__image
+				width: 80%
+			&__title-mobile
+				align-items: flex-start
+			&__call
+				top: 50%
+				right: -35px
+
+	.preview-block-grid__col:nth-child(2)
+		justify-content: center
+		align-items: center
+
+	.price-block
+		&-grid
+			@include grid2($c: 4)
+
+	.offer-block
+		.title
+			&:before
+				left: calc(50% - 75px/2)
+		&-grid
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			padding: 0
+			&__col:nth-child(1)
+				text-align: center
+			&__col:nth-child(2)
+				padding-bottom: 50px
+			&__form
+				margin-top: 15px
+
+
+
+	.services-block__list
+		padding: 0 150px
+	.trust-block
+		padding: 60px 0 0
+
+	.trust-block-grid__col:nth-child(1)
+		width: 70%
+
+	.calculation-block
+		.form-grid__checkbox
+			margin-bottom: 0
+		.button-yellow
+			width: 100%
+		&__title
+			max-width: 550px
+			margin: 0 auto 20px
+		&-form-grid
+			@include grid2($c: 2, $g: 30px)
+			&_width
+				grid-column: 1 / -1
+				&_item
+					width: 440px
+			&__items
+				height: 100%
+		&-grid
+			&__form
+				&_item
+					width: 100%
+
+	.photo-block
+		&-grid
+			@include grid2($c: 3)
+
+	.work-performed-block
+		&-grid
+			padding: 0 70px 20px 70px
+		&__button
+			display: none
+		.slick-dots
+			width: 40px
+
+	.video-block
+		&-grid
+			padding: 0 70px 50px 70px
+		.slick-dots
+			width: 40px
+		.slick-arrow
+			&:before
+				border: 2px solid #fff
+				color: #fff
+				background-color: transparent
+			&:hover
+				&:before
+					background-color: #fff
+					color: $mainC1
+
+	.comfort-block
+		&-grid
+			@include grid2($c: 3, $g: 15px)
+
+	.map-block
+		padding-top: 150px
+		&__form
+			margin-right: auto
+
+	.evacuation-block-grid
+		&__col
+			width: 50%
+		&__list
+			line-height: 20px
+			font-size: 14px
+			p
+				text-align: left
+			li
+				display: flex
+				justify-content: flex-start
+				align-items: center
+			li:nth-child(1)
+				margin-bottom: 10px
+			li + li
+				margin-bottom: 10px
+
+	.footer-block
+		@include grid($s: 20px)
+		&-grid
+			flex-wrap: wrap
+			justify-content: center
+			align-items: center	
+
+
+
+@media (max-width: nth($mediaBp,2))
+	.title
+		font-size: 27px
+
+	.preview-block
+		.circle-animation
+			z-index: 0
+		.form-grid
+			justify-content: center
+		&-video
+			justify-content: center
+			align-items: center
+			width: 265px
+			margin: 15px auto
+			.pulse-circle
+				left: 27px
+			&__icon
+				left: 0
+		&-grid
+			justify-content: center
+			&__col:nth-child(2)
+				display: none
+			&__title
+				display: flex
+				align-items: center
+				&-mobile
+					display: none
+			&__subtitle
+				max-width: 100%
+				text-align: center
+				margin-bottom: 50px
+				margin-top: 15px
+				&-form
+					text-align: center
+					margin: 0 auto
+			&__image
+				&-mobile
+					display: flex
+					justify-content: center
+					align-items: center
+					position: relative
+					.circle-animation
+						z-index: 0
+					.pulse-circle__big
+						width: 400px
+						height: 400px
+					.pulse-circle__small
+						width: 325px
+						height: 325px
+			&__call
+				position: relative
+				right: 0
+				&-mobile
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					margin-top: 15px
+			&__img
+				img
+					width: 400px
+
+
+
+	.price-block
+		&-grid
+			@include grid2($c: 3)
+
+	.offer-block-grid
+		&__form_image
+			display: none
+		&__col:nth-child(2)
+			padding-bottom: 0
+
+	.warranty-block
+		.title
+			&:before
+				left: calc(50% - 75px/2)
+		&-grid
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			&__col
+				@include flex($jc: center, $ai: center)
+				flex-direction: column
+				text-align: center
+			&__video
+				margin-top: 20px
+			&__icon
+				padding-right: 0
+
+
+	.services-block__list
+		padding: 0 50px
+
+	.trust-block
+		padding: 60px 0
+		.pulse-circle__big
+			width: 300px
+			height: 300px
+		.pulse-circle__small
+			width: 200px
+			height: 200px
+	.trust-block-grid__photo
+		img
+			height: 300px
+
+
+
+	.calculation-block-form-grid
+		@include grid2($c: 2, $g: 10px)
+		&__col
+			padding: 10px
+		&__items
+			padding: 15px
+		&_width_item
+			width: 346px
+
+	.photo-block
+		&-grid
+			@include grid2($c: 2)
+
+	.comfort-block
+		&-grid
+			@include grid2($c: 2, $g: 15px)
+
+	.map-block
+		padding-top: 200px
+
+
+@media (max-width: nth($mediaBp,3))
+	.title
+		font-size: 25px
+	.price-block, .offer-block, .warranty-block, .services-block, .trust-block, .calculation-block, .work-performed-block, .photo-block, .video-block, .certificate-block, .logos-block,  .comfort-block, .news-block, .team-block, .answers-block, .evacuation-block, .question-block, .comfort-block
+		padding: 50px 0
+	.preview-block
+		&-grid
+			&__title
+				font-size: 25px
+
+	.price-block
+		&-grid
+			@include grid2($c: 2, $g: 25px)
+
+	.services-block__list
+		padding: 0 0
+		&_text
+			width: 60%
+
+	.trust-block
+		.title
+			margin-bottom: 15px
+			&:before
+				left: calc(50% - 75px/2)
+		&__mobile
+			display: none
+			&_photo
+				@include flex($jc: center, $ai: center)
+				flex-direction: column
+		&-grid
+			flex-direction: column-reverse
+			&__col
+				text-align: center
+				&:nth-child(1)
+					width: 100%
+					@include flex($jc: center, $ai: center)
+					flex-direction: column
+			&__title
+				margin: 0px auto
+
+	.calculation-block-form-grid
+		@include grid2($c: 1)
+		&__col
+			display: flex
+			justify-content: center
+		&__items
+			width: 80%
+	.video-block
+		&__text
+			max-width: 380px
+			margin: 0px auto
+	.answers-block
+		&-grid
+			@include grid2($c: 1, $g: 30px)
+
+	.map-block
+		padding: 200px 0 50px
+
+	.evacuation-block
+		@include grid($s: 5px)
+		&-grid
+			padding-bottom: 0
+			flex-direction: column
+			&__col:nth-child(2)
+				display: none
+
+	.footer-block
+		@include grid($s: 10px)
+		&-grid
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			&__link
+				display: none
+			&__links
+				text-align: center
+			&__form
+				padding: 15px
+			&__text
+				max-width: 190px
+				p
+					font-size: 11px
+					display: flex
+					a
+						margin-left: 5px
+
+@media (max-width: nth($mediaBp,4))
+	.title
+		font-size: 24px
+		padding-bottom: 10px
+		margin-bottom: 25px
+		line-height: 22px
+		&:before
+			width: 37px
+			border: 1px solid $mainC1
+
+	.slick-dots
+		width: 40px
+	.slick-arrow
+		&:before
+			width: 32px
+			height: 32px
+			font-size: 15px
+	.slick-arrow.slick-next
+		right: 32px
+	.price-block, .offer-block, .warranty-block, .services-block, .trust-block, .calculation-block, .work-performed-block, .photo-block, .video-block, .certificate-block, .logos-block, .comfort-block, .news-block, .team-block, .answers-block, .evacuation-block, .comfort-block
+		padding: 30px 0
+
+	.logo
+		&_image
+			margin-right: 0
+			width: 150px
+		&_text
+			display: none
+
+	.nav-list__link
+		font-size: 15px
+		line-height: 2
+
+	.icon-user
+		font-size: 12px
+	.icon-phone
+		font-size: 12px
+		margin-right: 10px
+
+	.preview-block
+		background-color: #fff
+		padding-top: 75px
+		.circle-animation
+			z-index: 0
+		&-video__icon
+			left: -23px
+		&-grid
+			justify-content: center
+			&__col:nth-child(2)
+				display: none
+			&__title
+				display: none
+				&-mobile
+					font-size: 17px
+					line-height: 27px
+					text-align: center
+					display: flex
+					align-items: center
+			&__subtitle
+				font-size: 14px
+				line-height: 45px
+				text-align: center
+				margin-bottom: 25px
+				&-form
+					font-size: 12px
+					line-height: 17px
+					text-align: center
+					max-width: 275px
+					margin: 25px auto 15px
+			&__image
+				&-mobile
+					display: flex
+					justify-content: center
+					align-items: center
+					position: relative
+					.circle-animation
+						z-index: 0
+					.pulse-circle__big
+						width: 175px
+						height: 175px
+					.pulse-circle__small
+						width: 140px
+						height: 140px
+			&__call
+				position: relative
+				width: 110px
+				height: 110px
+				&_text
+					font-size: 10px
+					line-height: 12px
+					span
+						font-size: 12px
+						line-height: 15px
+				&-mobile
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					margin-top: 15px
+			&__text
+				margin-top: 20px
+				font-size: 10px
+				line-height: 18px
+			&__img
+				img
+					width: 195px
+			&__form
+				margin-top: 0
+		&-video
+			justify-content: center
+			width: 180px
+			margin: 10px auto
+			.pulse-circle
+				left: -5px
+				&__video
+					width: 60px
+					height: 60px
+			&__text
+				padding: 12px 15px 12px 40px
+			&__title
+				font-size: 13px
+				line-height: 17px
+			&__time
+				font-size: 9px
+				line-height: 18px
+			&__icon
+				width: 45px
+				height: 45px
+				top: calc(50% - 45px/2)
+
+	.pulse-circle__call
+		width: 127px
+		height: 127px
+	
+	.form-grid
+		flex-direction: column
+		&__col
+			justify-content: center
+			align-items: center
+		&__text
+			font-size: 10px
+			line-height: 19px
+			text-align: center
+		&__number
+			display: none
+			&-mobile
+				display: block
+				font-size: 12px
+				line-height: 20px
+		&__phone
+			width: 220px
+			height: 55px
+			margin-top: 0
+			padding: 15px
+			&_input
+				font-size: 14px
+		&__button
+			margin-top: 0
+			width: 220px
+			height: 53px
+			font-size: 14px
+			padding: 0
+		&__checkbox_label
+			font-size: 8px
+			line-height: 19px
+			&:before
+				width: 13px
+				height: 13px
+
+	.preview-block-services-grid
+		padding: 25px 40px 10px
+
+	.services
+		&-items
+			max-width: 220px
+		&-item
+			padding: 15px
+		&-title
+			font-size: 12px
+			line-height: 14px
+		&-text
+			font-size: 11px
+			line-height: 15px
+			max-width: 195px
+			margin-top: 10px
+
+	.price-block
+		.title
+			font-size: 15px
+			line-height: 21px
+			margin-bottom: 10px
+			&:before
+				left: calc(50% - 37px/2)
+		&-grid
+			@include grid2($c: 2, $g: 5px)
+			&__col
+				display: none
+				text-align: center
+				&_active
+					@include flex($jc: center, $ai: center)
+					flex-direction: column
+			&__items
+				width: 150px
+				height: 133px
+				padding: 5px 0
+			&__image
+				height: 75px
+				margin-bottom: 10px
+			&__text
+				font-size: 10px
+				line-height: 14px
+		&__text
+			font-size: 12px
+			line-height: 11px
+			margin-bottom: 15px
+		&__button
+			display: block
+
+	.offer-block
+		.form-grid__phone
+			height: 45px
+			justify-content: flex-start
+			width: 260px
+		.form-grid__checkbox
+			margin-top: 10px
+			&_label
+				font-size: 8px
+				line-height: 14px
+				padding-left: 20px
+				&:before
+					width: 14px
+					height: 14px
+		.title
+			font-size: 15px
+			line-height: 20px
+			max-width: 210px
+			margin-bottom: 15px
+			&:before
+				left: calc(50% - 37px/2)
+		// .form-grid__phone
+		// 	width: 260px
+		&-grid
+			&__title
+				margin: 0 auto 15px
+			&__text
+				font-size: 12px
+				line-height: 16px
+				max-width: 275px
+				p + p
+					margin-top: 20px
+			&__form
+				width: 300px
+				padding: 25px 40px 25px 20px
+				&_inputs
+					margin-top: 10px
+					@include grid2($c: 1, $g: 8px)
+					.form-grid__phone_input
+						font-size: 11px
+						line-height: 16px
+				&_title
+					font-size: 13px
+					line-height: 15px
+					margin-bottom: 20px
+				&_label
+					font-size: 10px
+					line-height: 12px
+					padding-left: 0
+					&:before
+						width: 15px
+						height: 15px
+						left: -20px
+				&_list
+					line-height: 12px
+					padding-bottom: 0px
+					li
+						padding-left: 20px
+					li + li
+						margin-top: 15px
+				&_button
+					width: 260px
+					height: 62px
+					font-size: 13px
+
+
+	.warranty-block
+		.title
+			font-size: 15px
+			line-height: 21px
+			max-width: 270px
+			&:before
+				left: calc(50% - 37px/2)
+		&-grid
+			&__icon
+				img
+					width: 45px
+			&__text
+				font-size: 12px
+				line-height: 15px
+				max-width: 230px
+				margin-bottom: 15px
+			&__subtitle
+				font-size: 13px
+				line-height: 17px
+				padding: 10px
+				max-width: 295px
+			&__subtext
+				margin-top: 20px
+				font-size: 10px
+				line-height: 13px
+				max-width: 295px
+			&__video
+				margin-top: 10px
+				&-link
+					img
+						width: 280px
+					.icon-play
+						width: 38px
+						height: 38px
+						top: calc(50% - 38px/2)
+						left: calc(50% - 38px/2)
+						font-size: 15px
+	.services-block
+		.title
+			font-size: 18px
+			margin-bottom: 15px
+			line-height: 25px
+			&:before
+				left: calc(50% - 37px/2)
+		&__list
+			&_link
+				font-size: 11px
+				line-height: 39px
+				color: #000
+				padding: 0 10px
+			&_button
+				display: none
+			&_text
+				width: 80%
+				margin-left: 0
+
+	.trust-block
+		.pulse-circle__small
+			width: 150px
+			height: 150px
+		.pulse-circle__big
+			width: 200px
+			height: 200px
+		.title
+			font-size: 16px
+			margin-bottom: 10px
+			line-height: 22px
+			&:before
+				left: calc(50% - 37px/2)
+		&-grid
+			&__title
+				max-width: 215px
+			&__text
+				font-size: 12px
+				line-height: 16px
+				max-width: 285px
+				margin: 0px auto
+			&__photo
+				img
+					height: 210px
+			&__btn
+				width: 160px
+				height: 45px
+				font-size: 11px
+				margin-bottom: 10px
+			&__subtitle
+				font-size: 14px
+				line-height: 14px
+			&__subtext
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				font-size: 11px
+				line-height: 14px
+				img
+					width: 63px
+					margin-top: 10px
+
+	.calculation-block
+		.form-grid__phone_input
+			font-size: 12px
+		.form-grid__checkbox_label:before
+			top: -2px
+		.form-grid__phone
+			width: 100%
+			padding: 15px
+			height: 48px
+		.button-yellow
+			height: 50px
+			font-size: 12px
+		.title
+			font-size: 14px
+			margin-bottom: 15px
+			line-height: 21px
+			&:before
+				left: calc(50% - 37px/2)
+		&__title
+			max-width: 250px
+			margin: 0px auto 15px
+		&__text
+			font-size: 11px
+			margin-bottom: 20px
+			line-height: 11px
+		&-grid
+			&__title
+				font-size: 12px
+				line-height: 14px
+				span
+					width: 25px
+					height: 25px
+					margin-right: 10px
+			&__form
+				&_select
+					font-size: 12px
+				&_item
+					height: 48px
+					padding: 15px
+					textarea
+						height: 100%
+						padding-top: 0
+				&_textarea
+					height: 85px
+				&_input
+					@include grid2($c: 1, $g: 10px)
+					width: 100%
+					margin-top: 10px
+
+	.photo-block
+		.title
+			font-size: 16px
+			margin-bottom: 15px
+			line-height: 22px
+			&:before
+				left: calc(50% - 37px/2)
+		&-grid
+			@include grid2($c: 2, $g: 5px)
+			&__col
+				@include flex($jc: center, $ai: center)
+			&__items
+				width: 150px
+				img
+					max-width: 100%
+
+	.icon-play
+		width: 38px
+		height: 38px
+		top: calc(50% - 38px/2)
+		left: calc(50% - 38px/2)
+		font-size: 15px
+	.work-performed-block
+		.title
+			font-size: 16px
+			margin-bottom: 20px
+			line-height: 20px
+			&:before
+				left: calc(50% - 37px/2)
+		&__title
+			max-width: 200px
+			margin: 0px auto
+		&__items
+			max-width: 220px
+			img
+				max-width: 100%
+			&_text
+				padding: 10px 15px
+		&__subtitle
+			font-size: 13px
+			line-height: 14px
+		&__text
+			font-size: 11px
+			margin-top: 10px
+			line-height: 14px
+		&__price
+			font-size: 11px
+			line-height: 14px
+			padding: 15px
+		&__link
+			span
+				width: 11px
+				height: 11px
+				font-size: 5px
+		
+
+	.video-block
+		.circle-animation
+			display: none
+		.title
+			font-size: 17px
+			margin-bottom: 10px
+			line-height: 24px
+			&:before
+				left: calc(50% - 37px/2)
+		&__text
+			font-size: 12px
+			margin-bottom: 20px
+			line-height: 16px
+			max-width: 255px
+			margin: 5px auto 20px
+		&-grid
+			padding-bottom: 30px
+			&__link
+				width: 225px
+				img
+					max-width: 100%
+
+	.logos-block
+		.title
+			font-size: 15px
+			margin-bottom: 25px
+			line-height: 28px
+			&:before
+				left: calc(50% - 37px/2)
+		&-grid
+			padding-bottom: 40px
+			&__col
+				img
+					height: 50px
+
+	.comfort-block
+		display: none
+
+	.certificate-block
+		.slick-dots
+			width: 50px
+		.title
+			font-size: 15px
+			line-height: 21px
+			margin-bottom: 10px
+			&:before
+				left: calc(50% - 37px/2)
+		&__text
+			font-size: 13px
+			line-height: 24px
+			margin-bottom: 20px
+		&-grid
+			padding-bottom: 35px
+			&__col
+				img
+					width: 150px
+
+	.news-block
+		.title
+			font-size: 16px
+			margin-bottom: 25px
+			&:before
+				left: calc(50% - 37px/2)
+		&-grid
+			&__col
+				padding: 0 0 35px 0
+			&__items
+				max-width: 230px
+			&__item
+				padding: 15px
+			&__title
+				font-size: 11px
+				line-height: 14px
+			&__text
+				font-size: 10px
+				line-height: 13px
+			&__button
+				margin-top: 10px
+			&__btn
+				width: 105px
+				height: 25px
+				font-size: 9px
+
+	.team-block
+		.slick-arrow.slick-prev
+			left: 5px
+		.slick-arrow.slick-next
+			right: 37px
+		.title
+			font-size: 17px
+			line-height: 24px
+			margin-bottom: 20px
+			&:before
+				left: calc(50% - 37px/2)
+		&-grid
+			&__col
+				padding-bottom: 40px
+			&__items
+				max-width: 220px
+			&__text
+				text-align: center
+			&__subtitle
+				font-size: 14px
+				line-height: 15px
+				margin-bottom: 5px
+			&__subtext
+				font-size: 12px
+				line-height: 15px
+	.answers-block
+		.title
+			font-size: 14px
+			line-height: 20px
+			margin-bottom: 15px
+			&:before
+				left: calc(50% - 37px/2)
+		.spoiler > input + label , .spoiler > .spoiler_body
+			height: 34px
+			font-size: 12px
+			padding: 10px
+			line-height: 12,73px
+		&-grid
+			@include grid2($c: 1, $g: 10px)
+	#map
+		img
+			width: 10px
+	.map-block
+		&__form
+			@include grid2($c: 1, $g: 20px)
+			width: 300px
+			padding: 30px
+			font-size: 11px
+		&__text
+			padding-left: 30px
+			h5
+				font-size: 11px
+		&__phone_text
+			padding-left: 30px
+			h5
+				font-size: 11px
+		&__contact
+			.social
+				margin-top: 10px
+		.social__link
+			width: 32px
+			height: 32px
+		&__btn
+			.contact_button
+				width: 155px
+				height: 30px
+				padding: 10px 20px
+			.button
+				font-size: 11px
+
+	.evacuation-block
+		@include grid($s: 0px)
+		&__subtitle
+			font-size: 13px
+		.title
+			font-size: 14px
+			margin-bottom: 15px
+			&:before
+				left: calc(50% - 37px/2)
+		&-grid
+			flex-direction: column
+			&__col:nth-child(2)
+				display: none
+			&__list
+				font-size: 10px
+				line-height: 25px
+				li
+					padding-left: 0
+				&_icon
+					margin-right: 5px
+					img
+						width: 18px
+						height: 18px
+
+	.question-block
+		display: none
+
+	.footer-block
+		&-grid
+			&__links
+				font-size: 11px
+			&__pay
+				&_text
+					font-size: 13px
+			&__logos
+				width: 220px
+				padding: 20px 15px 15px
+				li + li
+					margin-right: 10px
+			&__form
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				padding: 15px 35px
+				&_input
+					@include grid2($c: 1, $g: 7px)
+				&_text
+					max-width: 200px
+					font-size: 12px
+					text-align: center
+			.form-grid__phone
+				width: 220px
+				padding: 15px
+			.form-grid__button
+				width: 220px
+	
+@media (max-width: nth($mediaBp,5))		
+	.work-performed-block
+		&-grid
+			padding: 0 0px 20px 0px
+
+	.preview-block-services-grid
+		padding: 20px 0
+		&__col
+			padding: 0 20px 30px
+
+	.calculation-block-form-grid__items
+		width: 100%

@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">    
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a class="nav-list__link active" href="index.html">Главная</a></li>
+                <li><a class="nav-list__link" href="#anchor1">Цены</a></li>
+                <li><a class="nav-list__link" href="#anchor2">Услуги</a></li>
+                <li><a class="nav-list__link" href="#anchor3">Калькулятор стоимости</a></li>
+                <li><a class="nav-list__link" href="#anchor4">Фотографии центра</a></li>
+                <li><a class="nav-list__link" href="#anchor5">Выполненные работы</a></li>
+                <li><a class="nav-list__link" href="#anchor6">Камеры онлайн</a></li>
+                <li><a class="nav-list__link" href="#anchor7">Новости</a></li>
+                <li><a class="nav-list__link" href="#anchor8">Команда</a></li>
+                <li><a class="nav-list__link" href="#anchor9">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="header header-bg">
+        <div class="topheader">
+            <div class="container">
+                <div class="topheader-grid">
+                    <div class="topheader-grid__col">
+                        <div class="logo">
+                            <a class="logo_link">
+                                <img src="./images/logo.png" alt="logo" class="logo_image">
+                                <div class="logo_text">
+                                    <p>Центр обслуживания авотомобилей</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="topheader-grid__col">
+                        <div class="map">
+                            <span class="map-icon"></span>
+                            <div class="map_text">
+                                <p>Москва, ул. Примерная 100/2, м. Ленина</p>
+                                <a href="#anchor10">показать на крате</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="topheader-grid__col"> 
+                        <ul class="social">
+                            <li><a href="#" class="social__link social__link_telegram"></a></li>
+                            <li><a href="#" class="social__link social__link_viber"></a></li>
+                        </ul>
+                        <div class="contact">
+                            <a class="contact_number">+7 (495) 123-45-67</a>
+                            <p class="contact_text">Ежедневно с 09.00 до 21.00</p>
+                            <button class="button contact_button">
+                                    <span class="icon-phone"></span>
+                                    Заказать звонок
+                            </button>
+                        </div>
+                    </div>
+                    <div class="nav-toggle">
+                        <span class="nav-toggle__open"></span>
+                        <span class="nav-toggle__close"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="preview-block">
+            <div class="container">
+                <div class="preview-block-grid">
+                    <div class="preview-block-grid__col">
+                        <h1 class="preview-block-grid__title">
+                            <p>Выполним ремонт</p>
+                            <p>и обслуживание Вашего Mercedes</p>
+                        </h1>
+                        <h1 class="preview-block-grid__title-mobile">
+                            <p>Выполним ремонт</p>
+                            <p>и обслуживание Вашего</p>
+                            <p>Mercedes</p>
+                        </h1>
+                        <h2 class="preview-block-grid__subtitle">Замена моторного масла от 1000 руб.</h2>
+                        <div class="preview-block-grid__image-mobile">
+                            <div class="circle-animation">
+                                <div class="pulse-circle pulse-circle__big"></div>
+                                <div class="pulse-circle pulse-circle__small"></div>
+                            </div>
+                            <div class="preview-block-grid__img">
+                                <img src="images/preview.png" alt="Car">
+                            </div>
+                        </div>
+                        <a data-fancybox="" href="https://www.youtube.com/watch?v=98d13af805o" class="preview-block-video">
+                            <div class="circle-animation">
+                                <div class="pulse-circle pulse-circle__video"></div>
+                            </div>
+                            <div class="preview-block-video__icon">
+                            </div>
+                            <div class="preview-block-video__text">
+                                <div class="preview-block-video__title">Посмотрите видео о нашем сервисе</div>
+                                <div class="preview-block-video__time">2 мин 16 сек</div>
+                            </div>
+
+                        </a>
+                        <h2 class="preview-block-grid__subtitle-form">Получите бесплатную консультацию мастера и узнайте стоимость ТО для Вашего автомобиля прямо сейчас:</h2>
+                        <form class="preview-block-grid__form form">
+                            <div class="form-grid">
+                                <div class="form-grid__col">
+                                    <label class="form-grid__text">Введите Ваш контактный телефон:</label>
+                                    <div class="form-grid__phone">
+                                        <span class="icon-phone"></span>
+                                        <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="+7 (___) ___-__-__">
+                                    </div>
+                                    <div class="form-grid__number">
+                                        <p>или позвоните: 
+                                            <a href="#">+7 (495) 123-45-67</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-grid__col">
+                                    <button class="button form-grid__button">Узнать стоимость ТО</button>
+                                    <div class="form-grid__checkbox">
+                                        <input type="checkbox" checked class="form-grid__checkbox_input" id="form-checkbox">
+                                        <label class="form-grid__checkbox_label" for="form-checkbox">Даю согласие на обработку персональных данных</label>
+                                    </div>
+                                    <div class="form-grid__number-mobile">
+                                        <p>или позвоните: 
+                                            <a href="#">+7 (495) 123-45-67</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="preview-block-grid__call-mobile">
+                                <div class="preview-block-grid__call">
+                                    <div class="circle-animation">
+                                        <div class="pulse-circle pulse-circle__call"></div>
+                                    </div>
+                                    <a class="preview-block-grid__call_text">
+                                        <p>
+                                            <span class="icon-phone"></span>
+                                            <span>Позвони сейчас</span>
+                                            <br>и получи скидку 40%
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="preview-block-grid__text">Скидки распространяются на работы</div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="preview-block-grid__col">
+                        <div class="preview-block-grid__image">
+                            <div class="circle-animation">
+                                <div class="pulse-circle pulse-circle__big"></div>
+                                <div class="pulse-circle pulse-circle__small"></div>
+                            </div>
+                            <div class="preview-block-grid__img">
+                                <img src="images/preview.png" alt="Car">
+                            </div>
+                            <div class="preview-block-grid__call">
+                                 <div class="circle-animation">
+                                    <div class="pulse-circle pulse-circle__call"></div>
+                                </div>
+                                <a class="preview-block-grid__call_text">
+                                    <p>
+                                        <span class="icon-phone"></span>
+                                        <span>Позвони сейчас</span>
+                                        <br>и получи скидку 40%
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="preview-block-grid__text">Скидки распространяются на работы</div>
+                    </div>
+                </div>
+                <div class="preview-block-services">
+                    <div class="preview-block-services-grid">
+                        <div class="preview-block-services-grid__col">
+                            <div class="services-items">
+                                <div class="services-image">
+                                    <img src="./images/preview-1.png">
+                                </div>
+                                <div class="services-item">
+                                    <h3 class="services-title">Выявление любой неисправности автомобиля менее, чем за 1 час</h3>
+                                    <div class="services-text">
+                                        <p>Сотрудники сервиса специализируются на Mercedes. Это позволяет быстро выявить неисправность и устранить ее.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="preview-block-services-grid__col">
+                            <div class="services-items">
+                                <div class="services-image">
+                                    <img src="./images/preview-2.png">
+                                </div>
+                                <div class="services-item">
+                                    <h3 class="services-title">Выявление любой неисправности автомобиля менее, чем за 1 час</h3>
+                                    <div class="services-text">
+                                        <p>Сотрудники сервиса специализируются на Mercedes. Это позволяет быстро выявить неисправность и устранить ее.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-block-services-grid__col">
+                            <div class="services-items">
+                                <div class="services-image">
+                                    <img src="./images/preview-3.png">
+                                </div>
+                                <div class="services-item">
+                                    <h3 class="services-title">Выявление любой неисправности автомобиля менее, чем за 1 час</h3>
+                                    <div class="services-text">
+                                        <p>Сотрудники сервиса специализируются на Mercedes. Это позволяет быстро выявить неисправность и устранить ее.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>               
+    </header>
+
+    <main>
+        <div class="price-block" id="anchor1">
+            <div class="container">
+                <h2 class="price-block__title title">Цены на ремонт и обслуживание</h2>
+                <span class="price-block__line"></span>
+                <div class="price-block__text">
+                    <p>Выберите модель автомобиля:</p>
+                </div>
+                <div class="price-block-grid" id="price-list">
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-1.jpg">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Renault Logan</p>
+                                <p>2007 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-2.jpg">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Chevrolet Lacetti 1.6,</p>
+                                <p>2007 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-3.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Daewoo Matiz 1.0,</p>
+                                <p>2012 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-4.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Peugeot 308 1.6,</p>
+                                <p>2010 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-5.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>VW Polo 1.6,</p>
+                                <p>2011 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-6.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Opel Corsa 1.4,</p>
+                                <p>2009 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-7.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Ford Mondeo 2.0,</p>
+                                <p>2012 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-8.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Toyota Camry 2.4,</p>
+                                <p>2009 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-9.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Mazda 6 2.0 143hp,</p>
+                                <p>2010 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-10.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>BMW 5 E60 525i,</p>
+                                <p>2005 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-11.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>AUDI Q5 (8R) 2.0</p>
+                                <p>11.08-</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-12.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Toyota Corolla 1.6,</p>
+                                <p>2012 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-13.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Ford Focus III 1,6,</p>
+                                <p>2012 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-14.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Hyundai Solaris 1.6,</p>
+                                <p>2012 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-15.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Nissan Qashqai 2.0 бенз</p>
+                                <p>2009 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-16.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Nissan Teana</p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-17.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Suzuki Grand Vitara 2.0 140hp,</p>
+                                <p>2010 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-18.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Toyota Land Cruiser 200 4.7,</p>
+                                <p>2009 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-19.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Toyota Prado 3.0D,</p>
+                                <p>2010 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-20.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Daewoo Nexia 1.6, 2010 г.</p>
+                                <p>2010 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-21.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Ford Transit 1.8 diesel,</p>
+                                <p>2009 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-22.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Mercedes Sprinter 95квт 315</p>
+                                <p>CDI</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-23.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Fiat Duсato,</p>
+                                <p>2013 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-24.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Skoda Octavia</p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-25.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Skoda Yeti</p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-26.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Skoda Superb</p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-27.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Skoda Rapid</p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-28.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>KIA Rio</p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-29.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>KIA Sorento</p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-30.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>KIA Sportage</p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-31.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Chevrolet Cruze</p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-block-grid__col">
+                        <div class="price-block-grid__items">
+                            <div class="price-block-grid__image">
+                                <img src="./images/car-32.png">
+                            </div>
+                            <div class="price-block-grid__text">
+                                <p>Chevrolet Aveo</p>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-block__button">
+                	<button class="price-block__btn" id="price__show-more">Показать ещё 22 автомобиля</button>
+                	<button class="price-block__btn" id="price__show-less">Скрыть 22 автомобиля</button>
+                </div>
+            </div>
+        </div>
+        <div class="offer-block">
+            <div class="container">
+                <div class="offer-block-grid">
+                    <div class="offer-block-grid__col">
+                        <h2 class="offer-block-grid__title title">Летнее предложение: заправка кондиционера за 1 600 руб.</h2>
+                        <div class="offer-block-grid__text">
+                            <p>Специалисты сервисного центра делают качественное и комплексное сервисное обслуживание систем кондиционирования на новой технологичной установке MAHLE ACX 150.</p>
+                            <p>Гарантируем новая установка MAHLE ACX 150 полностью соответствует регламентным требованиям автопроизводтелей.</p>
+                        </div>
+                    </div>
+                    <div class="offer-block-grid__col">
+                        <form class="offer-block-grid__form">
+                            <h3 class="offer-block-grid__form_title">Выберите комплексную услугу или отдельный сервис:</h3>
+                            <ul class="offer-block-grid__form_list">
+                                <li>
+                                    <input class="offer-block-grid__form_input" type="checkbox" id="form-1" name="form-1">
+                                    <label class="offer-block-grid__form_label" for="form-1">диагностика и устранение неисправностей в системе кондициониров</label>
+                                </li>
+                                <li>
+                                    <input class="offer-block-grid__form_input" type="checkbox" id="form-2" name="form-2">
+                                    <label class="offer-block-grid__form_label" for="form-2">заправка кондиционера</label>
+                                </li>
+                                <li>
+                                    <input class="offer-block-grid__form_input" type="checkbox" id="form-3" name="form-3">
+                                    <label class="offer-block-grid__form_label" for="form-3">замена салонного фильтра</label>
+                                </li>
+                                <li>
+                                    <input class="offer-block-grid__form_input" type="checkbox" id="form-4" name="form-4">
+                                    <label class="offer-block-grid__form_label" for="form-4">антибактериальная обработка системы</label>
+                                </li>
+                                <li>
+                                    <input class="offer-block-grid__form_input" type="checkbox" id="form-5" name="form-5">
+                                    <label class="offer-block-grid__form_label" for="form-5">промывка радиаторов со снятием</label>
+                                </li>
+                            </ul>
+                            <div class="offer-block-grid__form_inputs">
+                                <div class="form-grid__phone">
+                                     <span class="icon-user"></span>
+                                    <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="Введите Ваше имя">
+                                </div>
+                                <div class="form-grid__phone">
+                                    <span class="icon-phone"></span>
+                                    <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="Контактный телефон">
+                                </div>
+                            </div>
+                            <div class="offer-block-grid__form_btn">
+                                <button class="button offer-block-grid__form_button">Записаться на заправку кондиционера</button>
+                            </div>
+                            <div class="form-grid__checkbox">
+                                <input type="checkbox" checked class="form-grid__checkbox_input" id="offer-form-checkbox">
+                                <label class="form-grid__checkbox_label" for="offer-form-checkbox">Даю согласие на обработку персональных данных</label>
+                            </div>
+                            <div class="offer-block-grid__form_image">
+                                <img src="./images/offer-img.png">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="warranty-block">
+            <div class="container">
+                <div class="warranty-block-grid">
+                    <div class="warranty-block-grid__col">
+                        <div class="warranty-block-grid__icon">
+                            <img src="./images/warranty-icon.png">
+                        </div>
+                    </div>
+                    <div class="warranty-block-grid__col">
+                        <h2 class="warranty-block-grid__title title">Мы не боимся давать гарантию 1 год или 40 000 пробега!</h2>
+                        <div class="warranty-block-grid__text">
+                            <p>Это значит, что Вы можете обслуживать совершенно новый автомобиль, только что купленный в автосалоне</p>
+                        </div>
+                        <h3 class="warranty-block-grid__subtitle">Гарантия автопроизводителя сохраняется в полном объеме</h3>
+                        <div class="warranty-block-grid__subtext">
+                            <p>*Гарантия распространяется на обслуживание и ремонт с использовнием запасных частей, купленных на СТО</p>
+                        </div>
+                    </div>
+                    <div class="warranty-block-grid__col">
+                    	<div class="warranty-block-grid__video">
+                            <a data-fancybox href="https://www.youtube.com/embed/iqBGeKOxyS4" class="warranty-block-grid__video-link">
+                                <img src="./images/warranty-video.jpg" alt="video">
+                                <span class="icon-play"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+        <div class="services-block" id="anchor2">
+            <div class="container">
+                <div class="services-block__title title">Услуги и цены</div>
+                <ul class="services-block__list">
+                    <li class="services-block__list_link">
+                        <div class="services-block__list_text">Замена моторного масла</div>
+                        <div class="services-block__list_price">100 руб.</div>
+                        <div class="services-block__list_button">
+                            <button class="services-block__list_btn">Подробнее</button>
+                        </div>
+                    </li>
+                    <li class="services-block__list_link">
+                        <div class="services-block__list_text">Диагностика подвески</div>
+                        <div class="services-block__list_price">250 руб.</div>
+                        <div class="services-block__list_button">
+                            <button class="services-block__list_btn">Подробнее</button>
+                        </div>
+                    </li>
+                    <li class="services-block__list_link">
+                        <div class="services-block__list_text">Диагностика механической форсунки</div>
+                        <div class="services-block__list_price">250 руб.</div>
+                        <div class="services-block__list_button">
+                            <button class="services-block__list_btn">Подробнее</button>
+                        </div>
+                    </li>
+                    <li class="services-block__list_link">
+                        <div class="services-block__list_text">Замена воздушного фильтра</div>
+                        <div class="services-block__list_price">350 руб.</div>
+                        <div class="services-block__list_button">
+                            <button class="services-block__list_btn">Подробнее</button>
+                        </div>
+                    </li>
+                    <li class="services-block__list_link">
+                        <div class="services-block__list_text">Замена топливного замена</div>
+                        <div class="services-block__list_price">390 руб.</div>
+                        <div class="services-block__list_button">
+                            <button class="services-block__list_btn">Подробнее</button>
+                        </div>
+                    </li>
+                    <li class="services-block__list_link">
+                        <div class="services-block__list_text">Замена масла в коробке МКПП</div>
+                        <div class="services-block__list_price">450 руб.</div>
+                        <div class="services-block__list_button">
+                            <button class="services-block__list_btn">Подробнее</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="trust-block">
+            <div class="container">
+                <div class="trust-block-grid">
+                    <div class="trust-block-grid__col">
+                        <div class="trust-block-grid__photo">
+                            <div class="circle-animation">
+                                <div class="pulse-circle pulse-circle__big"></div>
+                                <div class="pulse-circle pulse-circle__small"></div>
+                            </div>
+                            <img src="./images/photo.png">
+                        </div>
+                        <div class="trust-block__mobile_photo">
+                            <div class="trust-block-grid__button">
+                                <button class="button trust-block-grid__btn">Написать сообщение</button>
+                            </div>
+                            <h3 class="trust-block-grid__subtitle">Ответственный за работу с клиентами</h3>
+                            <div class="trust-block-grid__subtext">
+                                <p>Хлюпин Алексей</p>
+                                <img src="./images/sign.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trust-block-grid__col">
+                        <h2 class="trust-block-grid__title title">Лучше потерять деньги, чем Ваше доверие</h2>
+                        <div class="trust-block-grid__text">
+                            <p>Если у Вас есть пожелания по улучшения обслуживания, напишите мне или позвоните на мобильный телефон, я моментально отреагирую:</p>
+                            <p>    
+                                <span>+7 (495) 123-45-67</span>
+                            </p>
+                        </div>
+                        <div class="trust-block__mobile">
+                            <div class="trust-block-grid__button">
+                                <button class="button trust-block-grid__btn">Написать сообщение</button>
+                            </div>
+                            <h3 class="trust-block-grid__subtitle">Ответственный за работу с клиентами</h3>
+                            <div class="trust-block-grid__subtext">
+                                <p>Хлюпин Алексей</p>
+                                <img src="./images/sign.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="calculation-block" id="anchor3">
+            <div class="container">
+                <h2 class="calculation-block__title title">Получите точный расчет стоимости выполнения работ</h2>
+                <div class="calculation-block__text">
+                    <p>Заполните форму и наш специалист Вам перезвонит:</p>
+                </div>
+                <form class="calculation-block-form-grid">
+                    <input type="hidden" name="title" value="точный расчет стоимости выполнения работ">
+                    <div class="calculation-block-form-grid__col">
+                    	<div class="calculation-block-form-grid__items">
+	                        <h3 class="calculation-block-grid__title">
+	                            <p>
+	                                <span>1</span>Ваш автомобиль
+	                            </p>
+	                        </h3>
+	                        <div class="calculation-block-grid__form_item calculation-block-grid__form_mark">
+	                            <select type="text" class="calculation-block-grid__form_select" name="mark">
+	                                <option disabled selected hidden>Выберите марку авто</option>
+	                                <option value="Audi">Audi</option>
+	                                <option value="BMW">BMW</option>
+	                            </select>
+	                        </div>
+	                        <div class="calculation-block-grid__form_item">
+	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите модель авто">
+	                        </div>
+	                        <div class="calculation-block-grid__form_item calculation-block-grid__form_vin">
+	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="VIN номер">
+	                        </div>
+	                        <div class="calculation-block-grid__form_item calculation-block-grid__form_textarea">
+	                            <textarea type="text" class="form-grid__phone_input" name="name"  placeholder="Перечислите все работы или опишите неисправности"></textarea>
+	                        </div>
+	                    </div>
+                    </div>
+                    <div class="calculation-block-form-grid__col">
+                    	<div class="calculation-block-form-grid__items">
+	                        <h3 class="calculation-block-grid__title">
+	                            <p>
+	                                <span>2</span>Параметры
+	                            </p>
+	                        </h3>
+	                        <div class="calculation-block-grid__form_item">
+	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите объем двигателя">
+	                        </div>
+	                        <div class="calculation-block-grid__form_item calculation-block-grid__form_mark">
+	                            <select type="text" class="calculation-block-grid__form_select" name="transmission">
+	                                <option disabled selected hidden>Выберите тип трансмиссии</option>
+	                                <option value="MK">МКП</option>
+	                                <option value="AK">АКП</option>
+	                            </select>
+	                        </div>
+	                        <div class="calculation-block-grid__form_item">
+	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите год выпуска авто">
+	                        </div>
+	                        <div class="calculation-block-grid__form_item">
+	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Пробег авто">
+	                            <span class="icon-info"></span>
+	                        </div>
+	                    </div>
+                    </div>
+                    <div class="calculation-block-form-grid__col calculation-block-form-grid_width">
+                        <div class="calculation-block-form-grid_width_item calculation-block-form-grid__items">
+	                        <h3 class="calculation-block-grid__title">
+	                            <p>
+	                                <span>3</span>Ваши контакты
+	                            </p>
+	                        </h3>
+	                        <div class="calculation-block-grid__form_input">
+	                            <div class="form-grid__phone">
+	                                <span class="icon-user"></span>
+	                                <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите Ваше имя">
+	                            </div>
+	                            <div class="form-grid__phone">
+	                                <span class="icon-phone"></span>
+	                                <input type="text" class="form-grid__phone_input" name="name"  placeholder="Контактный телефон">
+	                            </div>  
+	                        </div>
+	                        <div class="calculation-block-grid__form_button">
+	                            <button class="button button-yellow">Отправить</button>
+	                        </div>
+	                        <div class="form-grid__checkbox">
+	                            <input type="checkbox" checked class="form-grid__checkbox_input" id="calculation-form-checkbox">
+	                            <label class="form-grid__checkbox_label" for="calculation-form-checkbox">Даю согласие на обработку персональных данных</label>
+	                        </div>
+	                    </div>
+                    </div>
+                </form>
+                <div class="preview-block-grid__call-mobile">
+                    <div class="preview-block-grid__call">
+                        <div class="circle-animation">
+                            <div class="pulse-circle pulse-circle__call"></div>
+                        </div>
+                        <a class="preview-block-grid__call_text">
+                            <p>
+                                <span class="icon-phone"></span>
+                                <span>Позвони сейчас</span>
+                                <br>и получи скидку 40%
+                            </p>
+                        </a>
+                    </div>
+                    <div class="preview-block-grid__text">Скидки распространяются на работы</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-block" id="anchor4">
+            <div class="container">
+                <h2 class="photo-block__title title">Фотографии нашего центра</h2>
+                <div class="photo-block-grid">
+                    <div class="photo-block-grid__col">
+                        <div class="photo-block-grid__items">
+                            <a data-fancybox="photo" href="./images/photo-img-1.png"  data-caption="Car"><img src="./images/photo-img-1.png"></a>
+                        </div>
+                    </div>
+                    <div class="photo-block-grid__col">
+                        <div class="photo-block-grid__items">
+                            <a data-fancybox="photo" href="./images/photo-img-2.png"  data-caption="Car"><img src="./images/photo-img-2.png"></a>
+                        </div>
+                    </div>
+                    <div class="photo-block-grid__col">
+                        <div class="photo-block-grid__items">
+                            <a data-fancybox="photo" href="./images/photo-img-3.png"  data-caption="Car"><img src="./images/photo-img-3.png"></a>
+                        </div>
+                    </div>
+                    <div class="photo-block-grid__col">
+                        <div class="photo-block-grid__items">
+                            <a data-fancybox="photo" href="./images/photo-img-4.png"  data-caption="Car"><img src="./images/photo-img-4.png"></a>
+                        </div>
+                    </div>
+                    <div class="photo-block-grid__col">
+                        <div class="photo-block-grid__items">
+                            <a data-fancybox="photo" href="./images/photo-img-5.png"  data-caption="Car"><img src="./images/photo-img-5.png"></a>
+                        </div>
+                    </div>
+                    <div class="photo-block-grid__col">
+                        <div class="photo-block-grid__items">
+                            <a data-fancybox="photo" href="./images/photo-img-6.png"  data-caption="Car"><img src="./images/photo-img-6.png"></a>
+                        </div>
+                    </div>
+                    <div class="photo-block-grid__col">
+                        <div class="photo-block-grid__items">
+                            <a data-fancybox="photo" href="./images/photo-img-7.png"  data-caption="Car"><img src="./images/photo-img-7.png"></a>
+                        </div>
+                    </div>
+                    <div class="photo-block-grid__col">
+                        <div class="photo-block-grid__items">
+                            <a data-fancybox="photo" href="./images/photo-img-8.png"  data-caption="Car"><img src="./images/photo-img-8.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-performed-block" id="anchor5">
+            <div class="container">
+                <h2 class="work-performed-block__title title">Выполненные работы для наших клиентов</h2>
+                <div class="work-performed-block-grid" id="work-list">
+                    <div class="work-performed-block-grid__col">
+                        <div class="work-performed-block__items">
+                            <div class="work-performed-block__video">
+                                <a data-fancybox href="https://www.youtube.com/watch?v=L8koM5juxoY" class="work-performed-block__video-link">
+                                    <img src="./images/video.jpg" alt="video">
+                                    <span class="icon-play"></span>
+                                </a>
+                            </div>
+                            <div class="work-performed-block__items_text">
+                                <h4 class="work-performed-block__subtitle">Выполнение ТО-3 для Mercedes GL 450</h4>
+                                <div class="work-performed-block__text">Владимир А.</div>
+                            </div>
+                                <div class="work-performed-block__price">
+                                    <ul class="work-performed-block__list">
+                                        <li class="work-performed-block__link">
+                                            <span class="work-performed-block__link_price-icon"></span>
+                                            <p>Стоимость работ: 27 000 руб.</p>
+                                        </li>
+                                        <li class="work-performed-block__link">
+                                            <span class="work-performed-block__link_time-icon"></span>
+                                            <p>Сроки: 3 часа</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="work-performed-block-grid__col">
+                        <div class="work-performed-block__items">
+                            <div class="work-performed-block__video">
+                                <a data-fancybox href="https://www.youtube.com/watch?v=L8koM5juxoY" class="work-performed-block__video-link">
+                                    <img src="./images/video.jpg" alt="video">
+                                    <span class="icon-play"></span>
+                                </a>
+                            </div>
+                            <div class="work-performed-block__items_text">
+                                <h4 class="work-performed-block__subtitle">Выполнение ТО-3 для Mercedes GL 450</h4>
+                                <div class="work-performed-block__text">Владимир А.</div>
+                            </div>
+                                <div class="work-performed-block__price">
+                                    <ul class="work-performed-block__list">
+                                        <li class="work-performed-block__link">
+                                            <span class="work-performed-block__link_price-icon"></span>
+                                            <p>Стоимость работ: 27 000 руб.</p>
+                                        </li>
+                                        <li class="work-performed-block__link">
+                                            <span class="work-performed-block__link_time-icon"></span>
+                                            <p>Сроки: 3 часа</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="work-performed-block-grid__col">
+                        <div class="work-performed-block__items">
+                            <div class="work-performed-block__video">
+                                <a data-fancybox href="https://www.youtube.com/watch?v=L8koM5juxoY" class="work-performed-block__video-link">
+                                    <img src="./images/video.jpg" alt="video">
+                                    <span class="icon-play"></span>
+                                </a>
+                            </div>
+                            <div class="work-performed-block__items_text">
+                                <h4 class="work-performed-block__subtitle">Выполнение ТО-3 для Mercedes GL 450</h4>
+                                <div class="work-performed-block__text">Владимир А.</div>
+                            </div>
+                                <div class="work-performed-block__price">
+                                    <ul class="work-performed-block__list">
+                                        <li class="work-performed-block__link">
+                                            <span class="work-performed-block__link_price-icon"></span>
+                                            <p>Стоимость работ: 27 000 руб.</p>
+                                        </li>
+                                        <li class="work-performed-block__link">
+                                            <span class="work-performed-block__link_time-icon"></span>
+                                            <p>Сроки: 3 часа</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="work-performed-block-grid__col">
+                        <div class="work-performed-block__items">
+                            <div class="work-performed-block__video">
+                                <a data-fancybox href="https://www.youtube.com/watch?v=L8koM5juxoY" class="work-performed-block__video-link">
+                                    <img src="./images/video.jpg" alt="video">
+                                    <span class="icon-play"></span>
+                                </a>
+                            </div>
+                            <div class="work-performed-block__items_text">
+                                <h4 class="work-performed-block__subtitle">Выполнение ТО-3 для Mercedes GL 450</h4>
+                                <div class="work-performed-block__text">Владимир А.</div>
+                            </div>
+                                <div class="work-performed-block__price">
+                                    <ul class="work-performed-block__list">
+                                        <li class="work-performed-block__link">
+                                            <span class="work-performed-block__link_price-icon"></span>
+                                            <p>Стоимость работ: 27 000 руб.</p>
+                                        </li>
+                                        <li class="work-performed-block__link">
+                                            <span class="work-performed-block__link_time-icon"></span>
+                                            <p>Сроки: 3 часа</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-performed-block__button">
+                    <a href="#" class="work-performed-block__show-more" id="work__show-more">
+                        Показать все работы
+                    </a>
+                    <a href="#" class="work-performed-block__show-more" id="work__show-less">
+                        Скрыть
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-block" id="anchor6">
+            <div class="container">
+                <h2 class="video-block__title title">Видео-камеры онлайн</h2>
+                <div class="video-block__text text">
+                    <p>Вы всегда можете наблюдать за ходом работ над Вашим автомобилем с помощью онлайн-трансляций</p>
+                </div>
+                <div class="circle-animation">
+                    <div class="pulse-circle pulse-circle__big"></div>
+                    <div class="pulse-circle pulse-circle__small"></div>
+                </div>
+                <div class="video-block-grid">
+                    <div class="video-block-grid__col">
+                        <a data-fancybox href="https://www.youtube.com/watch?v=L8koM5juxoY" class="video-block-grid__link">
+                            <img src="./images/video-block.jpg" alt="video">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                    <div class="video-block-grid__col">
+                        <a data-fancybox href="https://www.youtube.com/watch?v=L8koM5juxoY" class="video-block-grid__link">
+                            <img src="./images/video-block.jpg" alt="video">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                    <div class="video-block-grid__col">
+                        <a data-fancybox href="https://www.youtube.com/watch?v=L8koM5juxoY" class="video-block-grid__link">
+                            <img src="./images/video-block.jpg" alt="video">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="certificate-block">
+            <div class="container">
+                <h2 class="certificate-block__title title">Наши сертификаты</h2>
+                <div class="certificate-block__text">
+                    <p>О вашем авто заботятся специалисты</p>
+                </div>
+                <div class="certificate-block-grid">
+                    <div class="certificate-block-grid__col">
+                        <img src="./images/certificate.jpg">
+                    </div>
+                    <div class="certificate-block-grid__col">
+                        <img src="./images/certificate.jpg">
+                    </div>
+                    <div class="certificate-block-grid__col">
+                        <img src="./images/certificate.jpg">
+                    </div>
+                    <div class="certificate-block-grid__col">
+                        <img src="./images/certificate.jpg">
+                    </div>
+                    <div class="certificate-block-grid__col">
+                        <img src="./images/certificate.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="logos-block">
+            <div class="container">
+                <h2 class="logos-block__title title">Поставщики</h2>
+                <div class="logos-block-grid">
+                    <div class="logos-block-grid__col">
+                        <a class="logos-block-grid__col_link" href="#"><img class="logos-block-grid__col_image-small" src="./images/logo-1.png"></a>
+                    </div>
+                    <div class="logos-block-grid__col">
+                        <a class="logos-block-grid__col_link" href="#"><img src="./images/logo-2.png"></a>
+                    </div>
+                    <div class="logos-block-grid__col">
+                        <a class="logos-block-grid__col_link" href="#"><img class="logos-block-grid__col_image-small" src="./images/logo-1.png"></a>
+                    </div>
+                    <div class="logos-block-grid__col">
+                        <a class="logos-block-grid__col_link" href="#"><img src="./images/logo-2.png"></a>
+                    </div>
+                    <div class="logos-block-grid__col">
+                        <a class="logos-block-grid__col_link" href="#"><img class="logos-block-grid__col_image-small" src="./images/logo-1.png"></a>
+                    </div>
+                    <div class="logos-block-grid__col">
+                        <a class="logos-block-grid__col_link" href="#"><img src="./images/logo-2.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comfort-block">
+            <div class="container">
+                <h2 class="comfort-block__title title">Все удобства в одном центре</h2>
+                <div class="comfort-block-grid">
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                    <div class="comfort-block-grid__col">
+                        <a class="comfort-block-grid__col_link" data-fancybox="photo" href="./images/comfort.jpg"  data-caption="Car"><img src="./images/comfort.jpg">
+                            <div class="comfort-block-grid__col_hover">
+                                <div class="comfort-block-grid__col_text">
+                                    <p>Прием  и выдача а/м</p> 
+                                    <p>в согласованное с</p>
+                                    <p>клиентом время</p>
+                                </div>
+                            </div>
+                        </a>      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-block" id="anchor7">
+            <div class="container">
+                <h2 class="news-block__title title">Новости нашего центра</h2>
+                <div class="news-block-grid">
+                    <div class="news-block-grid__col">
+                        <div class="news-block-grid__items">
+                            <img src="./images/news.img.jpg">
+                            <div class="news-block-grid__item">
+                                <h4 class="news-block-grid__title">Открытие нового сервиса обслуживание в Москве!</h4>
+                                <p class="news-block-grid__text">Летом этого года «Заботливый Сервис» запускает свой новый филиал в Москве</p>
+                                <div class="news-block-grid__button">
+                                    <button class="news-block-grid__btn">Читать полностью</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-block-grid__col">
+                        <div class="news-block-grid__items">
+                            <img src="./images/news.img.jpg">
+                            <div class="news-block-grid__item">
+                                <h4 class="news-block-grid__title">Открытие нового сервиса обслуживание в Москве!</h4>
+                                <p class="news-block-grid__text">Летом этого года «Заботливый Сервис» запускает свой новый филиал в Москве</p>
+                                <div class="news-block-grid__button">
+                                    <button class="news-block-grid__btn">Читать полностью</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-block-grid__col">
+                        <div class="news-block-grid__items">
+                            <img src="./images/news.img.jpg">
+                            <div class="news-block-grid__item">
+                                <h4 class="news-block-grid__title">Открытие нового сервиса обслуживание в Москве!</h4>
+                                <p class="news-block-grid__text">Летом этого года «Заботливый Сервис» запускает свой новый филиал в Москве</p>
+                                <div class="news-block-grid__button">
+                                    <button class="news-block-grid__btn">Читать полностью</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-block-grid__col">
+                        <div class="news-block-grid__items">
+                            <img src="./images/news.img.jpg">
+                            <div class="news-block-grid__item">
+                                <h4 class="news-block-grid__title">Открытие нового сервиса обслуживание в Москве!</h4>
+                                <p class="news-block-grid__text">Летом этого года «Заботливый Сервис» запускает свой новый филиал в Москве</p>
+                                <div class="news-block-grid__button">
+                                    <button class="news-block-grid__btn">Читать полностью</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-block" id="anchor8">
+            <div class="container">
+                <h2 class="team-block__title title">Специалисты нашего центра</h2>
+                <div class="team-block-grid">
+                    <div class="team-block-grid__col">
+                        <div class="team-block-grid__items">
+                            <img src="./images/team.jpg">
+                            <div class="team-block-grid__text">
+                                <h4 class="team-block-grid__subtitle">Андрей Иванов</h4>
+                                <p class="team-block-grid__subtext">Автомеханик</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-block-grid__col">
+                        <div class="team-block-grid__items">
+                            <img src="./images/team.jpg">
+                            <div class="team-block-grid__text">
+                                <h4 class="team-block-grid__subtitle">Андрей Иванов</h4>
+                                <p class="team-block-grid__subtext">Автомеханик</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-block-grid__col">
+                        <div class="team-block-grid__items">
+                            <img src="./images/team.jpg">
+                            <div class="team-block-grid__text">
+                                <h4 class="team-block-grid__subtitle">Андрей Иванов</h4>
+                                <p class="team-block-grid__subtext">Автомеханик</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-block-grid__col">
+                        <div class="team-block-grid__items">
+                            <img src="./images/team.jpg">
+                            <div class="team-block-grid__text">
+                                <h4 class="team-block-grid__subtitle">Андрей Иванов</h4>
+                                <p class="team-block-grid__subtext">Автомеханик</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-block-grid__col">
+                        <div class="team-block-grid__items">
+                            <img src="./images/team.jpg">
+                            <div class="team-block-grid__text">
+                                <h4 class="team-block-grid__subtitle">Андрей Иванов</h4>
+                                <p class="team-block-grid__subtext">Автомеханик</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="answers-block">
+        	<div class="container">
+        		<h2 class="answers-block__title title">Ответы на часто задаваемые вопросы</h2>
+        		<div class="answers-block-grid">
+        			<div class="answers-block-grid__col">
+        				<div class="answers-block-grid__input spoiler">
+                            <input class="spoiler_hidden" type="checkbox" id="spoilerid_1">
+                                <label for="spoilerid_1">Заголовок вопроса</label>
+        					   <div class="spoiler_body">Скрываемый текст</div>
+        				</div>
+                    </div>
+        			<div class="answers-block-grid__col">
+                        <div class="answers-block-grid__input spoiler">
+                            <input class="spoiler_hidden" type="checkbox" id="spoilerid_2">
+                                <label for="spoilerid_2">Заголовок вопроса</label>
+                               <div class="spoiler_body">Скрываемый текст</div>
+                        </div>
+                    </div>
+        			<div class="answers-block-grid__col">
+                        <div class="answers-block-grid__input spoiler">
+                            <input class="spoiler_hidden" type="checkbox" id="spoilerid_3">
+                                <label for="spoilerid_3">Заголовок вопроса</label>
+                               <div class="spoiler_body">Скрываемый текст</div>
+                        </div>
+                    </div>
+        			<div class="answers-block-grid__col">
+                        <div class="answers-block-grid__input spoiler">
+                            <input class="spoiler_hidden" type="checkbox" id="spoilerid_4">
+                                <label for="spoilerid_4">Заголовок вопроса</label>
+                               <div class="spoiler_body">Скрываемый текст</div>
+                        </div>
+                    </div>
+        			<div class="answers-block-grid__col">
+                        <div class="answers-block-grid__input spoiler">
+                            <input class="spoiler_hidden" type="checkbox" id="spoilerid_5">
+                                <label for="spoilerid_5">Заголовок вопроса</label>
+                               <div class="spoiler_body">Скрываемый текст</div>
+                        </div>
+                    </div>
+        			<div class="answers-block-grid__col">
+                        <div class="answers-block-grid__input spoiler">
+                            <input class="spoiler_hidden" type="checkbox" id="spoilerid_6">
+                                <label for="spoilerid_6">Заголовок вопроса</label>
+                               <div class="spoiler_body">Скрываемый текст</div>
+                        </div>
+                    </div>
+        		</div>
+        	</div>
+        </div>
+
+        <div class="evacuation-block">
+            <div class="container">
+                <h3 class="evacuation-block__subtitle">Нет возможности привезти машину?</h3>
+                <h2 class="evacuation-block__title title">Поможем с эвакуацией Вашего авто</h2>
+                <div class="evacuation-block-grid">
+                    <div class="evacuation-block-grid__col">
+                        <ul class="evacuation-block-grid__list">
+                            <li>
+                                <div class="evacuation-block-grid__list_icon">
+                                    <img src="./images/evacuation-icon.svg">
+                                </div>
+                                <p>Это легко решить с помощью одного телефонного звонка</p>
+                            </li>
+                            <li>
+                                <div class="evacuation-block-grid__list_icon">
+                                    <img src="./images/evacuation-icon.svg">
+                                </div>
+                                <p>Заберем Вашу машину из любой точки города</p>
+                            </li>
+                            <li>
+                                <div class="evacuation-block-grid__list_icon">
+                                    <img src="./images/evacuation-icon.svg">
+                                </div>
+                                <p>Проведем диагностику</p>
+                            </li>
+                            <li>
+                                <div class="evacuation-block-grid__list_icon">
+                                    <img src="./images/evacuation-icon.svg">
+                                </div>
+                                <p>Согласуем детали</p>
+                            </li>
+                            <li>
+                                <div class="evacuation-block-grid__list_icon">
+                                    <img src="./images/evacuation-icon.svg">
+                                </div>
+                                <p>Сообщим о готовности Вашего автомобиля</p>
+                            </li>
+                        </ul>
+                        <img class="evacuation-block-grid__image" src="./images/evacuation.jpg" alt="evacuation">
+                    </div>
+                    <div class="evacuation-block-grid__col">
+                        <form class="evacuation-block-grid__form form">
+                            <div class="evacuation-block-grid__form_items">
+                                <h3 class="evacuation-block-grid__form_title">Заявка на вызов эвакуатора</h3>
+                                <div class="form-grid__phone">
+                                    <span class="icon-user"></span>
+                                    <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите Ваше имя">
+                                </div>
+                                <div class="form-grid__phone">
+                                    <span class="icon-phone"></span>
+                                    <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="Контактный телефон">
+                                </div>
+                                <button class="button form-grid__button">Отправить заявку</button>
+                                <div class="form-grid__checkbox">
+                                    <input type="checkbox" checked class="form-grid__checkbox_input" id="question-form-checkbox">
+                                    <label class="form-grid__checkbox_label" for="question-form-checkbox">Даю согласие на обработку персональных данных</label>
+                                </div>
+                            </div>
+                            <div class="evacuation-block-grid__form_number">
+                                <div class="form-grid__number">
+                                    <p>или позвоните: 
+                                        <a href="#">+7 (495) 123-45-67</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-block" id="anchor9">
+            <div  id="map"></div>
+        	<div class="container">
+        		<div class="map-block__form">
+        			<div class="map-block__adress">
+        				<div class="map-block__text">
+        					<h5>Адрес:</h5>
+                            <p>Москва, ул. Примерная 100/2, м. Ленина</p>
+                            <p>Работаем ежедневно с 9.00 до 21.00</p>
+        				</div>
+        			</div>
+        			<div class="map-block__phone">
+        				<div class="map-block__phone_text">
+        					<h5>Контактный телефон:</h5>
+                            <p>
+        					   +7 (495) 123-45-67
+        					</p>
+        				</div>
+        			</div>
+					<div class="map-block__contact">
+        				<div class="map-block__contact_text">
+        					<p>Связаться с нами в месседжерах:</p>
+        				</div>
+        				<ul class="social">
+                            <li><a href="#" class="social__link social__link_telegram"></i></a></li>
+                            <li><a href="#" class="social__link social__link_viber"></a></li>
+                        </ul>
+        			</div>
+        			<div class="map-block__btn">
+        				<button class="contact_button button">Записаться на СТО</button>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+
+        <div class="question-block">
+            <div class="container">
+                <h2 class="question-block__title title">Есть дополнительные вопросы?</h2>
+                <div class="question-block__text text">
+                    <p>Специалисты нашего центра бесплатно проконсультируют Вас или запишут на посещение автосервиса:</p>
+                </div>
+                <div class="circle-animation">
+                    <div class="pulse-circle pulse-circle__big"></div>
+                    <div class="pulse-circle pulse-circle__small"></div>
+                </div>
+                <form class="question-block__form form">
+                    <div class="form-grid">
+                        <div class="form-grid__col">
+                            <label class="form-grid__text">Введите Ваш контактный телефон:</label>
+                            <div class="form-grid__phone">
+                                <span class="icon-phone"></span>
+                                <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="+7 (___) ___-__-__">
+                            </div>
+                            <div class="form-grid__number">
+                                <p>или позвоните: 
+                                    <a href="#">+7 (495) 123-45-67</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-grid__col">
+                            <button class="button form-grid__button">Узнать стоимость ТО</button>
+                            <div class="form-grid__checkbox">
+                                <input type="checkbox" checked class="form-grid__checkbox_input" id="question-form-checkbox">
+                                <label class="form-grid__checkbox_label" for="question-form-checkbox">Даю согласие на обработку персональных данных</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-block">
+            <div class="container">
+                <div class="footer-block-grid">
+                    <div class="footer-block-grid__col">
+                        <a href="#" class="footer-block-grid__link">
+                            <img src="./images/logo.png" alt="logo" class="logo_image">
+                        </a>
+                        <ul class="footer-block-grid__links">
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                            <li><a href="#">Юридические данные</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block-grid__col">
+                        <div class="footer-block-grid__pay">
+                            <div class="footer-block-grid__pay_text"><p>Принимаем к оплате:</p></div>
+                            <ul class="footer-block-grid__logos">
+                                <li><img src="./images/footer-logo-1.png"></li>
+                                <li><img src="./images/footer-logo-2.png"></li>
+                                <li><img src="./images/footer-logo-3.png"></li>
+                                <li><img src="./images/footer-logo-4.png"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-block-grid__col">
+                        <form class="footer-block-grid__form">
+                            <div class="footer-block-grid__form_text">
+                                <p>Подпишитесь на рассылку и получите скидку 10% на ТО</p>
+                            </div>
+                            <div class="footer-block-grid__form_input">
+                                <div class="form-grid__phone">
+                                    <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="Введите Ваш e-mail">
+                                </div>
+                                <div class="footer-block-grid__form_btn">
+                                    <button class="button form-grid__button">Подписаться</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="footer-block-grid__col">
+                        <div class="footer-block-grid__text">
+                            <p>
+                                Разработка сайта
+                                <a href="#">Havk Style Design</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4S93WP34qfscf_Duy7bfxHhRDZdB6rxc&callback=initMap"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

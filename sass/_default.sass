@@ -1,0 +1,250 @@
+// ============================
+// RESETS
+// ============================
+table, thead, tbody, tfoot, tr, th, td
+	margin: 0
+	padding: 0
+	border: none
+	border-collapse: inherit
+	border-spacing: 0
+	border-color: inherit
+	vertical-align: inherit
+	font-weight: inherit
+	-webkit-border-horizontal-spacing: 0
+	-webkit-border-vertical-spacing: 0
+
+*, *:before, *:after
+	margin: 0
+	padding: 0
+
+input
+	border-radius: 0 
+	box-shadow: none !important
+
+ul, ol
+	list-style-type: none
+
+a
+	text-decoration: none
+	cursor: pointer
+
+html
+	-webkit-text-size-adjust: 100%
+	color: $mainC2
+
+
+body 
+	font-family: 'BrandonGrotesque', sans-serif
+	font-weight: normal
+	font-size: 18px
+
+.slick-initialized .slick-slide
+	display: flex
+
+.icon-phone
+	transform: rotate(90deg)
+
+.social__link_telegram:before
+	font-family: "Font Awesome 5 Brands"
+	font-weight: normal
+	content: "\f3fe"
+	font-size: 20px
+	color: #fff
+
+.social__link_viber:before
+	font-family: "Font Awesome 5 Brands"
+	font-weight: normal
+	content: "\f409"
+	font-size: 20px
+	color: #fff
+
+.title
+	position: relative
+	font-size: 32px
+	line-height: 40px
+	color: #000000
+	font-family: "Montserrat"
+	font-weight: bold
+	padding-bottom: 20px
+	margin-bottom: 20px
+	&:before
+		content: ""
+		width: 75px
+		border-bottom: 4px solid #285bd0
+		position: absolute
+		left: 0
+		bottom: 0
+
+.text
+	position: relative
+	font-size: 15px
+	font-family: "MuseoSansCyrl"
+	color: rgb(255, 255, 255)
+	line-height: 1.6
+	margin-bottom: 25px
+
+.button
+	@include flex($jc: center, $ai: center)
+	font-size: 14px
+	color: rgb(255, 255, 255)
+	font-family: "Montserrat"
+	font-weight: normal
+	border-radius: 5px
+	border: none
+	position: relative
+	overflow: hidden
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: -3em
+		width: 145%
+		height: 100%
+		background: linear-gradient(to left, rgba(255,255,255,.0), rgba(255,255,255,.8), rgba(255,255,255,.0)) no-repeat -2em 0%
+		background-size: 3em 100%
+		transform: skewX(-50deg)
+		animation: blink 3s .05s ease-in-out infinite
+	&:hover
+		cursor: pointer
+
+@keyframes blink
+	0%
+		background-position: 0%
+	100%
+		background-position: 130%
+
+.button-yellow
+	border-radius: 5px
+	box-shadow: 0px 3px 0px #ffb12a
+	background-color: #fdc53b
+	font-size: 18px
+	color: #000000
+	font-family: "Montserrat"
+	font-weight: normal
+	text-align: center
+	padding: 15px
+	overflow: hidden
+	width: 295px
+	height: 65px
+	&:hover
+		background-color: #ffb12a
+
+.pulse-circle
+	position: absolute
+	top: 50%
+	left: 0
+	border: 1px solid #285bd0
+	border-radius: 50%
+	transform: translate(-50%, -50%)
+	z-index: 0
+	&__video
+		width: 68px
+		height: 68px
+	&__big
+		width: 455px
+		height: 455px
+	&__small
+		width: 362px
+		height: 362px
+	&__call
+		width: 166px
+		height: 166px
+		border: 2px solid #ff0042
+		top: 60%
+		z-index: 10
+.circle-animation
+	position: absolute
+	top: 40%
+	left: 50%
+	animation: circle 1s infinite
+	z-index: -1
+
+@keyframes circle
+	0%
+		transform: scale(.7)
+		opacity: 0
+	50%
+		opacity: 1
+	100%
+		transform: scale(1)
+		opacity: 0
+
+.slick-slide:focus
+	outline: none
+
+.slick-arrow
+	border: none
+	font-size: 0
+	position: absolute
+	top: calc(50% - 49px/2)
+	cursor: pointer
+	z-index: 1
+	&:before
+		@include flex($jc: center, $ai: center)
+		border: 2px solid $mainC1
+		border-radius: 5px
+		width: 49px
+		height: 49px
+		color: $mainC1
+		position: absolute
+		font-family: "FontAwesome"
+		font-weight: 900
+		color: $mainC1
+		font-size: 25px
+	&:hover
+		&:before
+			background-color: $mainC1
+			color: #fff
+.slick-arrow.slick-prev:before
+	content: "\f104"
+.slick-arrow.slick-next:before
+	content: "\f105"
+.slick-arrow.slick-prev
+	left: 0px
+
+.slick-arrow.slick-next
+	right: 49px
+
+.slick-dots
+	@include flex($jc: space-between, $ai: center)
+	position: absolute
+	bottom: 10px
+	width: 60px
+	li
+		button
+			border-radius: 50%
+			background-color: #e0e0e0
+			width: 6px
+			height: 6px
+			font-size: 0
+			border: none
+	.slick-active
+		button
+			background-color: $mainC1
+
+.slick-arrow.slick-hidden
+	display: flex
+
+
+input:focus,
+label:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus,
+a:focus
+	outline: none
+
+*, *:before, *:after, input, textarea, button, select
+	box-sizing: border-box
+
+
+// ============================
+// SOCIAL COLORS
+// ============================
+
+$socCol: (telegram: #61A8DE, viber: #8351B6, whatsapp: #12b54f)
+
+@each $name, $color in $socCol
+	.soc_#{$name}
+		color: $color
