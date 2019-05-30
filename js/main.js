@@ -1,3 +1,6 @@
+$(document).ready(function(){
+    $(".modalbox").fancybox();
+});
 
 $(document).ready(function() {
 $("#price__show-less").hide();
@@ -49,11 +52,11 @@ $("#work__show-less").hide();
     $("#work__show-more").fadeIn('slow');
     $("#work__show-less").hide();
 
-    desiredHeight = $(window).height();
+    // desiredHeight = $(window).height();
 
-    $('html,body').animate({
-      scrollTop: $(".work-performed-block").offset().top + desiredHeight
-    }, 1500);
+    // $('html,body').animate({
+    //   scrollTop: $(".work-performed-block").offset().top + desiredHeight
+    // }, 1500);
   });
 });
 
@@ -83,6 +86,107 @@ $(window).on('load resize', function() {
     $(".work-performed-block-grid.slick-initialized").slick("unslick");
   }
 });
+
+$(window).on('load resize', function(e) {
+    $(".question-items__question").click(function (e) {
+    e.preventDefault(), $(this).hasClass("question-items__question_active") ? $(this).next(".question-items__answer").slideUp(300, function () {
+      $(this).removeAttr("style"), $(this).prev(".question-items__question").removeClass("question-items__question_active")
+    }) : ($(".question-items__question").removeClass("question-items__question_active"), $(".question-items__answer").slideUp(300, function () {
+      $(this).removeAttr("style")
+    }), $(this).addClass("question-items__question_active"), $(this).next(".question-items__answer").slideDown(300))
+  });
+});
+
+// $(document).ready(function() {
+// $('.question-items__answer').hide();
+// $('.question-items__question').click(function(){
+
+// 	$(this).next('.question-items__answer').slideUp(300);
+// },
+// function(){
+// 	$(this).next('.question-items__answer').slideDown(300);
+// });
+// });
+$(window).on('load resize', function(e) {
+	var price = document.querySelector('input[name = oil]:checked').value,
+	    discountPrice = .30;
+	    result.innerHTML = 'Итого: '+ price + ' руб.';
+	document.priceOil.onclick = function(){
+	    var price = document.querySelector('input[name = oil]:checked').value,
+	    discountPrice = .30;
+	    result.innerHTML = 'Итого: '+ price + ' руб.';
+	    $("#price-form-checkbox").on('click', function (e) {
+	    	$(".price-form__discount_checkbox_input").attr('checked',true);
+	      	
+
+	    		if($('.price-form__discount_checkbox_input:checked')) {
+					result.innerHTML = 'Итого: '+ (price - (price * discountPrice)) + ' руб.';
+				} else {
+					result.innerHTML = 'Итого: '+ price + ' руб.';
+				}
+			});
+	}
+});
+
+// $(window).on('load resize', function(e) {
+// 	 e.preventDefault();
+// 	 var buttonCheck =  document.querySelector('input[name = form]'),
+// 	 	button = document.getElementById("f_send");
+// 	 	if($('input[name="discount"]:checked')) {
+//    $("#f_send").addClass("disabled") }
+//    	else {
+//    		$("#f_send").addAttr("disabled");
+//    		}
+// 	});
+
+// $(window).on('resize', function(e) {
+//  	e.preventDefault();
+// 	var price = document.querySelector('input[name = oil]:checked').value;
+// 	    // discount = document.querySelector('input[name = discount]:checked').value;
+// 	    result.innerHTML = 'Итого: ' + price + ' руб.'
+// });
+
+$(document).ready(function() {
+	$(".form-grid__checkbox_input").change(function() {
+
+		if($(this).prop("checked"))
+			$(this).closest(".form").find(".form-grid__button").removeAttr("disabled");
+		else
+				$(this).closest(".form").find(".form-grid__button").attr("disabled", "disabled");
+	});
+});
+
+$('document').ready(function() {
+  $('.form-grid__button').on('click', function() {
+    $(this).closest(".form").find('input[required]').addClass('req');
+    $(this).closest(".form").find('select[required]').addClass('req');
+  });
+});
+
+document.addEventListener('invalid', (function () {
+  return function (e) {
+    e.preventDefault();
+    document.getElementsByClassName(".form-grid__checkbox_input").focus();
+  };
+})(), true);
+
+$(function() {
+   $('.form-grid__phone_input-mask').mask('+7(000)000-00-00');
+ });
+// $(function(){
+// $('#price-hidden-checkbox').click(function(){
+// $('#f_send').attr('disabled',!this.checked);
+// });
+// $('#form1').submit(function(){
+// return $('#price-hidden-checkbox').attr('checked');
+// });
+// });
+
+  // function s() {
+  //   var e = +$(".calc-oil-grid__input:checked").attr("data-oil"),
+  //     i = +$(".calc-stock__input:checked").attr("data-stock");
+  //   $(".calc__price").html("Итого: " + r(e - (isNaN(i) ? 0 : i)) + " руб."), $('input[name="price"]').attr("value", "Итого: " + r(e - (isNaN(i) ? 0 : i)) + " руб.")
+  // }
 	// selector (css selector
 	// default: [hred^="#anchor"]
 	// Селектор на ссылку для клика

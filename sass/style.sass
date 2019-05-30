@@ -207,6 +207,7 @@ body
 				line-height: 1.368
 		&__form
 			margin-top: 20px
+			margin-bottom: 60px
 			@include grid($s: 10px)
 		&__img
 			z-index: 10
@@ -315,7 +316,7 @@ body
 		@include grid($s: 20px)
 		&-grid
 			@include flex($jc: center, $ai: center)
-			padding: 60px 0 20px
+			padding: 0 0 20px
 			&__col
 				padding-bottom: 30px
 				@include flex($jc: center, $ai: center)
@@ -402,24 +403,33 @@ body
 			height: 20px
 	&__phone
 		@include flex($jc: center, $ai: center)
-		border: 1px solid rgb(214, 214, 214)
-		border-radius: 5px
-		background-color: #fff
-		padding: 25px 60px 25px 15px
+		width: 100%
 		margin-top: 10px
 		position: relative
-		color: rgb(170, 170, 172)
-		width: 100%
-		height: 65px
+		
+		span
+			margin-right: 10px
+			position: absolute
+			top: calc(50% - 18px/2)
+			left: 20px
+			color: rgb(170, 170, 172)
 		&_input
 			font-size: 17px
-			width: 100%
 			font-family: "MuseoSansCyrl"
 			border-style: none
+			background-color: #fff
 			color: rgb(170, 170, 172)
+			border: 1px solid rgb(214, 214, 214)
+			border-radius: 5px
+			color: rgb(170, 170, 172)
+			padding: 20px
+			width: 100%
+			height: 65px
 			&::-webkit-input-placeholder
 				color: rgb(170, 170, 172)
-
+			&_pad
+				padding: 20px 20px 20px 50px
+			
 
 	&__number
 		font-size: 15px
@@ -457,6 +467,13 @@ body
 		box-shadow: inset 0px -3px 0px 0px #ffb12a,0px 4px 10px 0px rgba(253, 183, 60, 0.2),inset 0px 3px 2px 0px rgba(255, 245, 212, 0.4)
 		&:hover
 			background-color: #ffb12a
+
+
+
+.form .req:invalid
+	border-color: red
+.form .req:valid
+	border-color: rgb(214, 214, 214)
 
 .price-block
 	padding: 80px 0
@@ -520,7 +537,248 @@ body
 				display: block
 				height: 100%
 				width: 100%
-				
+
+
+#price
+	display: none
+	background-color: transparent
+
+.price
+	&-block
+		&__descr
+			@include flex($jc: space-between, $ai: center)
+			padding: 20px 60px
+			border-bottom: 1px solid #dbdbdb
+		&__hidden
+			color: #121622
+			font-family: MuseoSansCyrl
+			padding: 0
+			background-color: #fff
+			.form-grid__button
+				margin-top: 10px
+				width: 100%
+			.services__hidden-call
+				padding: 10px
+			.services__hidden-call_icon
+				right: 143px
+			.services__hidden-form_block
+				padding-bottom: 70px
+			.services__hidden-form_subtitle
+				margin-bottom: 20px
+			.services__hidden-call_title
+				font-size: 14px
+			&-form
+				padding: 35px 60px
+			&-title
+				font-size: 32px
+				font-weight: bold
+				font-family: "Montserrat"
+				line-height: 45px
+			&_question
+				padding: 40px 60px
+			&_offer
+				padding: 50px 90px
+				background: url(../images/price-hidden-bg.png) no-repeat center
+				background-size: cover
+				.offer-block-grid
+					flex-direction: column
+					flex-wrap: wrap
+					align-items: flex-start
+					padding: 0
+					.title
+						font-size: 32px
+					&__title
+						max-width: 100%
+						color: #fff
+						span
+							color: #fdc53c
+					&__text
+						color: #fff
+						max-width: 740px
+					&__form
+						background-color: #1e3465
+						&_title
+							color: #fff
+						&_list
+							color: #fff
+						&_label
+							color: #fff
+							&:before
+								color: #000
+						.form-grid__checkbox_label
+							color: #fff
+							&:before
+								color: #000
+						&_image
+							top: 0
+							right: -65%
+							img
+								height: 375px
+
+	&-form
+		&-grid
+			@include flex($jc: space-between, $ai: flex-end)
+			&__col:nth-child(2)
+				width: 60%
+			.price-form-grid__col + .price-form-grid__col
+				margin-left: 20px
+		&__discount
+			&-title
+				font-size: 20px
+				font-weight: bold
+				font-family: "Montserrat"
+				line-height: 45px
+			&_items
+				border: 1px solid #dbdbdb
+				padding: 20px 20px 0 20px
+			&_item
+				border-bottom: 1px solid #dbdbdb
+				padding: 10px 0
+			&_title
+				font-size: 17px
+				line-height: 20px
+				margin-bottom: 10px
+			&_subtitle
+				font-size: 14px
+				line-height: 20px
+				color: #9b9b9b
+				margin-bottom: 10px
+			&_oil
+				@include flex($jc: flex-start, $ai: center)
+				&-type
+					input
+						display: none
+				.price-form__discount_oil-type + .price-form__discount_oil-type
+					margin-left: 20px
+			&_label
+				@include flex($jc: center, $ai: center)
+				border: 1px solid #9b9b9b
+				cursor: pointer
+				padding: 10px 20px
+			&_text
+				font-size: 16px
+				line-height: 19px
+			&_checkbox
+				font-size: 16px
+				line-height: 16px
+				color: #1746d4
+				max-width: 250px
+				padding-left: 30px
+				position: relative
+				input
+					display: none
+				&_label
+					position: relative
+					cursor: pointer
+					&:before
+						content: ""
+						font-weight: normal
+						font-style: normal
+						display: inline-block
+						text-decoration: inherit
+						@include flex($jc: center, $ai: center)
+						position: absolute
+						cursor: pointer
+						top: 0
+						left: -28px
+						border: 1px solid rgb(214, 214, 214)
+						border-radius: 2px
+						background-color: #fff
+						width: 20px
+						height: 20px
+
+			&_sum
+				background-color: $mainC1
+				color: #fff
+				font-size: 20px
+				font-weight: bold
+				font-family: "Montserrat"
+				padding: 15px 30px
+				position: relative
+				&-text
+					&:after
+						content: ""
+						position: absolute
+						right: -14px
+						top: 0
+						width: 0
+						height: 0
+						border-style: solid
+						border-width: 27px 0px 27px 14px
+						border-color: transparent transparent transparent $mainC1
+.price-form__discount_checkbox_input:checked + .price-form__discount_checkbox_label:before
+	font-family: "FontAwesome"
+	font-weight: 900
+	content: "\f00c"
+
+.form-grid__button[disabled]
+	background-color: #bfb6b6
+	cursor: default
+	box-shadow: none
+	&:after
+		display: none
+
+.price-form__discount_item:last-child
+	border: none	
+
+.price-form__discount_input:checked+.price-form__discount_label
+	border: 1px solid #fdc53c	
+
+.question
+	&-grid
+		@include flex($jc: flex-start)
+		flex-direction: column
+		&__col
+			width: 100%
+		.question-grid__col + .question-grid__col
+			margin-top: 15px
+	&-items
+		background-color: #f6f6f6
+		font-size: 16px
+		color: #000000
+		font-family: "MuseoSansCyrl"
+		font-size: 12px
+		cursor: pointer
+		&__question
+			padding: 30px
+			font-size: 19px
+			font-family: "Montserrat"
+			font-weight: bold
+			position: relative
+			&:after
+				font-family: "FontAwesome"
+				font-weight: 900
+				content: "\f107"
+				position: absolute
+				top: calc(50% - 23px/2)
+				right: 25px
+				color: $mainC1
+				font-size: 20px
+		&__answer
+			padding: 0 30px 30px
+			display: none
+			&_price
+				@include flex($jc: space-between, $ai: center)
+				padding: 0 70px
+				&:before
+					display: none
+			&_list
+				li
+					&:before
+						content: "━"
+						margin-right: 5px
+				li + li
+					margin-top: 10px
+
+.question-items__question_active:after
+	font-family: "FontAwesome"
+	font-weight: 900
+	content: "\f106"
+	position: absolute
+	top: calc(50% - 23px/2)
+	right: 25px
+	color: $mainC1
+	font-size: 20px
 
 .offer-block
 	@include grid($s: 5px)
@@ -552,8 +810,6 @@ body
 					color: #464646
 					&:before
 						top: 0
-			.form-grid__phone
-				height: 60px
 			&_title
 				font-size: 16px
 				line-height: 20px
@@ -610,8 +866,6 @@ body
 				color: #000000
 				font-family: "Montserrat"
 				margin-top: 10px
-				&:hover
-					background-color: #ffb12a
 			&_image
 				position: absolute
 				bottom: -50px
@@ -756,6 +1010,9 @@ body
 		&_btn
 			width: 109px
 			height: 35px
+			display: inline-block
+			padding: 10px
+			line-height: 1
 			border-radius: 18px
 			background-color: #fff
 			border: 2px solid #275bcf
@@ -769,6 +1026,160 @@ body
 				border: 2px solid #275bcf
 				color: #fff
 				cursor: pointer
+
+#services
+	display: none
+	background-color: transparent
+
+.services
+	&__hidden
+		display: block
+		color: #121622
+		background-color: #fff
+		padding: 30px
+		&-description
+			@include flex($jc: flex-start, $ai: flex-start)
+		&-title
+			font-size: 32px
+			font-family: "Montserrat"
+			line-height: 45px
+			text-align: left
+			font-weight: bold
+			margin-bottom: 10px
+		&__list
+			li:before
+				content: "━"
+				margin-right: 5px
+		&-subtitle
+			font-size: 15px
+			font-family: "MuseoSansCyrl"
+			line-height: 20px
+			text-align: left
+		&-descr
+			padding: 0 40px
+			width: 100%
+		&-icon
+			@include flex($jc: flex-start, $ai: center)
+			padding: 30px 0
+			&_item
+				display: flex
+				margin-right: 35px
+				img
+					margin-right: 15px
+			&_text
+				font-size: 15px
+				font-family: "MuseoSansCyrl"
+				line-height: 20px
+				text-align: left
+				span
+					font-size: 19px
+		&-list
+			font-size: 14px
+			font-family: "MuseoSansCyrl"
+			text-align: left
+			padding: 25px 0
+			border-top: 1px solid #dbdbdb
+			border-bottom: 1px solid #dbdbdb
+			li + li
+				margin-top: 20px
+			&_title
+				font-size: 18px
+				font-family: "Montserrat"
+				text-align: left
+				font-weight: bold
+				margin-bottom: 20px
+		&-text-block
+			padding: 25px 0
+			font-size: 14px
+			font-family: "MuseoSansCyrl"
+			text-align: left
+			line-height: 19px
+			border-bottom: 1px solid #dbdbdb
+			p + p
+				margin-top: 20px
+			&_title
+				font-size: 18px
+				font-family: "Montserrat"
+				line-height: 45px
+				text-align: left
+				font-weight: bold
+				margin-bottom: 10px
+		&-form
+			padding: 25px 0 40px
+			@include flex($jc: center, $ai: center)
+			&_block
+				background-color: #fff
+				border-radius: 5px
+				padding: 32px 32px 90px
+				text-align: center
+				box-shadow: 0px 14px 29px 0px rgba(0, 0, 0, 0.1)
+				position: relative
+			&_phone
+				display: flex
+				.form-grid__phone + .form-grid__phone
+					margin-left: 10px
+			&_title
+				font-size: 22px
+				font-family: "Montserrat"
+				line-height: 26px
+				font-weight: bold
+				margin-bottom: 10px
+			&_subtitle
+				font-size: 15px
+				font-family: "MuseoSansCyrl"
+				line-height: 20px
+				margin-bottom: 30px
+			.icon-user
+				margin-right: 10px
+			.icon-phone
+				margin-right: 10px
+			.form-grid__button
+				margin-top: 10px
+				width: 100%
+		&-call
+			background-color: #ff0042
+			position: absolute
+			right: 0
+			left: 0
+			bottom: 0
+			border-bottom-left-radius: 5px
+			border-bottom-right-radius: 5px
+			color: #fff
+			padding: 10px 15px
+			&-text
+				@include flex($jc: space-between, $ai: center)
+				font-size: 14px
+				font-family: "MuseoSansCyrl"
+				text-align: left
+				position: relative
+			&_title
+				font-size: 15px
+				font-family: "Montserrat"
+				text-transform: uppercase
+				font-weight: bold
+			&_subtitle
+				font-size: 15px
+				font-family: "Montserrat"
+				line-height: 20px
+				font-weight: bold
+			&_icon
+				width: 68px
+				height: 68px
+				@include flex($jc: center, $ai: center)
+				background-color: #eb003d
+				border-radius: 50%
+				color: #fff
+				position: absolute
+				bottom: -16px
+				right: 145px
+				font-size: 32px
+				&:before
+					content: "\f095"
+					font-family: "FontAwesome"
+					font-weight: 900
+					transform: rotate(90deg)
+
+
 
 textarea
 	resize: none
@@ -836,6 +1247,9 @@ textarea
 				left: 40%
 
 .calculation-block
+	.form-grid__button
+		margin-top: 0
+		width: 295px
 	.preview-block-grid__call-mobile
 		display: flex
 		position: relative
@@ -892,29 +1306,25 @@ textarea
 					content: "\f078"
 					color: #000
 					font-size: 17px
+					position: absolute
+					right: 20px
+			&_pad
+				padding-left: 50px
 			&_item
 				@include flex($jc: space-between, $ai: center)
-				border: 1px solid rgb(214, 214, 214)
-				border-radius: 5px
-				background-color: #fff
-				padding: 25px 15px 25px 15px
 				margin-top: 10px
 				position: relative
 				color: rgb(170, 170, 172)
-				width: 295px
-				height: 65px
 				textarea
 					resize: none
-					height: 100px
 					padding-top: 20px
 					width: 100%
 			&_textarea
-				height: 120px
+				.form-grid__phone_input
+						height: 120px
 			&_select
 				font-size: 17px
 				font-family: "MuseoSansCyrl"
-				border-style: none
-				width: 100%
 				color: rgb(170, 170, 172)
 				-webkit-appearance: none
 			&_vin
@@ -922,6 +1332,8 @@ textarea
 					font-family: "FontAwesome"
 					font-weight: 900
 					content: "\f129"
+					position: absolute
+					right: 20px
 			&_button
 				margin-top: 10px
 
@@ -1267,10 +1679,35 @@ textarea
 				font-family: "Montserrat"
 				font-weight: bold
 				text-align: center
+				padding: 7px
 				&:hover
 					background-color: $mainC1
 					color: #fff
 					cursor: pointer
+		&-hidden
+			display: none
+	&-hidden
+		&-grid
+			background-color: #fff
+			padding: 30px
+			@include flex($jc: center, $ai: flex-start)
+		&__title
+			font-size: 32px
+			font-family: "Montserrat"
+			color: #121622
+			font-weight: bold
+			line-height: 45px
+			margin-bottom: 20px
+		&__text
+			font-size: 14px
+			font-family: "MuseoSansCyrl"
+			color: #121622
+			line-height: 19px
+			max-width: 640px
+			p + p
+				margin-top: 20px
+		&__image
+			margin-right: 40px
 
 
 
@@ -1655,10 +2092,10 @@ textarea
 				padding: 0
 			.form-grid__phone
 				margin-top: 0
-				height: 50px
 				&_input
 					font-size: 13px
 					line-height: 18px
+					height: 50px
 		&__text
 			font-size: 13px
 			line-height: 18px
@@ -1670,6 +2107,119 @@ textarea
 				&:hover
 					color: $mainC1
 
+
+#sto
+	display: none
+	background-color: transparent
+	.title
+		font-size: 24px
+		line-height: 45px
+		margin-bottom: 10px
+		text-align: center
+		padding-bottom: 5px
+		&:before
+			width: 74px
+			left: calc(50% - 74px/2)
+.sto
+	background-color: #fff
+	border-radius: 5px
+	padding: 35px
+	&__text
+		font-size: 13px
+		line-height: 20px
+		color: #000
+	.form-grid__phone
+		&_input
+			margin-bottom: 10px
+			width: 100%
+			height: 60px
+		span
+			top: calc(50% - 32px/2)
+			left: 25px
+
+	.form-grid__button
+		margin-top: 10px
+		width: 100%
+	.form-grid__checkbox
+		text-align: center
+
+.modal-block
+	margin: 40px
+	position: relative
+	overflow: hidden
+	background-color: transparent
+	.fancybox-close-small
+
+.fancybox-slide--html .fancybox-close-small
+	right: 20px
+	top: -11px
+
+.fancybox-button svg
+	width: 60px
+	height: 60px
+
+#PK
+	display: none
+
+.PK
+	.fancybox-slide--html .fancybox-close-small
+		right: 25px
+		top: -10px
+	padding: 30px
+	background-color: #fff
+	font-size: 13px
+	font-family: "MuseoSansCyrl"
+	color: #000000
+	line-height: 1.6
+	.title
+		text-align: center
+		&:before
+			left: calc(50% - 75px/2)
+	h3
+		font-size: 22px
+		line-height: 40px
+		color: #000000
+		font-family: "Montserrat"
+		font-weight: bold
+		text-transform: uppercase
+		margin: 10px 0
+	p + p
+		margin-top: 10px
+	p
+		padding-left: 20px
+		text-align: justify
+	h4
+		display: flex
+		justify-content: space-between
+		padding: 0 20px
+		margin-top: 10px
+		p + p
+			margin-top: 0
+			padding-left: 0
+
+#law
+	display: none
+
+.law-block
+	padding: 30px
+	background-color: #fff
+	font-size: 13px
+	font-family: "MuseoSansCyrl"
+	color: #000000
+	line-height: 1.6
+	.title
+		font-size: 32px
+		text-align: center
+		&:before
+			left: calc(50% - 75px/2)
+	p + p
+		margin-top: 10px
+	p
+		padding: 0 50px
+		text-align: justify
+		max-width: 500px
+
+		
 // ============================
 // MAIN CODE END
 // ============================
@@ -1772,6 +2322,49 @@ textarea
 		&-grid
 			@include grid2($c: 4)
 
+	.price-form-grid__col:nth-child(2)
+		width: 47%
+		margin-top: 40px
+
+	.price-block__hidden .services__hidden-call_icon
+		display: none
+
+	.price-block__hidden
+		.form-grid__checkbox
+			margin-bottom: 40px
+		.services__hidden-call-text
+			justify-content: center
+			flex-wrap: wrap
+			text-align: center
+		.services__hidden-form_items
+			margin-bottom: 15px
+		.services__hidden-form_phone 
+			flex-wrap: wrap
+			.form-grid__phone + .form-grid__phone
+				margin-left: 0
+	
+	
+	.price-block__hidden_offer
+		.offer-block-grid
+			align-items: center
+		.offer-block-grid__form_image
+			display: none
+		.offer-block-grid__col:nth-child(2)
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+		.title
+			&:before
+				left: calc(50% - 75px/2)
+
+	.price-form-grid
+		align-items: flex-start
+
+	.question-items__question
+		font-size: 18px
+		padding: 25px 40px 25px 25px
+
 	.offer-block
 		.title
 			&:before
@@ -1818,6 +2411,9 @@ textarea
 			&__form
 				&_item
 					width: 100%
+
+	.news-hidden-grid
+		align-items: center
 
 	.photo-block
 		&-grid
@@ -1884,6 +2480,9 @@ textarea
 @media (max-width: nth($mediaBp,2))
 	.title
 		font-size: 27px
+	.PK
+		.title
+			font-size: 25px
 
 	.preview-block
 		.circle-animation
@@ -1949,6 +2548,18 @@ textarea
 		&-grid
 			@include grid2($c: 3)
 
+	.price-form-grid
+		flex-direction: column
+		align-items: center
+	.price-form__discount-title
+		text-align: center
+
+	.price-form-grid__col:nth-child(2)
+		width: 100%
+
+	.price-block__hidden-title
+		font-size: 25px
+
 	.offer-block-grid
 		&__form_image
 			display: none
@@ -1975,6 +2586,26 @@ textarea
 
 	.services-block__list
 		padding: 0 50px
+
+	.services
+		&__hidden
+			&-image
+				display: none
+			&-title
+				text-align: center
+			&-subtitle
+				text-align: center
+			&-icon
+				justify-content: center
+			&-list_title
+				text-align: center
+			&-text-block
+				text-align: justify
+				&_title
+					text-align: center
+			&-descr
+				padding: 0
+					
 
 	.trust-block
 		padding: 60px 0
@@ -2006,7 +2637,12 @@ textarea
 	.comfort-block
 		&-grid
 			@include grid2($c: 2, $g: 15px)
-
+	.news-hidden
+		&-grid
+			flex-wrap: wrap
+			text-align: justify
+		&__title
+			text-align: center
 	.map-block
 		padding-top: 200px
 
@@ -2014,6 +2650,15 @@ textarea
 @media (max-width: nth($mediaBp,3))
 	.title
 		font-size: 25px
+	.PK
+		.title
+			font-size: 18px
+		h3
+			font-size: 13px
+			line-height: 23px
+
+	.law-block p
+		padding: 0
 	.price-block, .offer-block, .warranty-block, .services-block, .trust-block, .calculation-block, .work-performed-block, .photo-block, .video-block, .certificate-block, .logos-block,  .comfort-block, .news-block, .team-block, .answers-block, .evacuation-block, .question-block, .comfort-block
 		padding: 50px 0
 	.preview-block
@@ -2024,6 +2669,17 @@ textarea
 	.price-block
 		&-grid
 			@include grid2($c: 2, $g: 25px)
+
+	.price-block__hidden-title
+		font-size: 17px
+
+	.price-block__hidden__image
+		width: 150px
+		img
+			max-width: 100%
+
+	.price-block__hidden_offer
+		display: none
 
 	.services-block__list
 		padding: 0 0
@@ -2062,6 +2718,10 @@ textarea
 		&__text
 			max-width: 380px
 			margin: 0px auto
+
+	.news-hidden__image
+		display: none
+
 	.answers-block
 		&-grid
 			@include grid2($c: 1, $g: 30px)
@@ -2106,6 +2766,32 @@ textarea
 		&:before
 			width: 37px
 			border: 1px solid $mainC1
+	.PK
+		padding: 20px
+		.title
+			font-size: 15px
+			&:before
+				left: calc(50% - 37px/2)
+		font-size: 13px
+		p
+			padding-left: 0
+
+	.sto
+		.form-grid__checkbox_label
+			padding-left: 15px
+			&:before
+				top: -2px
+
+	.law-block
+		padding: 20px
+		.title
+			font-size: 17px
+			text-align: center
+			&:before
+				left: calc(50% - 37px/2)
+		p
+			padding: 0
+
 
 	.slick-dots
 		width: 40px
@@ -2247,14 +2933,10 @@ textarea
 				font-size: 12px
 				line-height: 20px
 		&__phone
-			width: 220px
-			height: 55px
 			margin-top: 0
-			padding: 15px
 			&_input
 				font-size: 14px
 		&__button
-			margin-top: 0
 			width: 220px
 			height: 53px
 			font-size: 14px
@@ -2316,10 +2998,6 @@ textarea
 			display: block
 
 	.offer-block
-		.form-grid__phone
-			height: 45px
-			justify-content: flex-start
-			width: 260px
 		.form-grid__checkbox
 			margin-top: 10px
 			&_label
@@ -2349,13 +3027,14 @@ textarea
 					margin-top: 20px
 			&__form
 				width: 300px
-				padding: 25px 40px 25px 20px
+				padding: 20px
 				&_inputs
 					margin-top: 10px
 					@include grid2($c: 1, $g: 8px)
 					.form-grid__phone_input
 						font-size: 11px
 						line-height: 16px
+						padding-left: 50px
 				&_title
 					font-size: 13px
 					line-height: 15px
@@ -2484,10 +3163,6 @@ textarea
 			font-size: 12px
 		.form-grid__checkbox_label:before
 			top: -2px
-		.form-grid__phone
-			width: 100%
-			padding: 15px
-			height: 48px
 		.button-yellow
 			height: 50px
 			font-size: 12px
@@ -2515,14 +3190,6 @@ textarea
 			&__form
 				&_select
 					font-size: 12px
-				&_item
-					height: 48px
-					padding: 15px
-					textarea
-						height: 100%
-						padding-top: 0
-				&_textarea
-					height: 85px
 				&_input
 					@include grid2($c: 1, $g: 10px)
 					width: 100%
@@ -2667,6 +3334,15 @@ textarea
 				height: 25px
 				font-size: 9px
 
+	.news-hidden
+		&-grid
+			padding: 15px
+		&__title
+			font-size: 20px
+			line-height: 1
+		&__text
+			font-size: 13px
+
 	.team-block
 		.slick-arrow.slick-prev
 			left: 5px
@@ -2761,6 +3437,21 @@ textarea
 						width: 18px
 						height: 18px
 
+	.sto
+		&__text
+			margin-bottom: 15px
+			text-align: center
+		.form-grid__button
+			margin-top: 0
+		.form-grid__phone span
+			top: calc(50% - 24px/2)
+	#sto
+		.title
+			font-size: 20px
+			&:before
+				width: 37px
+				left: calc(50% - 37px/2)
+
 	.question-block
 		display: none
 
@@ -2788,9 +3479,6 @@ textarea
 					max-width: 200px
 					font-size: 12px
 					text-align: center
-			.form-grid__phone
-				width: 220px
-				padding: 15px
 			.form-grid__button
 				width: 220px
 	
@@ -2806,3 +3494,24 @@ textarea
 
 	.calculation-block-form-grid__items
 		width: 100%
+	.calculation-block-grid__form_mark:after
+		right: 10px
+
+	.sto
+		padding: 10px
+		.form-grid__phone span
+			left: 25px
+		.form-grid__phone_input_pad
+			padding: 20px 10px 20px 45px
+	.PK
+		.title
+			font-size: 13px
+		h4
+			padding: 0
+
+	.modal-block
+		margin: 0
+
+	#sto 
+		.title
+			font-size: 14px

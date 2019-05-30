@@ -114,7 +114,7 @@
                                     <label class="form-grid__text">Введите Ваш контактный телефон:</label>
                                     <div class="form-grid__phone">
                                         <span class="icon-phone"></span>
-                                        <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="+7 (___) ___-__-__">
+                                        <input type="text" class="form-grid__phone_input form-grid__phone_input-mask form-grid__phone_input_pad" name="phone" id="form-phone" placeholder="+7 (___) ___-__-__" required="">
                                     </div>
                                     <div class="form-grid__number">
                                         <p>или позвоните: 
@@ -232,17 +232,266 @@
                 <div class="price-block__text">
                     <p>Выберите модель автомобиля:</p>
                 </div>
+                <div id="price">
+                	<div class="price-block__hidden">
+		                <div class="price-block__descr">
+		                	<h2 class="price-block__hidden-title">Renault Logan, 2007 г.</h2>
+		                	<div class="price-block__hidden__image">
+		                		<img src="./images/car-1.jpg">
+		                	</div>
+	                	</div>
+	                	<div class="price-block__hidden-form">
+	                		<div class="price-form-grid">
+	                			<div class="price-form-grid__col">
+	                				<div class="price-form__discount">
+	                					<h3 class="price-form__discount-title">Стоимость ТО:</h3>
+	                					<div class="price-form__discount_items">
+	                						<div class="price-form__discount_item">
+		                						<h4 class="price-form__discount_title">Замена масла и масляного фильтра ДВС</h4>
+		                						<div class="price-form__discount_subtitle">Выберите производителя масла:</div>
+		                						<form class="price-form__discount_oil" id="priceOil" name="priceOil">
+		                							<div class="price-form__discount_oil-type">
+		                								<input type="radio" checked="" class="price-form__discount_input" id="bardahl" name="oil" data-calc="3812" value="3812">
+									            		<label class="price-form__discount_label" for="bardahl"><img src="./images/price-oil-1.png"></label>
+		                							</div>
+		                							<div class="price-form__discount_oil-type">
+		                								<input type="radio" class="price-form__discount_input" id="liqui" name="oil" data-calc="5000" value="5000">
+									            		<label class="price-form__discount_label" for="liqui"><img src="./images/price-oil-2.png"></label>
+		                							</div>
+		                						</form>
+		                					</div>
+		                					<div class="price-form__discount_item">
+		                						<div class="price-form__discount_text">
+		                							<p>Замена салонного фильтра</p>
+		                						</div>
+		                					</div>
+		                					<div class="price-form__discount_item">
+		                						<div class="price-form__discount_text">
+		                							<p>Замена воздушного фильтра двигателя</p>
+		                						</div>
+		                					</div>
+		                					<div class="price-form__discount_item">
+		                						<div class="price-form__discount_checkbox">
+		                							<input type="checkbox" class="price-form__discount_checkbox_input" name="
+		                							discount" id="price-form-checkbox" value="30">
+		                							<label class="price-form__discount_checkbox_label .form-grid__checkbox_label" for="price-form-checkbox">Посчитать со скидкой на первое посещение — 30%</label>
+		                						</div>
+		                					</div>
+	                					</div>
+	                					<div class="price-form__discount_sum">
+		                					<div class="price-form__discount_sum-text" id="result">
+		                						<p>Итого:</p>
+		                					</div>
+		                				</div>
+	                				</div>
+	                			</div>
+	                			<div class="price-form-grid__col">
+	                				<div class="services__hidden-form_block">
+		                        		<h4 class="services__hidden-form_title">Онлайн-запись на ТО</h4>
+		                        		<div class="services__hidden-form_subtitle">
+		                        			<p>наш менеджер перезвонит и уточнит удобный для Вас день и время</p>
+		                        		</div>
+		                        		<form class="services__hidden-form_items form">
+									    	<div class="services__hidden-form_phone">
+										    	<div class="form-grid__phone">
+										            <span class="icon-user"></span>
+										            <input type="text" class="form-grid__phone_input form-grid__phone_input_pad" name="name"  placeholder="Введите Ваше имя" required="">
+										        </div>
+										        <div class="form-grid__phone">
+										            <span class="icon-phone"></span>
+										            <input type="text" class="form-grid__phone_input form-grid__phone_input-mask form-grid__phone_input_pad" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+										        </div>
+										    </div>
+									        <button class="button form-grid__button">Отправить заявку</button>
+									        <div class="form-grid__checkbox">
+									            <input type="checkbox" checked="" name="formm" class="form-grid__checkbox_input" id="f_check" >
+									            <label class="form-grid__checkbox_label" for="f_check">Даю согласие на обработку персональных данных</label>
+									        </div>
+									    </form>
+									    <div class="services__hidden-call">
+									    	<div class="services__hidden-call-text">
+									    		<div>
+										    		<h4 class="services__hidden-call_title">Позвони сейчас и получи скидку 40%</h4>
+										    		<p>скидки распространяются на работы</p>
+										    	</div>
+									    		<div class="services__hidden-call_icon"></div>
+									    		<h5 class="services__hidden-call_subtitle">+7 (495) 123-45-67</h5>
+									    	</div>
+									   	</div>
+									</div>
+	                			</div>
+	                		</div>
+	                	</div>
+	                	<div class="price-block__hidden_question">
+	                		<div class="question-grid">
+	                			<div class="question-grid__col">
+	                				<div class="question-items">
+	                					<div class="question-items__question">
+	                						<p>Работы, выполняемые по мере необходимости при выполнении ТО</p>
+	                					</div>
+	                					<div class="question-items__answer">
+	                						<ul class="question-items__answer_list">
+	                							<li>Замена масла и масляного фильтра двигателя</li>
+	                							<li>Замена салонного фильтра</li>
+	                							<li>Замена воздушного фильтра</li>
+	                							<li>Очистка корпуса воздушного фильтра от пыли сжатым воздухом</li>
+	                							<li>Очистка дренажных каналов в подкапотном пространстве (сжатым воздухом)</li>
+	                							<li>Диагностика ходовой части</li>
+	                							<li>Диагностика рулевого управления</li>
+	                							<li>Диагностика тормозной системы (визуальный осмотр тормозных механизмов, проверка величины износа тормозных дисков, колодок с помощью шаблона)</li>
+	                							<li>Осмотр состояния днища автомобиля, подкапотного пространства на предмет целосности и герметичности систем</li>
+	                							<li>Проверка (регулировка) давления воздуха в шинах</li>
+	                							<li>Проверка световой индикации</li>
+	                							<li>Считывание ошибок в ЗУ о неисправностях</li>
+	                							<li>Проверка уровня и состояния технических жидкостей</li>
+	                							<li>Проверка состояния АКБ с помощью тестера</li>
+	                						</ul>
+	                					</div>
+	                				</div>
+	                			</div>
+	                			<div class="question-grid__col">
+	                				<div class="question-items">
+	                					<div class="question-items__question">
+	                						<p>Работы, выполняемые по мере необходимости при выполнении ТО</p>
+	                					</div>
+	                					<div class="question-items__answer">
+	                						<ul class="question-items__answer_list">
+	                							<li>Очистка дренажных каналов в подкапотном пространстве (сжатым воздухом)</li>
+	                							<li>Диагностика ходовой части</li>
+	                							<li>Диагностика рулевого управления</li>
+	                							<li>Диагностика тормозной системы (визуальный осмотр тормозных механизмов, проверка величины износа тормозных дисков, колодок с помощью шаблона)</li>
+	                							<li>Осмотр состояния днища автомобиля, подкапотного пространства на предмет целосности и герметичности систем</li>
+	                						</ul>
+	                					</div>
+	                				</div>
+	                			</div>
+	                			<div class="question-grid__col">
+	                				<div class="question-items">
+	                					<div class="question-items__question">
+	                						<p>Работы, рекомендуемые при сезонном обслуживании</p>
+	                					</div>
+	                					<div class="question-items__answer">
+	                						<ul class="question-items__answer_list">
+	                							<li>Замена масла и масляного фильтра двигателя</li>
+	                							<li>Замена салонного фильтра</li>
+	                							<li>Замена воздушного фильтра</li>
+	                							<li>Очистка дренажных каналов в подкапотном пространстве (сжатым воздухом)</li>
+	                							<li>Диагностика ходовой части</li>
+	                							<li>Диагностика рулевого управления</li>
+	                						</ul>
+	                					</div>
+	                				</div>
+	                			</div>
+	                			<div class="question-grid__col">
+	                				<div class="question-items">
+	                					<div class="question-items__question">
+	                						<p>Ориентировочная стоимсость работ для распространенных марок автомобилей</p>
+	                					</div>
+	                					<div class="question-items__answer">
+	                						<ul class="question-items__answer_list">
+	                							<li class="question-items__answer_price">
+	                								<div class="question-items__answer-title">
+	                									Замена моторного масла
+	                								</div>
+	                								<div class="question-items__answer-price">100 руб.</div>
+	                							</li>
+	                							<li class="question-items__answer_price">
+	                								<div class="question-items__answer-title">
+	                									Диагностика подвески
+	                								</div>
+	                								<div class="question-items__answer-price">250 руб.</div>
+	                							</li>
+	                							<li class="question-items__answer_price">
+	                								<div class="question-items__answer-title">
+	                									Диагностика механической форсунки
+	                								</div>
+	                								<div class="question-items__answer-price">300 руб.</div>
+	                							</li>
+	                							<li class="question-items__answer_price">
+	                								<div class="question-items__answer-title">
+	                									Замена масла в коробке МКПП
+	                								</div>
+	                								<div class="question-items__answer-price">450 руб.</div>
+	                							</li>
+	                						</ul>
+	                					</div>
+	                				</div>
+	                			</div>
+	                		</div>
+	                	</div>
+	                	<div class="price-block__hidden_offer">
+	                		<div class="offer-block-grid">
+			                    <div class="offer-block-grid__col">
+			                        <h2 class="offer-block-grid__title title"><p><span>Летнее предложение:</span></p><p>заправка кондиционера за 1 600 руб.</p></h2>
+			                        <div class="offer-block-grid__text">
+			                            <p>Специалисты сервисного центра делают качественное и комплексное сервисное обслуживание систем кондиционирования на новой технологичной установке MAHLE ACX 150.</p>
+			                            <p>Гарантируем новая установка MAHLE ACX 150 полностью соответствует регламентным требованиям автопроизводтелей.</p>
+			                        </div>
+			                    </div>
+			                    <div class="offer-block-grid__col">
+			                        <form class="offer-block-grid__form form">
+			                            <h3 class="offer-block-grid__form_title">Выберите комплексную услугу или отдельный сервис:</h3>
+			                            <ul class="offer-block-grid__form_list">
+			                                <li>
+			                                    <input class="offer-block-grid__form_input" type="checkbox" id="hidden-form-1" name="form-1">
+			                                    <label class="offer-block-grid__form_label" for="hidden-form-1">диагностика и устранение неисправностей в системе кондициониров</label>
+			                                </li>
+			                                <li>
+			                                    <input class="offer-block-grid__form_input" type="checkbox" id="hidden-form-2" name="form-2">
+			                                    <label class="offer-block-grid__form_label" for="hidden-form-2">заправка кондиционера</label>
+			                                </li>
+			                                <li>
+			                                    <input class="offer-block-grid__form_input" type="checkbox" id="hidden-form-3" name="form-3">
+			                                    <label class="offer-block-grid__form_label" for="hidden-form-3">замена салонного фильтра</label>
+			                                </li>
+			                                <li>
+			                                    <input class="offer-block-grid__form_input" type="checkbox" id="hidden-form-4" name="form-4">
+			                                    <label class="offer-block-grid__form_label" for="hidden-form-4">антибактериальная обработка системы</label>
+			                                </li>
+			                                <li>
+			                                    <input class="offer-block-grid__form_input" type="checkbox" id="hidden-form-5" name="form-5">
+			                                    <label class="offer-block-grid__form_label" for="hidden-form-5">промывка радиаторов со снятием</label>
+			                                </li>
+			                            </ul>
+			                            <div class="offer-block-grid__form_inputs">
+			                                <div class="form-grid__phone">
+			                                     <span class="icon-user"></span>
+			                                    <input type="text" class="form-grid__phone_input form-grid__phone_input_pad" name="name" id="form-phone" placeholder="Введите Ваше имя" required="">
+			                                </div>
+			                                <div class="form-grid__phone">
+			                                    <span class="icon-phone"></span>
+			                                    <input type="text" class="form-grid__phone_input form-grid__phone_input-mask form-grid__phone_input_pad" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+			                                </div>
+			                            </div>
+			                            <div class="offer-block-grid__form_btn">
+			                                <button class="button offer-block-grid__form_button form-grid__button">Записаться на заправку кондиционера</button>
+			                            </div>
+			                            <div class="form-grid__checkbox">
+			                                <input type="checkbox" checked class="form-grid__checkbox_input" id="hidden-offer-form-checkbox">
+			                                <label class="form-grid__checkbox_label" for="hidden-offer-form-checkbox">Даю согласие на обработку персональных данных</label>
+			                            </div>
+			                            <div class="offer-block-grid__form_image">
+			                                <img src="./images/hidden-offer.png">
+			                            </div>
+			                        </form>
+			                    </div>
+			                </div>
+	                	</div>
+	                </div>
+                </div>
                 <div class="price-block-grid" id="price-list">
                     <div class="price-block-grid__col">
-                        <div class="price-block-grid__items">
-                            <div class="price-block-grid__image">
-                                <img src="./images/car-1.jpg">
-                            </div>
-                            <div class="price-block-grid__text">
-                                <p>Renault Logan</p>
-                                <p>2007 г.</p>
-                            </div>
-                        </div>
+	                    <a data-fancybox=""  href="#price" class="modalbox">
+	                        <div class="price-block-grid__items">
+	                            <div class="price-block-grid__image">
+	                                <img src="./images/car-1.jpg">
+	                            </div>
+	                            <div class="price-block-grid__text">
+	                                <p>Renault Logan</p>
+	                                <p>2007 г.</p>
+	                            </div>
+	                        </div>
+	                    </a>
                     </div>
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
@@ -258,7 +507,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-3.png">
+                                <img src="./images/car-3.jpg">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Daewoo Matiz 1.0,</p>
@@ -269,7 +518,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-4.png">
+                                <img src="./images/car-4.jpg">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Peugeot 308 1.6,</p>
@@ -280,7 +529,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-5.png">
+                                <img src="./images/car-5.jpg">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>VW Polo 1.6,</p>
@@ -603,7 +852,7 @@
                         </div>
                     </div>
                     <div class="offer-block-grid__col">
-                        <form class="offer-block-grid__form">
+                        <form class="offer-block-grid__form form">
                             <h3 class="offer-block-grid__form_title">Выберите комплексную услугу или отдельный сервис:</h3>
                             <ul class="offer-block-grid__form_list">
                                 <li>
@@ -630,18 +879,18 @@
                             <div class="offer-block-grid__form_inputs">
                                 <div class="form-grid__phone">
                                      <span class="icon-user"></span>
-                                    <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="Введите Ваше имя">
+                                    <input type="text" class="form-grid__phone_input form-grid__phone_input_pad" name="phone" id="form-phone" placeholder="Введите Ваше имя" required="">
                                 </div>
                                 <div class="form-grid__phone">
                                     <span class="icon-phone"></span>
-                                    <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="Контактный телефон">
+                                    <input type="text" class="form-grid__phone_input form-grid__phone_input-mask form-grid__phone_input_pad" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
                                 </div>
                             </div>
                             <div class="offer-block-grid__form_btn">
-                                <button class="button offer-block-grid__form_button">Записаться на заправку кондиционера</button>
+                                <button class="button offer-block-grid__form_button form-grid__button">Записаться на заправку кондиционера</button>
                             </div>
                             <div class="form-grid__checkbox">
-                                <input type="checkbox" checked class="form-grid__checkbox_input" id="offer-form-checkbox">
+                                <input type="checkbox" checked class="form-grid__checkbox_input " id="offer-form-checkbox">
                                 <label class="form-grid__checkbox_label" for="offer-form-checkbox">Даю согласие на обработку персональных данных</label>
                             </div>
                             <div class="offer-block-grid__form_image">
@@ -691,42 +940,124 @@
                         <div class="services-block__list_text">Замена моторного масла</div>
                         <div class="services-block__list_price">100 руб.</div>
                         <div class="services-block__list_button">
-                            <button class="services-block__list_btn">Подробнее</button>
+                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
+                        </div>
+                        <div id="services">
+                        	<div class="services__hidden">
+	                        	<div class="services__hidden-description">
+	                        		<div class="services__hidden-image">
+	                        			<img src="./images/news-hidden.jpg">
+	                        		</div>
+	                        		<div class="services__hidden-descr">
+	                        			<h3 class="services__hidden-title">Замена тормозных колодок</h3>
+	                        			<div class="services__hidden-subtitle">
+	                        				<p>Неправильная работа тормозной системы - распространённая причина ДТП</p>
+	                        			</div>
+	                        			<div class="services__hidden-icon">
+	                        				<div class="services__hidden-icon_item">
+	                        					<img src="./images/services-icon-1.png">
+	                        					<div class="services__hidden-icon_text">
+	                        						<p>Стоимость от:</p>
+		                        					<p><span>2 000 руб.</span></p>
+	                        					</div>
+	                        				</div>
+	                        				<div class="services__hidden-icon_item">
+	                        					<img src="./images/services-icon-2.png">
+	                        					<div class="services__hidden-icon_text">
+	                        						<p>Гарантия:</p>
+	                        						<p><span>12 Месяцев</span></p>
+	                        					</div>
+	                        				</div>
+	                        			</div>
+	                        			<div class="services__hidden-list">
+	                        				<h4 class="services__hidden-list_title">Признаки для обращения к специалисту</h4>
+	                        				<ul class="services__hidden__list">
+	                        					<li>Ваш автомобиль тянет в одну сторону при торможении</li>
+	                        					<li>На приборной панели загорается значок тормозов</li>
+	                        					<li>Вашему автомобилю нужно большее расстояние чтобы остановиться чем раньше</li>
+	                        					<li>Педаль тормоза реагирует медленно или требует сильного</li>
+	                        					<li>Скрежет при торможении</li>
+	                        				</ul>
+	                        			</div>
+	                        		</div>
+	                        	</div>
+                        		<div class="services__hidden-text-block">
+                        			<h4 class="services__hidden-text-block_title">Важно знать</h4>
+	                                <p>О том, что самым важным элементом безопасности автомобиля являются тормоза, известно каждому. Все системы автомобиля могут работать как часы, но что спасет автомобиль в критической ситуации в первую очередь? Конечно же тормозная система. Тормозные колодки должны обеспечивать эффективное торможение во всех климатических условиях, тем более в сырую погоду.</p>
+									<p>О том, что тормозные колодки пора менять, вам подскажет резкий металлический звук из-под колес, который иногда сопровождается характерным запахом разогретого металла. Он появляется в момент торможения. Естественно, до этого лучше не доводить! Тормозные колодки на любом автомобиле изнашиваются неравномерно. Передние колодки при торможении принимают на себя основную нагрузку, поэтому изнашиваются быстрее и подлежат замене втрое чаще, чем задние. Тем не менее, рекомендуется всегда производить замену задних и передних тормозных колодок одновременно, даже если из всех четырех тормозных колодок износилась всего одна. Дело в том, что новые и старые тормозные колодки будут тормозить разные колеса по-разному, что может повлечь за собой аварию.</p>
+									<p>После замены тормозных колодок на Вашем автомобиле, постарайтесь первые несколько сотен километров пробега соблюдать осторожность при торможении, пока происходит притирка. В это время эффективность торможения может быть снижена.</p>
+                        		</div>
+                        		<div class="services__hidden-form">
+	                        		<div class="services__hidden-form_block">
+	                        			<h4 class="services__hidden-form_title">Онлайн-запись на ТО</h4>
+	                        			<div class="services__hidden-form_subtitle">
+	                        				<p>наш менеджер перезвонит и уточнит удобный для Вас день и время</p>
+	                        			</div>
+	                        			<form class="services__hidden-form_items form">
+								    		<div class="services__hidden-form_phone">
+									    		<div class="form-grid__phone">
+									                <span class="icon-user"></span>
+									                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad" name="name"  placeholder="Введите Ваше имя" required="">
+									            </div>
+									            <div class="form-grid__phone">
+									                <span class="icon-phone"></span>
+									                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+									            </div>
+									        </div>
+								            <button class="button form-grid__button">Отправить заявку</button>
+								            <div class="form-grid__checkbox">
+								                <input type="checkbox" checked class="form-grid__checkbox_input" id="services-checkbox">
+								                <label class="form-grid__checkbox_label" for="services-checkbox">Даю согласие на обработку персональных данных</label>
+								            </div>
+								    	</form>
+								    	<div class="services__hidden-call">
+								    		<div class="services__hidden-call-text">
+								    			<div>
+									    			<h4 class="services__hidden-call_title">Позвони сейчас и получи скидку 40%</h4>
+									    			<p>скидки распространяются на работы</p>
+									    		</div>
+								    			<div class="services__hidden-call_icon"></div>
+								    			<h5 class="services__hidden-call_subtitle">+7 (495) 123-45-67</h5>
+								    		</div>
+								    	</div>
+								    </div>
+                        		</div>
+                        	</div>	
                         </div>
                     </li>
                     <li class="services-block__list_link">
                         <div class="services-block__list_text">Диагностика подвески</div>
                         <div class="services-block__list_price">250 руб.</div>
                         <div class="services-block__list_button">
-                            <button class="services-block__list_btn">Подробнее</button>
+                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
                         </div>
                     </li>
                     <li class="services-block__list_link">
                         <div class="services-block__list_text">Диагностика механической форсунки</div>
                         <div class="services-block__list_price">250 руб.</div>
                         <div class="services-block__list_button">
-                            <button class="services-block__list_btn">Подробнее</button>
+                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
                         </div>
                     </li>
                     <li class="services-block__list_link">
                         <div class="services-block__list_text">Замена воздушного фильтра</div>
                         <div class="services-block__list_price">350 руб.</div>
                         <div class="services-block__list_button">
-                            <button class="services-block__list_btn">Подробнее</button>
+                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
                         </div>
                     </li>
                     <li class="services-block__list_link">
                         <div class="services-block__list_text">Замена топливного замена</div>
                         <div class="services-block__list_price">390 руб.</div>
                         <div class="services-block__list_button">
-                            <button class="services-block__list_btn">Подробнее</button>
+                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
                         </div>
                     </li>
                     <li class="services-block__list_link">
                         <div class="services-block__list_text">Замена масла в коробке МКПП</div>
                         <div class="services-block__list_price">450 руб.</div>
                         <div class="services-block__list_button">
-                            <button class="services-block__list_btn">Подробнее</button>
+                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
                         </div>
                     </li>
                 </ul>
@@ -784,7 +1115,7 @@
                 <div class="calculation-block__text">
                     <p>Заполните форму и наш специалист Вам перезвонит:</p>
                 </div>
-                <form class="calculation-block-form-grid">
+                <form class="calculation-block-form-grid form">
                     <input type="hidden" name="title" value="точный расчет стоимости выполнения работ">
                     <div class="calculation-block-form-grid__col">
                     	<div class="calculation-block-form-grid__items">
@@ -794,17 +1125,17 @@
 	                            </p>
 	                        </h3>
 	                        <div class="calculation-block-grid__form_item calculation-block-grid__form_mark">
-	                            <select type="text" class="calculation-block-grid__form_select" name="mark">
+	                            <select type="text" class="form-grid__phone_input calculation-block-grid__form_select" name="mark" required="">
 	                                <option disabled selected hidden>Выберите марку авто</option>
 	                                <option value="Audi">Audi</option>
 	                                <option value="BMW">BMW</option>
 	                            </select>
 	                        </div>
 	                        <div class="calculation-block-grid__form_item">
-	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите модель авто">
+	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите модель авто" required="">
 	                        </div>
 	                        <div class="calculation-block-grid__form_item calculation-block-grid__form_vin">
-	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="VIN номер">
+	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="VIN номер" required="">
 	                        </div>
 	                        <div class="calculation-block-grid__form_item calculation-block-grid__form_textarea">
 	                            <textarea type="text" class="form-grid__phone_input" name="name"  placeholder="Перечислите все работы или опишите неисправности"></textarea>
@@ -819,20 +1150,20 @@
 	                            </p>
 	                        </h3>
 	                        <div class="calculation-block-grid__form_item">
-	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите объем двигателя">
+	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите объем двигателя" required="">
 	                        </div>
 	                        <div class="calculation-block-grid__form_item calculation-block-grid__form_mark">
-	                            <select type="text" class="calculation-block-grid__form_select" name="transmission">
+	                            <select type="text" class="form-grid__phone_input calculation-block-grid__form_select" name="transmission">
 	                                <option disabled selected hidden>Выберите тип трансмиссии</option>
 	                                <option value="MK">МКП</option>
 	                                <option value="AK">АКП</option>
 	                            </select>
 	                        </div>
 	                        <div class="calculation-block-grid__form_item">
-	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите год выпуска авто">
+	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите год выпуска авто" required="">
 	                        </div>
 	                        <div class="calculation-block-grid__form_item">
-	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Пробег авто">
+	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Пробег авто" required="">
 	                            <span class="icon-info"></span>
 	                        </div>
 	                    </div>
@@ -847,15 +1178,15 @@
 	                        <div class="calculation-block-grid__form_input">
 	                            <div class="form-grid__phone">
 	                                <span class="icon-user"></span>
-	                                <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите Ваше имя">
+	                                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad" name="name"  placeholder="Введите Ваше имя" required="">
 	                            </div>
 	                            <div class="form-grid__phone">
 	                                <span class="icon-phone"></span>
-	                                <input type="text" class="form-grid__phone_input" name="name"  placeholder="Контактный телефон">
+	                                <input type="text" class="form-grid__phone_input-mask form-grid__phone_input form-grid__phone_input_pad" name="name"  placeholder="Контактный телефон" required="">
 	                            </div>  
 	                        </div>
 	                        <div class="calculation-block-grid__form_button">
-	                            <button class="button button-yellow">Отправить</button>
+	                            <button class="button button-yellow form-grid__button">Отправить</button>
 	                        </div>
 	                        <div class="form-grid__checkbox">
 	                            <input type="checkbox" checked class="form-grid__checkbox_input" id="calculation-form-checkbox">
@@ -1286,7 +1617,7 @@
                                 <h4 class="news-block-grid__title">Открытие нового сервиса обслуживание в Москве!</h4>
                                 <p class="news-block-grid__text">Летом этого года «Заботливый Сервис» запускает свой новый филиал в Москве</p>
                                 <div class="news-block-grid__button">
-                                    <button class="news-block-grid__btn">Читать полностью</button>
+                                   <a data-fancybox=""  href="#news" class="modalbox news-block-grid__btn">Читать полностью</a>
                                 </div>
                             </div>
                         </div>
@@ -1298,7 +1629,20 @@
                                 <h4 class="news-block-grid__title">Открытие нового сервиса обслуживание в Москве!</h4>
                                 <p class="news-block-grid__text">Летом этого года «Заботливый Сервис» запускает свой новый филиал в Москве</p>
                                 <div class="news-block-grid__button">
-                                    <button class="news-block-grid__btn">Читать полностью</button>
+                                	<a data-fancybox=""  href="#news" class="modalbox news-block-grid__btn">Читать полностью</a>
+                                </div>
+                                <div class="news-block-hidden modal-block" id="news">
+                                	<div class="news-hidden-grid">
+	                                	<div class="news-hidden__image">
+	                                		<img src="./images/news-hidden.jpg">
+	                                	</div>
+	                                	<div class="news-hidden__text">
+	                                		<h2 class="news-hidden__title">Заголовок новости</h2>
+	                                		<p>О том, что самым важным элементом безопасности автомобиля являются тормоза, известно каждому. Все системы автомобиля могут работать как часы, но что спасет автомобиль в критической ситуации в первую очередь? Конечно же тормозная система. Тормозные колодки должны обеспечивать эффективное торможение во всех климатических условиях, тем более в сырую погоду.</p>
+											<p>О том, что тормозные колодки пора менять, вам подскажет резкий металлический звук из-под колес, который иногда сопровождается характерным запахом разогретого металла. Он появляется в момент торможения. Естественно, до этого лучше не доводить! Тормозные колодки на любом автомобиле изнашиваются неравномерно. Передние колодки при торможении принимают на себя основную нагрузку, поэтому изнашиваются быстрее и подлежат замене втрое чаще, чем задние. Тем не менее, рекомендуется всегда производить замену задних и передних тормозных колодок одновременно, даже если из всех четырех тормозных колодок износилась всего одна. Дело в том, что новые и старые тормозные колодки будут тормозить разные колеса по-разному, что может повлечь за собой аварию.</p>
+											<p>После замены тормозных колодок на Вашем автомобиле, постарайтесь первые несколько сотен километров пробега соблюдать осторожность при торможении, пока происходит притирка. В это время эффективность торможения может быть снижена.</p>
+	                                	</div>
+	                                </div>
                                 </div>
                             </div>
                         </div>
@@ -1310,7 +1654,7 @@
                                 <h4 class="news-block-grid__title">Открытие нового сервиса обслуживание в Москве!</h4>
                                 <p class="news-block-grid__text">Летом этого года «Заботливый Сервис» запускает свой новый филиал в Москве</p>
                                 <div class="news-block-grid__button">
-                                    <button class="news-block-grid__btn">Читать полностью</button>
+                                    <a data-fancybox=""  href="#news" class="modalbox news-block-grid__btn">Читать полностью</a>
                                 </div>
                             </div>
                         </div>
@@ -1322,7 +1666,7 @@
                                 <h4 class="news-block-grid__title">Открытие нового сервиса обслуживание в Москве!</h4>
                                 <p class="news-block-grid__text">Летом этого года «Заботливый Сервис» запускает свой новый филиал в Москве</p>
                                 <div class="news-block-grid__button">
-                                    <button class="news-block-grid__btn">Читать полностью</button>
+                                    <a data-fancybox=""  href="#news" class="modalbox news-block-grid__btn">Читать полностью</a>
                                 </div>
                             </div>
                         </div>
@@ -1480,16 +1824,16 @@
                                 <h3 class="evacuation-block-grid__form_title">Заявка на вызов эвакуатора</h3>
                                 <div class="form-grid__phone">
                                     <span class="icon-user"></span>
-                                    <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите Ваше имя">
+                                    <input type="text" class="form-grid__phone_input form-grid__phone_input_pad" name="name"  placeholder="Введите Ваше имя" required="">
                                 </div>
                                 <div class="form-grid__phone">
                                     <span class="icon-phone"></span>
-                                    <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="Контактный телефон">
+                                    <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
                                 </div>
                                 <button class="button form-grid__button">Отправить заявку</button>
                                 <div class="form-grid__checkbox">
-                                    <input type="checkbox" checked class="form-grid__checkbox_input" id="question-form-checkbox">
-                                    <label class="form-grid__checkbox_label" for="question-form-checkbox">Даю согласие на обработку персональных данных</label>
+                                    <input type="checkbox" checked class="form-grid__checkbox_input .form-grid__phone_input_pad" id="evacuation-form-checkbox">
+                                    <label class="form-grid__checkbox_label" for="evacuation-form-checkbox">Даю согласие на обработку персональных данных</label>
                                 </div>
                             </div>
                             <div class="evacuation-block-grid__form_number">
@@ -1536,7 +1880,7 @@
                         </ul>
         			</div>
         			<div class="map-block__btn">
-        				<button class="contact_button button">Записаться на СТО</button>
+        				<a data-fancybox=""  href="#sto" class="modalbox contact_button button">Записаться на СТО</a>
         			</div>
         		</div>
         	</div>
@@ -1558,7 +1902,7 @@
                             <label class="form-grid__text">Введите Ваш контактный телефон:</label>
                             <div class="form-grid__phone">
                                 <span class="icon-phone"></span>
-                                <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="+7 (___) ___-__-__">
+                                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="form-phone" placeholder="+7 (___) ___-__-__" required="">
                             </div>
                             <div class="form-grid__number">
                                 <p>или позвоните: 
@@ -1587,8 +1931,8 @@
                             <img src="./images/logo.png" alt="logo" class="logo_image">
                         </a>
                         <ul class="footer-block-grid__links">
-                            <li><a href="#">Политика конфиденциальности</a></li>
-                            <li><a href="#">Юридические данные</a></li>
+                            <li><a data-fancybox=""  href="#PK" class="modalbox">Политика конфиденциальности</a></li>
+                            <li><a data-fancybox=""  href="#law" class="modalbox">Юридические данные</a></li>
                         </ul>
                     </div>
                     <div class="footer-block-grid__col">
@@ -1603,13 +1947,13 @@
                         </div>
                     </div>
                     <div class="footer-block-grid__col">
-                        <form class="footer-block-grid__form">
+                        <form class="footer-block-grid__form form">
                             <div class="footer-block-grid__form_text">
                                 <p>Подпишитесь на рассылку и получите скидку 10% на ТО</p>
                             </div>
                             <div class="footer-block-grid__form_input">
                                 <div class="form-grid__phone">
-                                    <input type="text" class="form-grid__phone_input" name="phone" id="form-phone" placeholder="Введите Ваш e-mail">
+                                    <input type="text" class="form-grid__phone_input" name="phone" id="" placeholder="Введите Ваш e-mail" required="">
                                 </div>
                                 <div class="footer-block-grid__form_btn">
                                     <button class="button form-grid__button">Подписаться</button>
@@ -1629,9 +1973,124 @@
             </div>
         </div>
     </footer>
+    <div class="modal-block" id="PK">
+    	<div class="PK">
+    		<h2 class="PK__title title">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h2>
+    		<h4>
+    			<p>г. Москва</p>
+    			<p>«10» января 2017</p>
+    		</h4>
+    		<p>Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в отношении всей информации, которую Центр обслуживания автомобилей «Заботливый сервис»,</p>
+			<p>расположенный на доменном имени адрес автосервиса, может получить о Пользователе во время использования сайта Центра обслуживания автомобилей.</p>
+			<h3>1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</h3>
+			<p>1.1 В настоящей Политике конфиденциальности используются следующие термины:</p>
+			<p>1.1.1.	«Администрация сайта Интернет-магазина (далее – Администрация сайта) » – уполномоченные сотрудники на управления сайтом, действующие от имени Название организации, которые организуют и (или) осуществляет обработку персональных данных, а также определяет цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.</p>
+			<p>1.1.2. «Персональные данные» - любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных).</p>
+			<p>1.1.3. «Обработка персональных данных» - любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.</p>
+			<p>1.1.4. «Конфиденциальность персональных данных» - обязательное для соблюдения Оператором или иным получившим доступ к персональным данным лицом требование не допускать их распространения без согласия субъекта персональных данных или наличия иного законного основания.</p>
+			<p>1.1.5. «Пользователь сайта Интернет-магазина (далее ? Пользователь)» – лицо, имеющее доступ к Сайту, посредством сети Интернет и использующее Сайт интернет-магазина.</p>
+			<p>1.1.6. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере пользователя, который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе при попытке открыть страницу соответствующего сайта.</p>
+			<p>1.1.7. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу IP.</p>
+			<h3>2. ОБЩИЕ ПОЛОЖЕНИЯ</h3>
+			<p>2.1. Использование Пользователем сайта Интернет-магазина означает согласие с настоящей Политикой конфиденциальности и условиями обработки персональных данных Пользователя.</p>
+			<p>2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить использование сайта Интернет-магазина.</p>
+			<p>2.3.Настоящая Политика конфиденциальности применяется только к сайту Интернет-магазина Название магазина. Интернет-магазин не контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь может перейти по ссылкам, доступным на сайте Интернет-магазина.</p>
+			<p>2.4. Администрация сайта не проверяет достоверность персональных данных, предоставляемых Пользователем сайта Интернет-магазина.</p>
+			<h3>3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</h3>
+			<p>3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации сайта интернет-магазина по неразглашению и обеспечению режима защиты конфиденциальности персональных данных, которые Пользователь предоставляет по запросу Администрации сайта при регистрации на сайте интернет-магазина или при оформлении заказа для приобретения Товара.</p>
+			<p>3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности, предоставляются Пользователем путём заполнения регистрационной формы на Сайте интернет-магазина Название магазина в разделе Название раздела и включают в себя следующую информацию:</p>
+			<p>3.2.1. фамилию, имя, отчество Пользователя;</p>
+			<p>3.2.2. контактный телефон Пользователя;</p>
+			<p>3.2.3. адрес электронной почты (e-mail);</p>
+			<p>3.2.4. адрес доставки Товара;</p>
+			<p>3.2.5. место жительство Пользователя.</p>
+			<p>3.3. Интернет-магазин защищает Данные, которые автоматически передаются в процессе просмотра рекламных блоков и при посещении страниц, на которых установлен статистический скрипт системы ("пиксель"): IP адрес; информация из cookies; информация о браузере (или иной программе, которая осуществляет доступ к показу рекламы); время доступа; адрес страницы, на которой расположен рекламный блок; реферер (адрес предыдущей страницы).</p>
+			<p>3.3.1. Отключение cookies может повлечь невозможность доступа к частям сайта Интернет-магазина, требующим авторизации.</p>
+			<p>3.3.2. Интернет-магазин осуществляет сбор статистики об IP-адресах своих посетителей. Данная информация используется с целью выявления и решения технических проблем, для контроля законности проводимых финансовых платежей.</p>
+			<p>3.4. Любая иная персональная информация неоговоренная выше (история покупок, используемые браузеры и операционные системы и т.д.) подлежит надежному хранению и нераспространению, за исключением случаев, предусмотренных в п.п. 5.2. и 5.3. настоящей Политики конфиденциальности.</p>
+			<h3>4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ</h3>
+			<p>4.1. Персональные данные Пользователя Администрация сайта интернет-магазина может использовать в целях:</p>
+			<p>4.1.1. Идентификации Пользователя, зарегистрированного на сайте Интернет-магазина, для оформления заказа и (или) заключения Договора купли-продажи товара дистанционным способом с Название интернет-магазина.</p>
+			<p>4.1.2. Предоставления Пользователю доступа к персонализированным ресурсам Сайта интернет-магазина.</p>
+			<p>4.1.3. Установления с Пользователем обратной связи, включая направление уведомлений, запросов, касающихся использования Сайта интернет-магазина, оказания услуг, обработка запросов и заявок от Пользователя.</p>
+			<p>4.1.4. Определения места нахождения Пользователя для обеспечения безопасности, предотвращения мошенничества.</p>
+			<p>4.1.5. Подтверждения достоверности и полноты персональных данных, предоставленных Пользователем.</p>
+			<p>4.1.6. Создания учетной записи для совершения покупок, если Пользователь дал согласие на создание учетной записи.</p>
+			<p>4.1.7. Уведомления Пользователя Сайта интернет-магазина о состоянии Заказа.</p>
+			<p>4.1.8. Обработки и получения платежей, подтверждения налога или налоговых льгот, оспаривания платежа, определения права на получение кредитной линии Пользователем.</p>
+			<p>4.1.9. Предоставления Пользователю эффективной клиентской и технической поддержки при возникновении проблем связанных с использованием Сайта интернет-магазина.</p>
+			<p>4.1.10. Предоставления Пользователю с его согласия, обновлений продукции, специальных предложений, информации о ценах, новостной рассылки и иных сведений от имени Интернет-магазина или от имени партнеров Интернет-магазина.</p>
+			<p>4.1.11. Осуществления рекламной деятельности с согласия Пользователя.</p>
+			<p>4.1.12. Предоставления доступа Пользователю на сайты или сервисы партнеров Интернет-магазина с целью получения продуктов, обновлений и услуг.</p>
+			<h3>5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ</h3>
+			<p>5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным способом, в том числе в информационных системах персональных данных с использованием средств автоматизации или без использования таких средств.</p>
+			<p>5.2. Пользователь соглашается с тем, что Администрация сайта вправе передавать персональные данные третьим лицам, в частности, курьерским службам, организациями почтовой связи, операторам электросвязи, исключительно в целях выполнения заказа Пользователя, оформленного на Сайте интернет-магазина «Название магазина», включая доставку Товара.</p>
+			<p>5.3. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной власти Российской Федерации только по основаниям и в порядке, установленным законодательством Российской Федерации.</p>
+			<p>5.4. При утрате или разглашении персональных данных Администрация сайта информирует Пользователя об утрате или разглашении персональных данных.</p>
+			<p>5.5. Администрация сайта принимает необходимые организационные и технические меры для защиты персональной информации Пользователя от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий третьих лиц.</p>
+			<p>5.6. Администрация сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.</p>
+			<h3>6. ОБЯЗАТЕЛЬСТВА СТОРОН</h3>
+			<p>6.1. Пользователь обязан:</p>
+			<p>6.1.1. Предоставить информацию о персональных данных, необходимую для пользования Сайтом интернет-магазина.</p>
+			<p>6.1.2. Обновить, дополнить предоставленную информацию о персональных данных в случае изменения данной информации.</p>
+			<p>6.2. Администрация сайта обязана:</p>
+			<p>6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей Политики конфиденциальности.</p>
+			<p>6.2.2. Обеспечить хранение конфиденциальной информации в тайне, не разглашать без предварительного письменного разрешения Пользователя, а также не осуществлять продажу, обмен, опубликование, либо разглашение иными возможными способами переданных персональных данных Пользователя, за исключением п.п. 5.2. и 5.3. настоящей Политики Конфиденциальности.</p>
+			<p>6.2.3. Принимать меры предосторожности для защиты конфиденциальности персональных данных Пользователя согласно порядку, обычно используемого для защиты такого рода информации в существующем деловом обороте.</p>
+			<p>6.2.4. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с момента обращения или запроса Пользователя или его законного представителя либо уполномоченного органа по защите прав субъектов персональных данных на период проверки, в случае выявления недостоверных персональных данных или неправомерных действий.</p>
+			<h3>7. ОТВЕТСТВЕННОСТЬ СТОРОН</h3>
+			<p>7.1. Администрация сайта, не исполнившая свои обязательства, несёт ответственность за убытки, понесённые Пользователем в связи с неправомерным использованием персональных данных, в соответствии с законодательством Российской Федерации, за исключением случаев, предусмотренных п.п. 5.2., 5.3. и</p>
+			<p>7.2. В случае утраты или разглашения Конфиденциальной информации Администрация сайта не несёт ответственность, если данная конфиденциальная информация:</p>
+			<p>7.2.1. Стала публичным достоянием до её утраты или разглашения.</p>
+			<p>7.2.2. Была получена от третьей стороны до момента её получения Администрацией сайта.</p>
+			<p>7.2.3. Была разглашена с согласия Пользователя.</p>
+			<h3>8. РАЗРЕШЕНИЕ СПОРОВ</h3>
+			<p>8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем сайта Интернет-магазина и Администрацией сайта, обязательным является предъявление претензии (письменного предложения о добровольном урегулировании спора).</p>
+			<p>8.2 .Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно уведомляет заявителя претензии о результатах рассмотрения претензии.</p>
+			<p>8.3. При не достижении соглашения спор будет передан на рассмотрение в судебный орган в соответствии с действующим законодательством Российской Федерации.</p>
+			<p>8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией сайта применяется действующее законодательство Российской Федерации.</p>
+			<h3>9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ</h3>
+			<p>9.1. Администрация сайта вправе вносить изменения в настоящую Политику конфиденциальности без согласия Пользователя.</p>
+			<p>9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте интернет-магазина, если иное не предусмотрено новой редакцией Политики конфиденциальности.</p>
+			<p>9.3. Все предложения или вопросы по настоящей Политике конфиденциальности следует сообщать указать раздел сайта интернет-магазина</p>
+			<p>9.4. Действующая Политика конфиденциальности размещена на странице по адресу www. адрес магазина.</p>
+			<h4>Обновлено «20» мая 2019г.</h4>
+    	</div>
+    </div>
 
+    <div class="modal-block" id="law">
+    	<div class="law-block">
+    		<h2 class="law-block title">Юридическая информация</h2>
+    		<p>Мир Автосервиса, ООО зарегистрирована по адресу г.Санкт-Петербург, ул.Камчатская, д.9, 192007. Генеральный директор организации ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЗАБОТЛИВЫЙ СЕРВИС" Фролов Вячеслав Игоревич. Основным видом деятельности компании является Техническое обслуживание и ремонт легковых автомобилей и легких грузовых автотранспортных средств. Также Заботливый Автосервис, ООО работает еще по 7 направлениям. Размер уставного капитала 15 000 руб.</p>
+			<p>ОOO "ЗАБОТЛИВЫЙ СЕРВИС" присвоен ИНН 7816363114, КПП 781601001, ОГРН 1057810128276, ОКПО 76191149</p>
+		</div>
+	</div>
+
+    <div id="sto" class=" modal-block">
+    	<div class="sto">
+    	<h2 class="sto__title title">Записаться на СТО</h2>
+    	<div class="sto__text">
+    		<p>Введите контактные данные, мы Вам перезвоним:</p>
+    	</div>
+    	<form class="form" id="f_contact">
+    		<div class="form-grid__phone">
+                <span class="icon-user"></span>
+                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad " name="name"  placeholder="Введите Ваше имя" required="">
+            </div>
+            <div class="form-grid__phone">
+                <span class="icon-phone"></span>
+                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+            </div>
+            <button id="f_send" class="button form-grid__button">Записаться на СТО</button>
+            <div class="form-grid__checkbox">
+                <input type="checkbox" checked class="form-grid__checkbox_input" id="sto-checkbox">
+                <label class="form-grid__checkbox_label" for="sto-checkbox">Даю согласие на обработку персональных данных</label>
+            </div>
+    	</form>
+    </div>
+    </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4S93WP34qfscf_Duy7bfxHhRDZdB6rxc&callback=initMap"></script>
-    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
