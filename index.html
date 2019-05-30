@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Document</title>
+    <title>Заботливый сервис - центр обслуживания автомобилей</title>
     <script src="js/jquery.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
@@ -59,10 +59,10 @@
                         <div class="contact">
                             <a class="contact_number">+7 (495) 123-45-67</a>
                             <p class="contact_text">Ежедневно с 09.00 до 21.00</p>
-                            <button class="button contact_button">
-                                    <span class="icon-phone"></span>
-                                    Заказать звонок
-                            </button>
+                            <a data-fancybox=""  href="#call-modal" class="button contact_button">
+                            	<span class="icon-phone"></span>
+                            	Заказать звонок
+                            </a>
                         </div>
                     </div>
                     <div class="nav-toggle">
@@ -77,13 +77,13 @@
                 <div class="preview-block-grid">
                     <div class="preview-block-grid__col">
                         <h1 class="preview-block-grid__title">
-                            <p>Выполним ремонт</p>
-                            <p>и обслуживание Вашего Mercedes</p>
+                            <span>Выполним ремонт</span>
+                            <span>и обслуживание Вашего Mercedes</span>
                         </h1>
                         <h1 class="preview-block-grid__title-mobile">
-                            <p>Выполним ремонт</p>
-                            <p>и обслуживание Вашего</p>
-                            <p>Mercedes</p>
+                            <span>Выполним ремонт</span>
+                            <span>и обслуживание Вашего</span>
+                            <span>Mercedes</span>
                         </h1>
                         <h2 class="preview-block-grid__subtitle">Замена моторного масла от 1000 руб.</h2>
                         <div class="preview-block-grid__image-mobile">
@@ -109,7 +109,7 @@
                         </a>
                         <h2 class="preview-block-grid__subtitle-form">Получите бесплатную консультацию мастера и узнайте стоимость ТО для Вашего автомобиля прямо сейчас:</h2>
                         <form class="preview-block-grid__form form">
-                            <div class="form-grid">
+                           <input type="hidden" name="title" value="Получите бесплатную консультацию"> <div class="form-grid">
                                 <div class="form-grid__col">
                                     <label class="form-grid__text">Введите Ваш контактный телефон:</label>
                                     <div class="form-grid__phone">
@@ -140,7 +140,7 @@
                                     <div class="circle-animation">
                                         <div class="pulse-circle pulse-circle__call"></div>
                                     </div>
-                                    <a class="preview-block-grid__call_text">
+                                    <a data-fancybox=""  href="#call-modal" class="preview-block-grid__call_text">
                                         <p>
                                             <span class="icon-phone"></span>
                                             <span>Позвони сейчас</span>
@@ -165,7 +165,7 @@
                                  <div class="circle-animation">
                                     <div class="pulse-circle pulse-circle__call"></div>
                                 </div>
-                                <a class="preview-block-grid__call_text">
+                                <a data-fancybox=""  href="#call-modal"  class="preview-block-grid__call_text">
                                     <p>
                                         <span class="icon-phone"></span>
                                         <span>Позвони сейчас</span>
@@ -182,7 +182,7 @@
                         <div class="preview-block-services-grid__col">
                             <div class="services-items">
                                 <div class="services-image">
-                                    <img src="./images/preview-1.png">
+                                    <img src="./images/preview-1.png" alt="car-offer">
                                 </div>
                                 <div class="services-item">
                                     <h3 class="services-title">Выявление любой неисправности автомобиля менее, чем за 1 час</h3>
@@ -195,7 +195,7 @@
                          <div class="preview-block-services-grid__col">
                             <div class="services-items">
                                 <div class="services-image">
-                                    <img src="./images/preview-2.png">
+                                    <img src="./images/preview-2.png" alt="car-offer">
                                 </div>
                                 <div class="services-item">
                                     <h3 class="services-title">Выявление любой неисправности автомобиля менее, чем за 1 час</h3>
@@ -208,7 +208,7 @@
                         <div class="preview-block-services-grid__col">
                             <div class="services-items">
                                 <div class="services-image">
-                                    <img src="./images/preview-3.png">
+                                    <img src="./images/preview-3.png" alt="car-offer">
                                 </div>
                                 <div class="services-item">
                                     <h3 class="services-title">Выявление любой неисправности автомобиля менее, чем за 1 час</h3>
@@ -237,7 +237,7 @@
 		                <div class="price-block__descr">
 		                	<h2 class="price-block__hidden-title">Renault Logan, 2007 г.</h2>
 		                	<div class="price-block__hidden__image">
-		                		<img src="./images/car-1.jpg">
+		                		<img src="./images/car-1.jpg" alt="car-1">
 		                	</div>
 	                	</div>
 	                	<div class="price-block__hidden-form">
@@ -250,13 +250,14 @@
 		                						<h4 class="price-form__discount_title">Замена масла и масляного фильтра ДВС</h4>
 		                						<div class="price-form__discount_subtitle">Выберите производителя масла:</div>
 		                						<form class="price-form__discount_oil" id="priceOil" name="priceOil">
+		                							<input type="hidden" name="title" value="Выберите производителя масла">
 		                							<div class="price-form__discount_oil-type">
 		                								<input type="radio" checked="" class="price-form__discount_input" id="bardahl" name="oil" data-calc="3812" value="3812">
-									            		<label class="price-form__discount_label" for="bardahl"><img src="./images/price-oil-1.png"></label>
+									            		<label class="price-form__discount_label" for="bardahl"><img src="./images/price-oil-1.png" alt="bardahl-1"></label>
 		                							</div>
 		                							<div class="price-form__discount_oil-type">
 		                								<input type="radio" class="price-form__discount_input" id="liqui" name="oil" data-calc="5000" value="5000">
-									            		<label class="price-form__discount_label" for="liqui"><img src="./images/price-oil-2.png"></label>
+									            		<label class="price-form__discount_label" for="liqui"><img src="./images/price-oil-2.png" alt="liqui"></label>
 		                							</div>
 		                						</form>
 		                					</div>
@@ -272,8 +273,7 @@
 		                					</div>
 		                					<div class="price-form__discount_item">
 		                						<div class="price-form__discount_checkbox">
-		                							<input type="checkbox" class="price-form__discount_checkbox_input" name="
-		                							discount" id="price-form-checkbox" value="30">
+		                							<input type="checkbox" class="price-form__discount_checkbox_input" name="discount" id="price-form-checkbox" value="30">
 		                							<label class="price-form__discount_checkbox_label .form-grid__checkbox_label" for="price-form-checkbox">Посчитать со скидкой на первое посещение — 30%</label>
 		                						</div>
 		                					</div>
@@ -292,6 +292,7 @@
 		                        			<p>наш менеджер перезвонит и уточнит удобный для Вас день и время</p>
 		                        		</div>
 		                        		<form class="services__hidden-form_items form">
+									    <input type="hidden" name="title" value="Онлайн-запись на ТО">	
 									    	<div class="services__hidden-form_phone">
 										    	<div class="form-grid__phone">
 										            <span class="icon-user"></span>
@@ -299,13 +300,13 @@
 										        </div>
 										        <div class="form-grid__phone">
 										            <span class="icon-phone"></span>
-										            <input type="text" class="form-grid__phone_input form-grid__phone_input-mask form-grid__phone_input_pad" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+										            <input type="text" class="form-grid__phone_input form-grid__phone_input-mask form-grid__phone_input_pad" name="phone" id="price-form-phone" placeholder="Контактный телефон" required="">
 										        </div>
 										    </div>
 									        <button class="button form-grid__button">Отправить заявку</button>
 									        <div class="form-grid__checkbox">
-									            <input type="checkbox" checked="" name="formm" class="form-grid__checkbox_input" id="f_check" >
-									            <label class="form-grid__checkbox_label" for="f_check">Даю согласие на обработку персональных данных</label>
+									            <input type="checkbox" checked="" name="formm" class="form-grid__checkbox_input" id="price-form-check" >
+									            <label class="form-grid__checkbox_label" for="price-form-check">Даю согласие на обработку персональных данных</label>
 									        </div>
 									    </form>
 									    <div class="services__hidden-call">
@@ -422,7 +423,7 @@
 	                	<div class="price-block__hidden_offer">
 	                		<div class="offer-block-grid">
 			                    <div class="offer-block-grid__col">
-			                        <h2 class="offer-block-grid__title title"><p><span>Летнее предложение:</span></p><p>заправка кондиционера за 1 600 руб.</p></h2>
+			                        <h2 class="offer-block-grid__title title"><span>Летнее предложение:</span>заправка кондиционера за 1 600 руб.</h2>
 			                        <div class="offer-block-grid__text">
 			                            <p>Специалисты сервисного центра делают качественное и комплексное сервисное обслуживание систем кондиционирования на новой технологичной установке MAHLE ACX 150.</p>
 			                            <p>Гарантируем новая установка MAHLE ACX 150 полностью соответствует регламентным требованиям автопроизводтелей.</p>
@@ -430,7 +431,8 @@
 			                    </div>
 			                    <div class="offer-block-grid__col">
 			                        <form class="offer-block-grid__form form">
-			                            <h3 class="offer-block-grid__form_title">Выберите комплексную услугу или отдельный сервис:</h3>
+			                           <input type="hidden" name="title" value="Выберите комплексную услугу"> 
+			                           <h3 class="offer-block-grid__form_title">Выберите комплексную услугу или отдельный сервис:</h3>
 			                            <ul class="offer-block-grid__form_list">
 			                                <li>
 			                                    <input class="offer-block-grid__form_input" type="checkbox" id="hidden-form-1" name="form-1">
@@ -456,11 +458,11 @@
 			                            <div class="offer-block-grid__form_inputs">
 			                                <div class="form-grid__phone">
 			                                     <span class="icon-user"></span>
-			                                    <input type="text" class="form-grid__phone_input form-grid__phone_input_pad" name="name" id="form-phone" placeholder="Введите Ваше имя" required="">
+			                                    <input type="text" class="form-grid__phone_input form-grid__phone_input_pad" name="name" id="offer-name" placeholder="Введите Ваше имя" required="">
 			                                </div>
 			                                <div class="form-grid__phone">
 			                                    <span class="icon-phone"></span>
-			                                    <input type="text" class="form-grid__phone_input form-grid__phone_input-mask form-grid__phone_input_pad" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+			                                    <input type="text" class="form-grid__phone_input form-grid__phone_input-mask form-grid__phone_input_pad" name="phone" id="offer-phone" placeholder="Контактный телефон" required="">
 			                                </div>
 			                            </div>
 			                            <div class="offer-block-grid__form_btn">
@@ -471,7 +473,7 @@
 			                                <label class="form-grid__checkbox_label" for="hidden-offer-form-checkbox">Даю согласие на обработку персональных данных</label>
 			                            </div>
 			                            <div class="offer-block-grid__form_image">
-			                                <img src="./images/hidden-offer.png">
+			                                <img src="./images/hidden-offer.png" alt="cond">
 			                            </div>
 			                        </form>
 			                    </div>
@@ -481,22 +483,20 @@
                 </div>
                 <div class="price-block-grid" id="price-list">
                     <div class="price-block-grid__col">
-	                    <a data-fancybox=""  href="#price" class="modalbox">
-	                        <div class="price-block-grid__items">
-	                            <div class="price-block-grid__image">
-	                                <img src="./images/car-1.jpg">
-	                            </div>
-	                            <div class="price-block-grid__text">
-	                                <p>Renault Logan</p>
-	                                <p>2007 г.</p>
-	                            </div>
+	                    <div class="price-block-grid__items">
+	                        <div class="price-block-grid__image">
+	                            <img src="./images/car-1.jpg" alt="car-1">
 	                        </div>
-	                    </a>
+	                        <div class="price-block-grid__text">
+	                            <p>Renault Logan</p>
+	                            <p>2007 г.</p>
+	                        </div>
+	                    </div>
                     </div>
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-2.jpg">
+                                <img src="./images/car-2.jpg" alt="car-2">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Chevrolet Lacetti 1.6,</p>
@@ -507,7 +507,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-3.jpg">
+                                <img src="./images/car-3.jpg" alt="car-3">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Daewoo Matiz 1.0,</p>
@@ -518,7 +518,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-4.jpg">
+                                <img src="./images/car-4.jpg" alt="car-4">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Peugeot 308 1.6,</p>
@@ -529,7 +529,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-5.jpg">
+                                <img src="./images/car-5.jpg" alt="car-5">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>VW Polo 1.6,</p>
@@ -540,7 +540,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-6.png">
+                                <img src="./images/car-6.png" alt="car-6">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Opel Corsa 1.4,</p>
@@ -551,7 +551,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-7.png">
+                                <img src="./images/car-7.png" alt="car-7">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Ford Mondeo 2.0,</p>
@@ -562,7 +562,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-8.png">
+                                <img src="./images/car-8.png" alt="car-8">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Toyota Camry 2.4,</p>
@@ -573,7 +573,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-9.png">
+                                <img src="./images/car-9.png" alt="car-9">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Mazda 6 2.0 143hp,</p>
@@ -584,7 +584,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-10.png">
+                                <img src="./images/car-10.png" alt="car-10">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>BMW 5 E60 525i,</p>
@@ -595,7 +595,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-11.png">
+                                <img src="./images/car-11.png" alt="car-11">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>AUDI Q5 (8R) 2.0</p>
@@ -606,7 +606,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-12.png">
+                                <img src="./images/car-12.png" alt="car-12">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Toyota Corolla 1.6,</p>
@@ -617,7 +617,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-13.png">
+                                <img src="./images/car-13.png" alt="car-13">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Ford Focus III 1,6,</p>
@@ -628,7 +628,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-14.png">
+                                <img src="./images/car-14.png" alt="car-14">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Hyundai Solaris 1.6,</p>
@@ -639,7 +639,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-15.png">
+                                <img src="./images/car-15.png" alt="car-15">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Nissan Qashqai 2.0 бенз</p>
@@ -650,7 +650,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-16.png">
+                                <img src="./images/car-16.png" alt="car-16">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Nissan Teana</p>
@@ -661,7 +661,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-17.png">
+                                <img src="./images/car-17.png" alt="car-17">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Suzuki Grand Vitara 2.0 140hp,</p>
@@ -672,7 +672,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-18.png">
+                                <img src="./images/car-18.png" alt="car-18">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Toyota Land Cruiser 200 4.7,</p>
@@ -683,7 +683,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-19.png">
+                                <img src="./images/car-19.png" alt="car-19">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Toyota Prado 3.0D,</p>
@@ -694,7 +694,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-20.png">
+                                <img src="./images/car-20.png" alt="car-20">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Daewoo Nexia 1.6, 2010 г.</p>
@@ -705,7 +705,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-21.png">
+                                <img src="./images/car-21.png" alt="car-21">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Ford Transit 1.8 diesel,</p>
@@ -716,7 +716,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-22.png">
+                                <img src="./images/car-22.png" alt="car-22">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Mercedes Sprinter 95квт 315</p>
@@ -727,7 +727,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-23.png">
+                                <img src="./images/car-23.png" alt="car-23">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Fiat Duсato,</p>
@@ -738,7 +738,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-24.png">
+                                <img src="./images/car-24.png" alt="car-24">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Skoda Octavia</p>
@@ -749,7 +749,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-25.png">
+                                <img src="./images/car-25.png" alt="car-25">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Skoda Yeti</p>
@@ -760,7 +760,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-26.png">
+                                <img src="./images/car-26.png" alt="car-26">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Skoda Superb</p>
@@ -771,7 +771,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-27.png">
+                                <img src="./images/car-27.png" alt="car-27">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Skoda Rapid</p>
@@ -782,7 +782,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-28.png">
+                                <img src="./images/car-28.png" alt="car-28">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>KIA Rio</p>
@@ -793,7 +793,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-29.png">
+                                <img src="./images/car-29.png" alt="car-29">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>KIA Sorento</p>
@@ -804,7 +804,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-30.png">
+                                <img src="./images/car-30.png" alt="car-30">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>KIA Sportage</p>
@@ -815,7 +815,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-31.png">
+                                <img src="./images/car-31.png" alt="car-31">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Chevrolet Cruze</p>
@@ -826,7 +826,7 @@
                     <div class="price-block-grid__col">
                         <div class="price-block-grid__items">
                             <div class="price-block-grid__image">
-                                <img src="./images/car-32.png">
+                                <img src="./images/car-32.png" alt="car-32">
                             </div>
                             <div class="price-block-grid__text">
                                 <p>Chevrolet Aveo</p>
@@ -853,7 +853,7 @@
                     </div>
                     <div class="offer-block-grid__col">
                         <form class="offer-block-grid__form form">
-                            <h3 class="offer-block-grid__form_title">Выберите комплексную услугу или отдельный сервис:</h3>
+                           <input type="hidden" name="title" value="Выберите комплексную услугу"> <h3 class="offer-block-grid__form_title">Выберите комплексную услугу или отдельный сервис:</h3>
                             <ul class="offer-block-grid__form_list">
                                 <li>
                                     <input class="offer-block-grid__form_input" type="checkbox" id="form-1" name="form-1">
@@ -879,11 +879,11 @@
                             <div class="offer-block-grid__form_inputs">
                                 <div class="form-grid__phone">
                                      <span class="icon-user"></span>
-                                    <input type="text" class="form-grid__phone_input form-grid__phone_input_pad" name="phone" id="form-phone" placeholder="Введите Ваше имя" required="">
+                                    <input type="text" class="form-grid__phone_input form-grid__phone_input_pad" name="phone" id="offer-block-name" placeholder="Введите Ваше имя" required="">
                                 </div>
                                 <div class="form-grid__phone">
                                     <span class="icon-phone"></span>
-                                    <input type="text" class="form-grid__phone_input form-grid__phone_input-mask form-grid__phone_input_pad" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+                                    <input type="text" class="form-grid__phone_input form-grid__phone_input-mask form-grid__phone_input_pad" name="phone" id="offer-block-phone" placeholder="Контактный телефон" required="">
                                 </div>
                             </div>
                             <div class="offer-block-grid__form_btn">
@@ -894,7 +894,7 @@
                                 <label class="form-grid__checkbox_label" for="offer-form-checkbox">Даю согласие на обработку персональных данных</label>
                             </div>
                             <div class="offer-block-grid__form_image">
-                                <img src="./images/offer-img.png">
+                                <img src="./images/offer-img.png" alt="offer">
                             </div>
                         </form>
                     </div>
@@ -907,7 +907,7 @@
                 <div class="warranty-block-grid">
                     <div class="warranty-block-grid__col">
                         <div class="warranty-block-grid__icon">
-                            <img src="./images/warranty-icon.png">
+                            <img src="./images/warranty-icon.png" alt="warranty">
                         </div>
                     </div>
                     <div class="warranty-block-grid__col">
@@ -940,13 +940,13 @@
                         <div class="services-block__list_text">Замена моторного масла</div>
                         <div class="services-block__list_price">100 руб.</div>
                         <div class="services-block__list_button">
-                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
+                            <a class="services-block__list_btn">Подробнее</a>
                         </div>
                         <div id="services">
                         	<div class="services__hidden">
 	                        	<div class="services__hidden-description">
 	                        		<div class="services__hidden-image">
-	                        			<img src="./images/news-hidden.jpg">
+	                        			<img src="./images/news-hidden.jpg" alt="news">
 	                        		</div>
 	                        		<div class="services__hidden-descr">
 	                        			<h3 class="services__hidden-title">Замена тормозных колодок</h3>
@@ -955,14 +955,14 @@
 	                        			</div>
 	                        			<div class="services__hidden-icon">
 	                        				<div class="services__hidden-icon_item">
-	                        					<img src="./images/services-icon-1.png">
+	                        					<img src="./images/services-icon-1.png"  alt="services-icon">
 	                        					<div class="services__hidden-icon_text">
 	                        						<p>Стоимость от:</p>
-		                        					<p><span>2 000 руб.</span></p>
+		                        					<p><span class="services__hidden-icon_price">2 000 руб.</span></p>
 	                        					</div>
 	                        				</div>
 	                        				<div class="services__hidden-icon_item">
-	                        					<img src="./images/services-icon-2.png">
+	                        					<img src="./images/services-icon-2.png" alt="services-icon2">
 	                        					<div class="services__hidden-icon_text">
 	                        						<p>Гарантия:</p>
 	                        						<p><span>12 Месяцев</span></p>
@@ -994,6 +994,7 @@
 	                        				<p>наш менеджер перезвонит и уточнит удобный для Вас день и время</p>
 	                        			</div>
 	                        			<form class="services__hidden-form_items form">
+								    	<input type="hidden" name="title" value="Онлайн-запись на ТО">	
 								    		<div class="services__hidden-form_phone">
 									    		<div class="form-grid__phone">
 									                <span class="icon-user"></span>
@@ -1001,7 +1002,7 @@
 									            </div>
 									            <div class="form-grid__phone">
 									                <span class="icon-phone"></span>
-									                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+									                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="services__hidden-phone" placeholder="Контактный телефон" required="">
 									            </div>
 									        </div>
 								            <button class="button form-grid__button">Отправить заявку</button>
@@ -1029,35 +1030,35 @@
                         <div class="services-block__list_text">Диагностика подвески</div>
                         <div class="services-block__list_price">250 руб.</div>
                         <div class="services-block__list_button">
-                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
+                            <a class="services-block__list_btn">Подробнее</a>
                         </div>
                     </li>
                     <li class="services-block__list_link">
                         <div class="services-block__list_text">Диагностика механической форсунки</div>
                         <div class="services-block__list_price">250 руб.</div>
                         <div class="services-block__list_button">
-                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
+                            <a class="services-block__list_btn">Подробнее</a>
                         </div>
                     </li>
                     <li class="services-block__list_link">
                         <div class="services-block__list_text">Замена воздушного фильтра</div>
                         <div class="services-block__list_price">350 руб.</div>
                         <div class="services-block__list_button">
-                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
+                            <a class="services-block__list_btn">Подробнее</a>
                         </div>
                     </li>
                     <li class="services-block__list_link">
                         <div class="services-block__list_text">Замена топливного замена</div>
                         <div class="services-block__list_price">390 руб.</div>
                         <div class="services-block__list_button">
-                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
+                            <a class="services-block__list_btn">Подробнее</a>
                         </div>
                     </li>
                     <li class="services-block__list_link">
                         <div class="services-block__list_text">Замена масла в коробке МКПП</div>
                         <div class="services-block__list_price">450 руб.</div>
                         <div class="services-block__list_button">
-                            <a data-fancybox=""  href="#services" class="modalbox services-block__list_btn">Подробнее</a>
+                            <a class="services-block__list_btn">Подробнее</a>
                         </div>
                     </li>
                 </ul>
@@ -1073,16 +1074,16 @@
                                 <div class="pulse-circle pulse-circle__big"></div>
                                 <div class="pulse-circle pulse-circle__small"></div>
                             </div>
-                            <img src="./images/photo.png">
+                            <img src="./images/photo.png" alt="photo-1">
                         </div>
                         <div class="trust-block__mobile_photo">
                             <div class="trust-block-grid__button">
-                                <button class="button trust-block-grid__btn">Написать сообщение</button>
+                            	<a data-fancybox=""  href="#message" class="button trust-block-grid__btn">Написать сообщение</a>
                             </div>
                             <h3 class="trust-block-grid__subtitle">Ответственный за работу с клиентами</h3>
                             <div class="trust-block-grid__subtext">
                                 <p>Хлюпин Алексей</p>
-                                <img src="./images/sign.png">
+                                <img src="./images/sign.png" alt="sign">
                             </div>
                         </div>
                     </div>
@@ -1096,7 +1097,7 @@
                         </div>
                         <div class="trust-block__mobile">
                             <div class="trust-block-grid__button">
-                                <button class="button trust-block-grid__btn">Написать сообщение</button>
+                            	<a data-fancybox=""  href="#message" class="button trust-block-grid__btn">Написать сообщение</a>
                             </div>
                             <h3 class="trust-block-grid__subtitle">Ответственный за работу с клиентами</h3>
                             <div class="trust-block-grid__subtext">
@@ -1116,7 +1117,7 @@
                     <p>Заполните форму и наш специалист Вам перезвонит:</p>
                 </div>
                 <form class="calculation-block-form-grid form">
-                    <input type="hidden" name="title" value="точный расчет стоимости выполнения работ">
+                   <input type="hidden" name="title" value="точный расчет стоимости выполнения работ">
                     <div class="calculation-block-form-grid__col">
                     	<div class="calculation-block-form-grid__items">
 	                        <h3 class="calculation-block-grid__title">
@@ -1125,7 +1126,7 @@
 	                            </p>
 	                        </h3>
 	                        <div class="calculation-block-grid__form_item calculation-block-grid__form_mark">
-	                            <select type="text" class="form-grid__phone_input calculation-block-grid__form_select" name="mark" required="">
+	                            <select class="form-grid__phone_input calculation-block-grid__form_select" name="mark" required="">
 	                                <option disabled selected hidden>Выберите марку авто</option>
 	                                <option value="Audi">Audi</option>
 	                                <option value="BMW">BMW</option>
@@ -1138,7 +1139,7 @@
 	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="VIN номер" required="">
 	                        </div>
 	                        <div class="calculation-block-grid__form_item calculation-block-grid__form_textarea">
-	                            <textarea type="text" class="form-grid__phone_input" name="name"  placeholder="Перечислите все работы или опишите неисправности"></textarea>
+	                            <textarea class="form-grid__phone_input" name="name"  placeholder="Перечислите все работы или опишите неисправности"></textarea>
 	                        </div>
 	                    </div>
                     </div>
@@ -1153,7 +1154,7 @@
 	                            <input type="text" class="form-grid__phone_input" name="name"  placeholder="Введите объем двигателя" required="">
 	                        </div>
 	                        <div class="calculation-block-grid__form_item calculation-block-grid__form_mark">
-	                            <select type="text" class="form-grid__phone_input calculation-block-grid__form_select" name="transmission">
+	                            <select class="form-grid__phone_input calculation-block-grid__form_select" name="transmission">
 	                                <option disabled selected hidden>Выберите тип трансмиссии</option>
 	                                <option value="MK">МКП</option>
 	                                <option value="AK">АКП</option>
@@ -1200,7 +1201,7 @@
                         <div class="circle-animation">
                             <div class="pulse-circle pulse-circle__call"></div>
                         </div>
-                        <a class="preview-block-grid__call_text">
+                        <a data-fancybox=""  href="#call-modal"   class="preview-block-grid__call_text">
                             <p>
                                 <span class="icon-phone"></span>
                                 <span>Позвони сейчас</span>
@@ -1820,7 +1821,7 @@
                     </div>
                     <div class="evacuation-block-grid__col">
                         <form class="evacuation-block-grid__form form">
-                            <div class="evacuation-block-grid__form_items">
+                           <input type="hidden" name="title" value="Заявка на вызов эвакуатора"> <div class="evacuation-block-grid__form_items">
                                 <h3 class="evacuation-block-grid__form_title">Заявка на вызов эвакуатора</h3>
                                 <div class="form-grid__phone">
                                     <span class="icon-user"></span>
@@ -1828,14 +1829,13 @@
                                 </div>
                                 <div class="form-grid__phone">
                                     <span class="icon-phone"></span>
-                                    <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+                                    <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="evacuation-phone" placeholder="Контактный телефон" required="">
                                 </div>
                                 <button class="button form-grid__button">Отправить заявку</button>
                                 <div class="form-grid__checkbox">
                                     <input type="checkbox" checked class="form-grid__checkbox_input .form-grid__phone_input_pad" id="evacuation-form-checkbox">
                                     <label class="form-grid__checkbox_label" for="evacuation-form-checkbox">Даю согласие на обработку персональных данных</label>
                                 </div>
-                            </div>
                             <div class="evacuation-block-grid__form_number">
                                 <div class="form-grid__number">
                                     <p>или позвоните: 
@@ -1843,9 +1843,7 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </form>
+                    	</form>
                     </div>
                 </div>
             </div>
@@ -1897,12 +1895,12 @@
                     <div class="pulse-circle pulse-circle__small"></div>
                 </div>
                 <form class="question-block__form form">
-                    <div class="form-grid">
+                   <input type="hidden" name="title" value="Специалисты нашего центра бесплатно проконсультируют"> <div class="form-grid">
                         <div class="form-grid__col">
                             <label class="form-grid__text">Введите Ваш контактный телефон:</label>
                             <div class="form-grid__phone">
                                 <span class="icon-phone"></span>
-                                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="form-phone" placeholder="+7 (___) ___-__-__" required="">
+                                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="question-phone" placeholder="+7 (___) ___-__-__" required="">
                             </div>
                             <div class="form-grid__number">
                                 <p>или позвоните: 
@@ -1948,7 +1946,8 @@
                     </div>
                     <div class="footer-block-grid__col">
                         <form class="footer-block-grid__form form">
-                            <div class="footer-block-grid__form_text">
+                           <input type="hidden" name="title" value="получите скидку 10%"> 
+                           	<div class="footer-block-grid__form_text">
                                 <p>Подпишитесь на рассылку и получите скидку 10% на ТО</p>
                             </div>
                             <div class="footer-block-grid__form_input">
@@ -2066,28 +2065,80 @@
 		</div>
 	</div>
 
-    <div id="sto" class=" modal-block">
-    	<div class="sto">
-    	<h2 class="sto__title title">Записаться на СТО</h2>
-    	<div class="sto__text">
-    		<p>Введите контактные данные, мы Вам перезвоним:</p>
-    	</div>
-    	<form class="form" id="f_contact">
-    		<div class="form-grid__phone">
-                <span class="icon-user"></span>
-                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad " name="name"  placeholder="Введите Ваше имя" required="">
-            </div>
-            <div class="form-grid__phone">
-                <span class="icon-phone"></span>
-                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
-            </div>
-            <button id="f_send" class="button form-grid__button">Записаться на СТО</button>
-            <div class="form-grid__checkbox">
-                <input type="checkbox" checked class="form-grid__checkbox_input" id="sto-checkbox">
-                <label class="form-grid__checkbox_label" for="sto-checkbox">Даю согласие на обработку персональных данных</label>
-            </div>
-    	</form>
+	<div id="call-modal" class=" modal-block">
+    	<div class="call-modal">
+	    	<h2 class="sto__title title">Заказать звонок</h2>
+	    	<div class="sto__text">
+	    		<p>Введите контактные данные, мы Вам перезвоним:</p>
+	    	</div>
+	    	<form class="form">
+	    	<input type="hidden" name="title" value="мы Вам перезвоним:">	<div class="form-grid__phone">
+	                <span class="icon-user"></span>
+	                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad " name="name"  placeholder="Введите Ваше имя" required="">
+	            </div>
+	            <div class="form-grid__phone">
+	                <span class="icon-phone"></span>
+	                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+	            </div>
+	            <button class="button form-grid__button">Заказать звонок</button>
+	            <div class="form-grid__checkbox">
+	                <input type="checkbox" checked class="form-grid__checkbox_input" id="call-modal-checkbox">
+	                <label class="form-grid__checkbox_label" for="call-modal-checkbox">Даю согласие на обработку персональных данных</label>
+	            </div>
+	    	</form>
+	    </div>
     </div>
+
+    <div id="sto" class="modal-block">
+    	<div class="sto">
+	    	<h2 class="sto__title title">Записаться на СТО</h2>
+	    	<div class="sto__text">
+	    		<p>Введите контактные данные, мы Вам перезвоним:</p>
+	    	</div>
+	    	<form class="form" id="f_contact">
+	    	<input type="hidden" name="title" value=" мы Вам перезвоним">	<div class="form-grid__phone">
+	                <span class="icon-user"></span>
+	                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad " name="name"  placeholder="Введите Ваше имя" required="">
+	            </div>
+	            <div class="form-grid__phone">
+	                <span class="icon-phone"></span>
+	                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+	            </div>
+	            <button id="f_send" class="button form-grid__button">Записаться на СТО</button>
+	            <div class="form-grid__checkbox">
+	                <input type="checkbox" checked class="form-grid__checkbox_input" id="sto-checkbox">
+	                <label class="form-grid__checkbox_label" for="sto-checkbox">Даю согласие на обработку персональных данных</label>
+	            </div>
+	    	</form>
+	    </div>
+    </div>
+
+    <div id="message" class=" modal-block">
+    	<div class="message">
+	    	<h2 class="sto__title title">Написать сообщение</h2>
+	    	<div class="sto__text">
+	    		<p>Введите контактные данные, мы Вам перезвоним:</p>
+	    	</div>
+	    	<form class="form" id="f_contact">
+	    	<input type="hidden" name="title" value="Введите контактные данные">
+	    		<div class="form-grid__phone">
+	                <span class="icon-user"></span>
+	                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad " name="name"  placeholder="Введите Ваше имя" required="">
+	            </div>
+	            <div class="form-grid__phone">
+	                <span class="icon-phone"></span>
+	                <input type="text" class="form-grid__phone_input form-grid__phone_input_pad form-grid__phone_input-mask" name="phone" id="form-phone" placeholder="Контактный телефон" required="">
+	            </div>
+	            <div class="message-textarea">
+	            	<textarea class="form-grid__phone_input" name="name"  placeholder="Текст сообщения"></textarea>
+	            </div>
+	            <button id="f_send" class="button form-grid__button">Написать сообщение</button>
+	            <div class="form-grid__checkbox">
+	                <input type="checkbox" checked class="form-grid__checkbox_input" id="message-checkbox">
+	                <label class="form-grid__checkbox_label" for="message-checkbox">Даю согласие на обработку персональных данных</label>
+	            </div>
+	    	</form>
+	    </div>
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4S93WP34qfscf_Duy7bfxHhRDZdB6rxc&callback=initMap"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>

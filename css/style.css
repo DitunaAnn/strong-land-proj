@@ -140,6 +140,7 @@ body {
           transform: skewX(-50deg);
   -webkit-animation: blink 2s 1s ease-in-out infinite;
           animation: blink 2s 1s ease-in-out infinite;
+  will-change: background-position;
 }
 .button:hover {
   cursor: pointer;
@@ -217,6 +218,7 @@ body {
   left: 50%;
   -webkit-animation: circle 3s infinite;
           animation: circle 3s infinite;
+  will-change: transform, opacity;
   z-index: -1;
 }
 
@@ -6462,12 +6464,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.preview-block-grid__title-mobile p {
+.preview-block-grid__title-mobile span {
   background-color: #285bd0;
   padding: 0 7px;
   margin-bottom: 2px;
 }
-.preview-block-grid__title p {
+.preview-block-grid__title span {
   background-color: #285bd0;
   padding: 0 15px;
   margin-bottom: 7px;
@@ -6580,6 +6582,7 @@ body {
   color: #fff;
   font-weight: bold;
   line-height: 1.143;
+  z-index: 1;
 }
 .preview-block-grid__call_text span {
   text-transform: uppercase;
@@ -7173,6 +7176,13 @@ body {
 }
 .price-block__hidden_offer .offer-block-grid .title {
   font-size: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .price-block__hidden_offer .offer-block-grid__title {
   max-width: 100%;
@@ -8266,6 +8276,9 @@ textarea {
   line-height: 20px;
   color: #ffffff;
   font-family: "MuseoSansCyrl";
+}
+.trust-block-grid__button {
+  width: 235px;
 }
 .trust-block-grid__btn {
   border-radius: 5px;
@@ -10002,6 +10015,38 @@ textarea {
   text-align: center;
 }
 
+#message {
+  display: none;
+  background-color: transparent;
+}
+#message .title {
+  font-size: 24px;
+  line-height: 45px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+#message .title:before {
+  width: 74px;
+  left: calc(50% - 74px/2);
+}
+
+.message {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 35px;
+}
+.message-textarea {
+  margin-top: 10px;
+}
+.message-textarea .form-grid__phone_input {
+  height: 120px;
+}
+.message .form-grid__button {
+  margin-top: 10px;
+  width: 100%;
+}
+
 .modal-block {
   margin: 40px;
   position: relative;
@@ -10017,6 +10062,32 @@ textarea {
 .fancybox-button svg {
   width: 60px;
   height: 60px;
+}
+
+#call-modal {
+  display: none;
+  background-color: transparent;
+}
+#call-modal .title {
+  font-size: 24px;
+  line-height: 45px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+#call-modal .title:before {
+  width: 74px;
+  left: calc(50% - 74px/2);
+}
+
+.call-modal {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 35px;
+}
+.call-modal .form-grid__button {
+  margin-top: 10px;
+  width: 100%;
 }
 
 #PK {
@@ -10234,7 +10305,7 @@ textarea {
     padding: 0px;
   }
   .preview-block-services-grid {
-    padding: 60px 40px 25px;
+    padding: 0 40px 25px;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10711,7 +10782,11 @@ textarea {
   }
 
   .price-form-grid__col:nth-child(2) {
-    width: 100%;
+    width: 80%;
+  }
+
+  .question-items__question {
+    font-size: 15px;
   }
 
   .price-block__hidden-title {
@@ -11176,6 +11251,20 @@ textarea {
     top: -2px;
   }
 
+  #message .title {
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  #message .title:before {
+    width: 37px;
+    left: calc(50% - 37px/2);
+  }
+
+  .message {
+    padding: 10px;
+  }
+
   .law-block {
     padding: 20px;
   }
@@ -11374,6 +11463,91 @@ textarea {
     height: 127px;
   }
 
+  .price-block__descr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  .price-block__hidden-form {
+    padding: 15px;
+  }
+  .price-block__hidden-title {
+    font-size: 15px;
+  }
+  .price-block__hidden .services__hidden-form_block {
+    padding: 10px 10px 90px;
+  }
+  .price-block__hidden .services__hidden-form_title {
+    font-size: 15px;
+  }
+  .price-block__hidden .services__hidden-form_subtitle {
+    font-size: 13px;
+  }
+  .price-block__hidden .form-grid__phone {
+    margin-top: 10px;
+  }
+  .price-block__hidden_question {
+    padding: 10px;
+  }
+  .price-form__discount-title {
+    font-size: 15px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  .price-form__discount_items {
+    padding: 10px;
+    text-align: center;
+  }
+  .price-form__discount_subtitle {
+    font-size: 13px;
+  }
+  .price-form__discount_text {
+    font-size: 13px;
+    text-align: left;
+    line-height: 13px;
+  }
+  .price-form__discount_checkbox {
+    font-size: 13px;
+    text-align: left;
+  }
+  .price-form__discount_sum-text:after {
+    display: none;
+  }
+
+  .question-items__question {
+    font-size: 13px;
+    padding: 10px 30px 10px 10px;
+  }
+  .question-items__question:after {
+    right: 15px;
+  }
+
+  .question-items__answer_price {
+    padding: 0;
+  }
+
+  .question-items__answer {
+    padding: 10px;
+  }
+
+  .price-block__hidden .services__hidden-call_title {
+    font-size: 13px;
+  }
+
+  .price-form-grid .price-form-grid__col + .price-form-grid__col {
+    margin-left: 0;
+  }
+
+  .price-form-grid__col:nth-child(2) {
+    width: 100%;
+  }
+
+  .fancybox-content {
+    padding: 45px 10px;
+  }
+
   .form-grid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -11401,9 +11575,6 @@ textarea {
     font-size: 12px;
     line-height: 20px;
   }
-  .form-grid__phone {
-    margin-top: 0;
-  }
   .form-grid__phone_input {
     font-size: 14px;
   }
@@ -11412,6 +11583,7 @@ textarea {
     height: 53px;
     font-size: 14px;
     padding: 0;
+    margin-top: 0;
   }
   .form-grid__checkbox_label {
     font-size: 8px;
@@ -11595,6 +11767,7 @@ textarea {
     width: 260px;
     height: 62px;
     font-size: 13px;
+    margin-top: 10px;
   }
 
   .warranty-block .title {

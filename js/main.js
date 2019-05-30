@@ -5,6 +5,32 @@ $(document).ready(function(){
 $(document).ready(function() {
 $("#price__show-less").hide();
   var grid = $('#price-list');
+    var modalCaptionImgElement = $('#price .price-block__hidden__image img');
+    var modalCaptionElement    = $('#price .price-block__hidden-title');
+
+    $(document).on('click', '.price-block-grid__col', function() {
+        var $this                  = $(this);
+        var imgElement             = $this.find('img');
+        var captionBlockElement    = $this.find('.price-block-grid__text');
+        var img;
+        var caption;
+
+        if(imgElement.length && captionBlockElement.length && modalCaptionImgElement.length && modalCaptionElement.length) {
+            img     = imgElement.prop('src');
+            caption = $.trim(captionBlockElement.text().replace(/\s+/g, ' '));
+
+            if(img && caption) {
+                modalCaptionImgElement.attr('src', img);
+                modalCaptionElement.text(caption);
+
+                $.fancybox.open({
+                    type : 'inline',
+                    src  : '#price'
+                });
+            }
+        }
+    });
+
   grid.find('.price-block-grid__col').slice(0, 8).addClass('price-block-grid__col_active');
 
 
@@ -29,6 +55,34 @@ $("#price__show-less").hide();
       scrollTop: $(".price-block").offset().top + desiredHeight
     }, 1500);
   });
+});
+
+$(document).ready(function() {
+    var modalCaptionElement    = $('#services .services__hidden-title');
+    var modalCaptionPrice    = $('#services .services__hidden-icon_price');
+
+    $(document).on('click', '.services-block__list_btn', function() {
+        var $this                  = $(this);
+        var captionBlockElement    = $this.closest('.services-block__list_link').find('.services-block__list_text');
+        var captionBlockPrice    = $this.closest('.services-block__list_link').find('.services-block__list_price');
+        var caption;
+        var price;
+
+        if(captionBlockElement.length && modalCaptionElement.length && captionBlockPrice.length && modalCaptionPrice.length) {
+            caption = $.trim(captionBlockElement.text().replace(/\s+/g, ' '));
+            price = $.trim(captionBlockPrice.text().replace(/\s+/g, ' '));
+
+            if(caption) {
+                modalCaptionElement.text(caption);
+                modalCaptionPrice.text(price);
+
+                $.fancybox.open({
+                    type : 'inline',
+                    src  : '#services'
+                });
+            }
+        }
+    });
 });
 
 $(document).ready(function() {
@@ -108,24 +162,35 @@ $(window).on('load resize', function(e) {
 // });
 // });
 $(window).on('load resize', function(e) {
-	var price = document.querySelector('input[name = oil]:checked').value,
-	    discountPrice = .30;
-	    result.innerHTML = 'Итого: '+ price + ' руб.';
-	document.priceOil.onclick = function(){
-	    var price = document.querySelector('input[name = oil]:checked').value,
-	    discountPrice = .30;
-	    result.innerHTML = 'Итого: '+ price + ' руб.';
-	    $("#price-form-checkbox").on('click', function (e) {
-	    	$(".price-form__discount_checkbox_input").attr('checked',true);
-	      	
+    var $resultSumElement = $('#result');
+    var $discountElement  = $('input[name="discount"]');
+    var $price            = $('input#bardahl').val();
+    var discountPrice     = .30;
 
-	    		if($('.price-form__discount_checkbox_input:checked')) {
-					result.innerHTML = 'Итого: '+ (price - (price * discountPrice)) + ' руб.';
-				} else {
-					result.innerHTML = 'Итого: '+ price + ' руб.';
-				}
-			});
-	}
+    $resultSumElement.text('Итого: ' + $price + ' руб.');
+
+    $(document).on('click', '.price-form__discount_oil-type', function() {
+        var $this         = $(this);
+        var $priceElement = $this.find('input[name="oil"]');
+
+        if($priceElement.length && $discountElement.length) {
+            $price = $priceElement.val();
+
+            if($discountElement.prop('checked')) {
+                $resultSumElement.text('Итого: ' + ($price - ($price * discountPrice)) + ' руб.');
+            }
+            else {
+                $resultSumElement.text('Итого: ' + $price + ' руб.');
+            }
+        }
+    }).on('click', 'input[name="discount"]', function() {
+        if($(this).prop('checked')) {
+            $resultSumElement.text('Итого: ' + ($price - ($price * discountPrice)) + ' руб.');
+        }
+        else {
+            $resultSumElement.text('Итого: ' + $price + ' руб.');
+        }
+    });
 });
 
 // $(window).on('load resize', function(e) {

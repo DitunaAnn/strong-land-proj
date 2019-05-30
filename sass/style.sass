@@ -183,11 +183,11 @@ body
 				flex-direction: column
 				justify-content: center
 				align-items: center
-				p
+				span
 					background-color: rgb(40, 91, 208)
 					padding: 0 7px
 					margin-bottom: 2px
-			p
+			span
 				background-color: rgb(40, 91, 208)
 				padding: 0 15px
 				margin-bottom: 7px
@@ -254,6 +254,7 @@ body
 				color: #fff
 				font-weight: bold
 				line-height: 1.143
+				z-index: 1
 				span
 					text-transform: uppercase
 					font-size: 16px
@@ -587,6 +588,8 @@ body
 					padding: 0
 					.title
 						font-size: 32px
+						display: flex
+						flex-direction: column
 					&__title
 						max-width: 100%
 						color: #fff
@@ -1225,6 +1228,8 @@ textarea
 			line-height: 20px
 			color: #ffffff
 			font-family: "MuseoSansCyrl"
+		&__button
+			width: 235px
 		&__btn
 			border-radius: 5px
 			box-shadow: 0px 3px 0px #ffb12a
@@ -2143,6 +2148,31 @@ textarea
 	.form-grid__checkbox
 		text-align: center
 
+#message
+	display: none
+	background-color: transparent
+	.title
+		font-size: 24px
+		line-height: 45px
+		margin-bottom: 10px
+		text-align: center
+		padding-bottom: 5px
+		&:before
+			width: 74px
+			left: calc(50% - 74px/2)
+
+.message
+	background-color: #fff
+	border-radius: 5px
+	padding: 35px
+	&-textarea
+		margin-top: 10px
+		.form-grid__phone_input
+			height: 120px
+	.form-grid__button
+		margin-top: 10px
+		width: 100%
+
 .modal-block
 	margin: 40px
 	position: relative
@@ -2157,6 +2187,26 @@ textarea
 .fancybox-button svg
 	width: 60px
 	height: 60px
+
+#call-modal
+	display: none
+	background-color: transparent
+	.title
+		font-size: 24px
+		line-height: 45px
+		margin-bottom: 10px
+		text-align: center
+		padding-bottom: 5px
+		&:before
+			width: 74px
+			left: calc(50% - 74px/2)
+.call-modal
+	background-color: #fff
+	border-radius: 5px
+	padding: 35px
+	.form-grid__button
+		margin-top: 10px
+		width: 100%
 
 #PK
 	display: none
@@ -2296,7 +2346,7 @@ textarea
 		&-services
 			@include grid($s: 0px)
 			&-grid
-				padding: 60px 40px 25px
+				padding: 0 40px 25px
 				position: relative
 				@include flex($jc: center, $ai: center)
 				&__col
@@ -2343,7 +2393,7 @@ textarea
 			.form-grid__phone + .form-grid__phone
 				margin-left: 0
 	
-	
+
 	.price-block__hidden_offer
 		.offer-block-grid
 			align-items: center
@@ -2555,7 +2605,10 @@ textarea
 		text-align: center
 
 	.price-form-grid__col:nth-child(2)
-		width: 100%
+		width: 80%
+
+	.question-items__question
+		font-size: 15px
 
 	.price-block__hidden-title
 		font-size: 25px
@@ -2782,6 +2835,18 @@ textarea
 			&:before
 				top: -2px
 
+	#message
+		.title
+			font-size: 24px
+			line-height: 1
+			margin-bottom: 10px
+			&:before
+				width: 37px
+				left: calc(50% - 37px/2)
+
+	.message
+		padding: 10px
+
 	.law-block
 		padding: 20px
 		.title
@@ -2916,6 +2981,71 @@ textarea
 	.pulse-circle__call
 		width: 127px
 		height: 127px
+
+	.price
+		&-block
+			&__descr
+				flex-direction: column
+				padding: 0
+			&__hidden
+				&-form
+					padding: 15px
+				&-title
+					font-size: 15px
+				.services__hidden-form_block
+					padding: 10px 10px 90px
+				.services__hidden-form_title
+					font-size: 15px
+				.services__hidden-form_subtitle
+					font-size: 13px
+				.form-grid__phone
+					margin-top: 10px
+				&_question
+					padding: 10px
+		&-form
+			&__discount
+				&-title
+					font-size: 15px
+					line-height: 1
+					margin-bottom: 15px
+				&_items
+					padding: 10px
+					text-align: center
+				&_subtitle
+					font-size: 13px
+				&_text
+					font-size: 13px
+					text-align: left
+					line-height: 13px
+				&_checkbox
+					font-size: 13px
+					text-align: left
+				&_sum-text:after
+					display: none
+
+	.question-items__question
+		font-size: 13px
+		padding: 10px 30px 10px 10px
+		&:after
+			right: 15px
+
+	.question-items__answer_price
+		padding: 0
+
+	.question-items__answer
+		padding: 10px
+
+	.price-block__hidden .services__hidden-call_title
+		font-size: 13px
+
+	.price-form-grid .price-form-grid__col + .price-form-grid__col
+		margin-left: 0
+
+	.price-form-grid__col:nth-child(2)
+		width: 100%
+
+	.fancybox-content
+		padding: 45px 10px
 	
 	.form-grid
 		flex-direction: column
@@ -2933,7 +3063,6 @@ textarea
 				font-size: 12px
 				line-height: 20px
 		&__phone
-			margin-top: 0
 			&_input
 				font-size: 14px
 		&__button
@@ -2941,6 +3070,7 @@ textarea
 			height: 53px
 			font-size: 14px
 			padding: 0
+			margin-top: 0
 		&__checkbox_label
 			font-size: 8px
 			line-height: 19px
@@ -3058,6 +3188,7 @@ textarea
 					width: 260px
 					height: 62px
 					font-size: 13px
+					margin-top: 10px
 
 
 	.warranty-block

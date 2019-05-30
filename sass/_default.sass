@@ -108,6 +108,7 @@ body
 		background-size: 3em 100%
 		transform: skewX(-50deg)
 		animation: blink 2s 1s ease-in-out infinite
+		will-change: background-position
 	&:hover
 		cursor: pointer
 
@@ -161,6 +162,7 @@ body
 	top: 40%
 	left: 50%
 	animation: circle 3s infinite
+	will-change: transform, opacity
 	z-index: -1
 
 @keyframes circle
